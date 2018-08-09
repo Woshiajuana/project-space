@@ -1,0 +1,43 @@
+.music-line {
+  border-bottom: 0px; }
+  .music-line li.col-1 {
+    width: 344px; }
+  .music-line li.col-2 {
+    width: 140px;
+    color: #b2b2b2; }
+  .music-line li.col-2-1 {
+    width: 83px;
+    color: #b2b2b2;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    background: url("../images/shouting.png") no-repeat left center;
+    text-indent: 20px; }
+  .music-line li.col-3 {
+    width: 140px;
+    color: #b2b2b2; }
+  .music-line li.col-4 {
+    color: #b2b2b2; }
+  .music-line li.play-panel {
+    float: right; }
+    .music-line li.play-panel a {
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      float: left;
+      background-image: url("../images/music-play-ico.png");
+      background-position: 0 0;
+      margin-right: 6px;
+      margin-top: 16px; }
+    .music-line li.play-panel a.a1 {
+      background-position: 0 0px; }
+    .music-line li.play-panel a.a2 {
+      background-position: -30px 0px; }
+    .music-line li.play-panel a.a3 {
+      background-position: -60px 0px; }
+    .music-line li.play-panel a.a4 {
+      background-position: -90px 0px; }
+
+/*# sourceMappingURL=music.css.map */

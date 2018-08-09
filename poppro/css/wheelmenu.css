@@ -1,0 +1,47 @@
+/* Required Stylesheets */
+.wheel-button {
+    position: relative;
+}
+
+.wheel {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 120px; /* this will determine the diameter of the circle  */
+    height: 120px; /* this will determine the diameter of the circle  */
+    visibility: hidden;
+    position: relative;
+    display: none;
+}
+
+.wheel li {
+    overflow: hidden;
+    float:left;
+}
+
+.wheel li a {
+    display: block;
+}
+
+
+
+.wheel-button:hover{
+    color: white;
+}
+
+
+.wheel-button {
+    background: url('../images/tip-menu-main.png');width: 57px; height: 75px;
+    position: fixed;
+    top: 40%;
+    right:50px;
+    z-index: 999;
+
+}
+
+
+.item-1,.item-2,.item-3,.item-4{width:36px; height: 36px;display: inline-block;}
+.item-1{background: url('../images/tip-menu-1.png')}
+.item-2{background: url('../images/tip-menu-2.png')}
+.item-3{background: url('../images/tip-menu-3.png')}
+.item-4{background: url('../images/tip-menu-4.png')}

@@ -1,0 +1,285 @@
+.hd-l{width: 910px;float: left; margin-bottom: 40px;
+
+
+.toptab{font-weight: normal;border-bottom: 1px solid #d9d9d9;
+  a{width: 88px; height:40px;line-height:40px;color: #333; text-align: center; display: inline-block; border-bottom: 2px solid #f5f5f9; text-decoration: none}
+  a.on{border-bottom: 2px solid #18b2d8}
+  a.add-link{float: right; color: #18b2d8; background: url('../images/new-ico-1.png') no-repeat left center; padding-left:22px; width: auto;margin-right: 20px;}
+}
+
+  .hulist{background: #fff;
+    li{ padding: 24px 60px 24px 90px;line-height: 150%;position: relative; border-bottom: 1px solid #d9d9d9;
+      h4{font-size: 18px; color: #333333; font-weight:normal;margin-bottom: 5px;
+        span{float: left;}
+        a.showimg-ico{background: url('../images/hudong-list-imgico.png'); width: 21px; height: 18px; display: inline-block; margin: 1px 0 0 10px; position:relative;
+          img{position:absolute; overflow: hidden; left: 25px;display: none;}
+        }
+        a.showimg-ico:hover{
+          img{display: inline-block;}
+        }
+      }
+      p{color: #999; font-size: 14px;margin-bottom: 5px;}
+      div{font-size: 12px; color: #999999; overflow: hidden;
+        span{margin-right: 90px;float: left}
+        span.txt{float: right; margin-right: 0px;
+          strong{font-weight: normal; color: #333333;}
+        }
+      }
+      .pl{position: absolute;color: #999;font-size: 12px;left: 0px;top:24px;width: 80px;text-align: right;
+        i{font-style: normal;color: #18b2d8;font-size: 18px;display: block;}
+      }
+    }
+    li.hot{
+      h4{color: #ff4c4c}
+    }
+    li.great{
+      h4{color: #18b2d8}
+    }
+  }
+
+  .pagination{padding: 3px 0px; background: #fff;
+    a{background:none}
+    a.on{background:#18b2d8}
+  }
+
+  .submit-txt-box{background: #fff;padding: 0 50px;
+    h3{font-size: 12px; color: #333;background: url('../images/new-ico-4.png') no-repeat 20px center;font-weight: normal;padding: 10px 0 10px 35px;}
+    .btnbox{padding: 20px 0;
+      a{width: 64px;height: 24px; display: inline-block; background: #18b2d8; text-align: center; line-height: 24px; text-decoration: none; color: #fff;border-radius: 3px; -webkit-border-radius: 3px;-moz-border-radius:3px; margin-right: 40px;font-size: 12px; }
+    }
+    .input-1{width: 100%;height: 30px; line-height: 30px; background: #f5f5f9; border: 1px solid #d9d9d9; color: #999999;text-indent: 20px;margin-bottom: 16px;}
+
+    .pinlunbox{border: 1px solid #d9d9d9; background: #f5f5f9;}
+    .pinlunbox-top{height: 39px;border-bottom: 1px solid #d9d9d9;padding-left: 20px;position: relative;
+      a.face,a.img,div.img{color: #18b2d8;font-size: 12px;padding-left:18px; height: 30px;line-height: 30px;display: inline-block; margin-right: 20px;text-decoration: none; margin-top: 5px;position: relative;float: left}
+
+      a.face{background: url('../images/new-ico-2.png') no-repeat left 8px;}
+      a.img{background: url('../images/new-ico-3.png') no-repeat left 10px;overflow: hidden;
+        input{position: absolute; left: 0; right: 0;height: 30px;width: 42px;opacity: 0;cursor: pointer}
+      }
+      div.img{background: url('../images/new-ico-3.png') no-repeat left 10px;overflow: hidden;}
+    }
+    .textarea-1{height: 188px;border: 0px;background:#f5f5f9;padding: 20px; display: block;resize: none;width: 768px;}
+  }
+}
+
+.hd-r{width: 340px;float: right;}
+
+.right-title-1{
+  background: url('../images/new-ico-6.png') no-repeat left center;font-size: 16px;color: #333;font-weight: normal; height: 44px; line-height: 44px;text-indent: 28px;
+}
+
+.right-title-2{
+  background: url('../images/new-ico-7.png') no-repeat left center;font-size: 16px;color: #333;font-weight: normal; height: 44px; line-height: 44px;text-indent: 28px;
+}
+
+.right-title-3{
+  background: url('../images/new-ico-5.png') no-repeat left center;font-size: 16px;color: #333;font-weight: normal; height: 44px; line-height: 44px;text-indent: 28px;
+}
+
+.right-list-box{background: #fff;margin-bottom: 30px;
+  .gailan {overflow: hidden;padding-left: 20px;padding-top: 30px; padding-bottom: 10px;
+    li {width: 118px;height: 32px;border: 1px solid #18b2d8;background: #fff;margin-bottom: 20px;margin-right: 20px;float: left; line-height: 32px;padding:0 10px;border-radius:3px;-moz-border-radius:3px;color: #18b2d8;
+      span{float: right}
+    }
+    li.on{background: #18b2d8;color: #fff;border: 1px solid #1090af}
+  }
+
+  .hotlist{padding: 20px 16px 20px 16px;
+    li{font-size: 12px;padding-left: 32px;position: relative;margin-bottom:20px;
+      h4{color: #333333;font-weight: normal; margin-bottom:5px;}
+      p{color: #b2b2b2;
+        span{margin-right: 20px;}
+        .yuedu{float: right;background: url('../images/mian-eye-ico.png') no-repeat left center;padding-left: 20px;}
+        .pinlun{float: right;background: url('../images/mian-pl-ico.png') no-repeat left center;padding-left: 18px;}
+      }
+      strong{position: absolute; left: 0px;top:10px; background: #18b2d8;width: 18px;height: 18px;border-radius:18px; -webkit-border-radius: 18px; text-align: center; color: #fff;line-height: 18px;font-weight: normal;}
+      strong.ranking-1{background: url('../images/ranking-1.png');width: 20px; height: 24px;text-indent: -9999px;border-radius:0px; -webkit-border-radius: 0px;top:7px}
+      strong.ranking-2{background: url('../images/ranking-2.png');width: 20px; height: 24px;text-indent: -9999px;border-radius:0px; -webkit-border-radius: 0px;top:7px}
+      strong.ranking-3{background: url('../images/ranking-3.png');width: 20px; height: 24px;text-indent: -9999px;border-radius:0px; -webkit-border-radius: 0px;top:7px}
+    }
+  }
+
+  .favlist{padding: 20px;padding-bottom: 0px;overflow: hidden;
+    li{font-size: 12px;margin-bottom:20px;padding-left: 22px;background-repeat: no-repeat;background-position:left -2px;position: relative;
+      span.fav{background: url('../images/new-ico-9.png');background-size: 20px 20px;display:inline-block; width: 20px; height: 20px;position: absolute; left: -4px;top:-2px;}
+      h4{color: #333333;font-weight: normal; margin-bottom:5px;}
+      p{color: #b2b2b2;overflow: hidden;
+        span{margin-right: 20px;}
+        .yuedu{float: right;background: url('../images/mian-eye-ico.png') no-repeat left center;padding-left: 20px;}
+        .pinlun{float: right;background: url('../images/mian-pl-ico.png') no-repeat left center;padding-left: 18px;}
+      }
+    }
+  }
+
+}
+.pagination-1{text-align:right;padding-top: 10px;
+  a{width: 16px; height: 16px;display: inline-block; text-decoration: none;margin-right: 5px;color: #999;}
+  a.on{background: #18b2d8;font-size: 12px;text-align: center;color: #fff;}
+}
+
+
+
+.mt0{margin-bottom: 0px;}
+
+/*-----detail-----------------------------------*/
+.hd-r-2{margin-top: -44px}
+.detailbox{background: #fff;
+  h2{font-size:24px;font-weight: normal;padding: 30px 40px 0 40px}
+  p.headerinfo{padding: 15px 40px; color: #808080; font-size: 12px; border-bottom: 1px solid #d9d9d9;
+    span{margin-right: 25px;}
+    .yuedu{background: url('../images/mian-eye-ico.png') no-repeat left center;padding-left: 20px;}
+    .pinlun{background: url('../images/mian-pl-ico.png') no-repeat left center;padding-left: 18px;}
+    .fav{background: url('../images/new-ico-8.png') no-repeat left center;padding-left: 18px;}
+  }
+
+  .pagination-2{padding:15px 0 30px 40px;font-size: 12px;
+    a{width: 32px; height: 32px; display: inline-block; color: #333; text-decoration: none; text-align: center; line-height: 32px;}
+    a.on{background: #18b2d8;color: #fff;}
+    .num{margin-left: 30px;
+      i{font-style: normal; color: #18b2d8;}
+    }
+    input{width:53px;height: 30px;margin: 0 5px;border: 1px solid #d9d9d9}
+    a.btn{width:53px;height: 30px;margin: 0 5px; border: 1px solid #d9d9d9}
+  }
+
+  .pagination-3{text-align:center;padding-top: 10px;padding-right: 40px;
+    a{width: 20px; height:20px;display: inline-block; text-decoration: none;margin-right: 5px;color: #999; line-height: 20px}
+    a.on{background: #18b2d8;font-size: 12px;text-align: center;color: #fff; text-align: center}
+  }
+
+
+  .pagination{border-top: 1px solid #d9d9d9;position: relative;margin-top: -1px;}
+
+
+
+
+  .pinlun-submint{padding-top: 10px; overflow: hidden; padding-left: 144px; position: relative;
+    .subheaderimg{width: 64px;height: 64px;float: left;margin-right: 40px;margin-left: 40px;position: absolute;left: 0px;
+      img{width: 64px;height: 64px;}
+    }
+
+    h4.title{font-size: 18px;color: #999;font-weight: normal;margin-bottom: 10px;margin-top: 5px;
+      span{font-size: 12px;color: #18b2d8;}
+    }
+    .sub-pinlun-submint-box{width: 726px;border: 1px solid #d9d9d9;float: left;background: #f5f5f9;
+      .headerbox{height: 39px;background: #f5f5f9; border-bottom: 1px solid #d9d9d9;padding-left: 15px;position: relative;
+        a.face,a.img,div.img{color: #18b2d8;font-size: 12px;padding-left:18px; height: 30px;line-height: 30px;display: inline-block; margin-right: 20px;text-decoration: none; margin-top: 5px;position: relative;float: left}
+
+        a.face{background: url('../images/new-ico-2.png') no-repeat left 8px;}
+        a.img{background: url('../images/new-ico-3.png') no-repeat left 10px;overflow: hidden;
+          input{position: absolute; left: 0; right: 0;height: 30px;width: 42px;opacity: 0;cursor: pointer}
+        }
+        div.img{background: url('../images/new-ico-3.png') no-repeat left 10px;overflow: hidden;}
+      }
+      textarea{height: 148px;width: 696px; padding: 15px; background:none;border: 0px;resize: none;color: #999999; font-size: 14px;}
+    }
+    .btnbox{padding: 20px 0 20px 0px;clear: both;
+      a{width: 64px;height: 24px; display: inline-block; background: #18b2d8; text-align: center; line-height: 24px; text-decoration: none; color: #fff;border-radius: 3px; -webkit-border-radius: 3px;-moz-border-radius:3px; margin-right: 40px;font-size: 12px; }
+    }
+  }
+
+}
+
+.hasheaderbox{width:670px;padding-left: 183px;position: relative;
+  .arical{line-height: 180%;font-size: 14px;
+    img{max-width: 680px;}
+  }
+  .fav-ico{ text-align: center;padding: 40px 0;
+    span{background: url('../images/new-ico-9.png') no-repeat center top;display: inline-block;padding-top: 40px;padding-left: 20px; padding-right: 20px;text-align: center; font-size: 12px;color: #808080;cursor: pointer}
+    span.on{background: url('../images/new-ico-9-on.png') no-repeat center top;}
+  }
+  .userinfo{position: absolute;left: 40px;width: 100px;
+    img{margin-bottom: 10px;}
+    span{width: 30px;height: 30px; margin: 0 3px 3px 0;display: inline-block;float: left;
+      img{width: 30px;height: 30px;margin-bottom: 0px;}
+    }
+  }
+  h3.title{font-size: 18px;color: #999;font-weight: normal;margin-bottom: 10px;
+    span{font-size: 12px;color: #18b2d8;}
+  }
+  p.time{color: #999;margin-bottom: 20px;}
+}
+
+.pinlulistbox{
+  h3{font-size: 18px;height: 47px; line-height: 47px;font-weight: normal;border-bottom: 1px solid #d9d9d9;text-indent:40px;
+    span{color: #999;font-size: 14px;margin-left: 16px;}
+  }
+}
+.pinlunlistlist{
+  .pinlunlistlist-box{margin-left: 144px;border-bottom: 1px solid #d9d9d9;padding-top: 30px;position: relative;min-height: 160px;_height:160px;
+    .userinfo{position: absolute;left:-100px;width: 64px;
+      img{margin-bottom: 10px;width: 64px}
+      span{width: 30px;height: 30px; margin: 0 2px 2px 0;display: inline-block;float: left;
+        img{width: 30px;height: 30px;margin-bottom: 0px;}
+      }
+    }
+
+    h4.title{font-size: 18px;color: #999;font-weight: normal;margin-bottom: 10px;
+      span{font-size: 12px;color: #18b2d8;}
+    }
+    .txt{color: #333; font-size: 14px;line-height: 25px;}
+
+    .time{color: #999999;padding-top: 10px;
+      span{margin-right: 20px;}
+      span.pinlun{background: url('../images/mian-pl-ico.png') no-repeat left center;padding-left: 18px;}
+    }
+
+    .sub-pinlun-submint{padding-top: 10px; overflow: hidden; padding-left: 58px; position: relative;
+      .subheaderimg{width: 48px;height: 48px;float: left;margin-right: 10px; position: absolute; left: 0px;
+        img{width: 48px;height: 48px;}
+      }
+      .logintip{width:590px;}
+      .sub-pinlun-submint-box{width: 610px;border: 1px solid #d9d9d9;float: left;background: #f5f5f9;
+        .headerbox{height: 39px;background: #f5f5f9; border-bottom: 1px solid #d9d9d9;padding-left: 15px;position: relative;
+          a.face{color: #18b2d8;font-size: 12px;padding-left:18px; height: 30px;line-height: 30px;display: inline-block; margin-right: 20px;text-decoration: none; margin-top: 5px;background: url('../images/new-ico-2.png') no-repeat left 8px;}
+        }
+        textarea{height: 148px;width: 580px; padding: 15px; background:none;border: 0px;resize: none;color: #999999; font-size: 14px;}
+      }
+      .btnbox{padding: 20px 0 20px 0px;clear: both;
+        a{width: 64px;height: 24px; display: inline-block; background: #18b2d8; text-align: center; line-height: 24px; text-decoration: none; color: #fff;border-radius: 3px; -webkit-border-radius: 3px;-moz-border-radius:3px; margin-right: 40px;font-size: 12px; }
+      }
+    }
+
+    ul{padding-top: 30px;
+      li{padding-left: 58px;position: relative;margin-bottom: 20px;font-size: 12px;color:#333;line-height: 22px;
+        .headerimg{position: absolute;left: 0px;top:0px;
+          img{width: 48px;height: 48px; display: inline-block;}
+        }
+        span.name{color: #999;}
+        .time{color: #808080;
+          span.pinlun{background: url('../images/mian-pl-ico.png') no-repeat left center;padding-left: 18px; margin-left: 30px;}
+        }
+
+        .sub-pinlun-submint{padding-top: 10px; overflow: hidden;
+          .subheaderimg{width: 48px;height: 48px;float: left;margin-right: 10px;
+            img{width: 48px;height: 48px;}
+          }
+          .sub-pinlun-submint-box{width: 610px;border: 1px solid #d9d9d9;float: left;background: #f5f5f9;
+            .headerbox{height: 39px;background: #f5f5f9; border-bottom: 1px solid #d9d9d9;padding-left: 15px;
+              a.face{color: #18b2d8;font-size: 12px;padding-left:18px; height: 30px;line-height: 30px;display: inline-block; margin-right: 20px;text-decoration: none; margin-top: 5px;background: url('../images/new-ico-2.png') no-repeat left 8px;}
+            }
+            textarea{height: 148px;width: 580px; padding: 15px; background:none;border: 0px;resize: none;color: #999999; font-size: 14px;}
+          }
+          .btnbox{padding: 20px 0 20px 00px;clear: both;
+            a{width: 64px;height: 24px; display: inline-block; background: #18b2d8; text-align: center; line-height: 24px; text-decoration: none; color: #fff;border-radius: 3px; -webkit-border-radius: 3px;-moz-border-radius:3px; margin-right: 40px;font-size: 12px; }
+          }
+        }
+      }
+    }
+
+
+
+
+  }
+}
+
+.logintip{ background: #fdf9e3; height: 30px; line-height: 30px;width: 706px;padding: 0 10px; border: 1px solid #fef1db;margin-bottom: 20px; color: #999;font-size: 12px;
+  a{color: #2aabd2; text-decoration: none}
+}
+
+.bqbox{position: absolute; background: #fff; border: 1px solid #ccc;width: 250px;padding: 10px;top:-44px;display: none;
+  li{float: left;width: 30px;height: 30px;text-align: center;vertical-align: middle;}
+  a.close{position: absolute; top:5px; right: 5px;font-family: Arial;font-size: 12px;color:#666; text-decoration: none}
+}
+
