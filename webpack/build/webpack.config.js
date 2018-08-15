@@ -4,6 +4,7 @@ const fs = require('fs-extra');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
+const webpackConfig = require('../config');
 
 const entry = {};
 let walkFun = '';
@@ -26,7 +27,7 @@ let walkFun = '';
                 page_name = index === (dir_arr.length - 1) ? page_name : (page_name ? page_name + '/' + item : item);
             });
             entry[page_name] = full_path;
-        } else if (['js','css','img','scss'].indexOf(last_dir) === -1 && stat.isDirectory()) {
+        } else if (['js','css','img','scss', 'images', 'image'].indexOf(last_dir) === -1 && stat.isDirectory()) {
             let sub_dir = path.join(dir, file);
             walkFun(sub_dir);
         }
@@ -37,18 +38,55 @@ const config = {
     entry: entry,
     output: {
         filename: 'static/js/[name].js',
-        path: path.join(__dirname, '../dist')
+        path: path.join(__dirname, '..' + webpackConfig.outputPath)
     },
     module: {
         rules: [
-            // {
-            //     test: /\.html$/,
-            //     loader: 'html-withimg-loader'
-            // },
+            {
+                test: /\.html$/,
+                loader: 'html-loader',
+                exclude: /node_modules/,
+                options: {
+                    // 除了img的src,还可以继续配置处理更多html引入的资源
+                    attrs: ['img:src', 'img:data-src', 'audio:src']
+                }
+            },
+            {
+                test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+                loader: 'url-loader',
+                exclude: /node_modules/,
+                options: {
+                    publicPath: webpackConfig.publicPath,
+                    name: 'media/[name].[ext]'
+                }
+            },
+            // 处理字体文件
+            {
+                test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+                loader: 'url-loader',
+                exclude: /node_modules/,
+                options: {
+                    publicPath: webpackConfig.publicPath,
+                    name: 'static/font/[name].[ext]'
+                }
+            },
             {
                 test: /\.js(\?[^?]+)?$/,
                 loaders: ['babel-loader'],
                 exclude: /node_modules/
+            },
+            {
+                test: /\.(png|jpeg|jpg|gif|svg)$/,
+                exclude: /node_modules/,
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: '1024',
+                        // outputPath: 'static/',
+                        publicPath: webpackConfig.publicPath,
+                        name: 'static/images/[name].[ext]'
+                    }
+                }],
             },
             //处理css文件
             {
@@ -60,19 +98,8 @@ const config = {
                 }),
             },
             {
-                test: /\.(png|jpeg|jpg|gif|svg)$/,
-                exclude: /node_modules/,
-                use: [{
-                    loader: 'url-loader',
-                    options: {
-                        limit: '1024',
-                        // publicPath: '/dist/',
-                        name: '../images/[name].[ext]'
-                    }
-                }],
-            },
-            {
                 test: /.scss$/,
+                exclude: /node_modules/,
                 use: ExtractTextPlugin.extract({
                     use: [{
                         loader: "css-loader"
@@ -82,7 +109,11 @@ const config = {
                     // 在开发环境使用 style-loader
                     fallback: "style-loader"
                 })
-            }
+            },
+            // {
+            //     test: /\.(htm|html)$/i,
+            //     use:[ 'html-withimg-loader']
+            // },
         ]
     },
     plugins: [
