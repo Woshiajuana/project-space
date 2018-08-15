@@ -36,7 +36,7 @@ let walkFun = '';
 const config = {
     entry: entry,
     output: {
-        filename: 'js/[name].js',
+        filename: 'static/js/[name].js',
         path: path.join(__dirname, '../dist')
     },
     module: {
@@ -66,8 +66,8 @@ const config = {
                     loader: 'url-loader',
                     options: {
                         limit: '1024',
-                        publicPath: '/dist/',
-                        name: 'static/images/[name].[hash:7].[ext]'
+                        // publicPath: '/dist/',
+                        name: '../images/[name].[ext]'
                     }
                 }],
             },
