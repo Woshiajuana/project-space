@@ -3,5 +3,10 @@
  */
 module.exports = {
     publicPath: '/dist',
-    outputPath: '/dist'
+    outputPath: '/dist',
+    copyArr: [
+        { from: '../src/assets/lib', to: '../dist/static/lib' },
+        { from: '../src/assets/media', to: '../dist/static/media' },
+    ]
+
 };

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="POPPRO是由Crypton Future Media公司官方独家授权的初音未来官方中文投稿网站。" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>POPPRO | 首页</title>
+    <!--<link rel="shortcut icon" href="../images/favicon.ico"/>-->
+</head>
+<body>
+    <!--头部-->
+    <div class="header-wrap">
+        <div class="session">
+            <div class="logo" alt="logo"></div>
+            <div class="user-info">
+                <div class="user-head">
+                    <img src="http://www.owulia.com/static/temp/1.jpg" alt="头像">
+                </div>
+                <span class="user-name">woshiajauan</span>
+                <span class="user-text">[退出]</span>
+            </div>
+            <div class="user-info">
+                <span class="user-text">[登录]</span> | <span class="user-text">[注册]</span>
+            </div>
+        </div>
+    </div>
+    <!--/头部-->
+    <!--主体-->
+    <div class="body-wrap">
+        <div class="session">
+            <div class="left" id="music-wrap">
+                <ul class="list-wrap">
+                    <li class="list-item-title">
+                        <div class="list-item-part check">
+                            <div class="check-all-box" id="check-all">
+                                <div class="check-inner"></div>
+                            </div>
+                            <span class="check-box-prompt">全选</span>
+                        </div>
+                        <div class="list-item-part title-name">
+                            <span id="list-delete">删除</span>
+                        </div>
+                        <div class="list-item-part author">作者</div>
+                        <div class="list-item-part time">时长</div>
+                    </li>
+                </ul>
+                <ul class="list-wrap music-list" id="music-list"></ul>
+            </div>
+            <div class="right">
+                <div class="music-pic"><img class="music-pic-image" id="music-pic-image" src="" alt=""></div>
+                <h3 class="music-title" id="music-title"></h3>
+                <div class="music-words-wrap">
+                    <div class="music-words-inner" id="lrc_list">
+                        <!--<ul class="music-words-con" id="lrc_list"></ul>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/主体-->
+    <!--尾部-->
+    <div class="footer-wrap">
+        <div class="session footer-inner" id="player-warp">
+            <div class="player" id="player"></div>
+            <div class="play-ctr-wrap play-item">
+                <i class="play-ctr-item play-icon up"></i>
+                <i id="play-ctr" class="play-ctr-item play-icon play"></i>
+                <i class="play-ctr-item play-icon down"></i>
+            </div>
+            <div class="play-bar-wrap play-item">
+                <div class="play-prompt">
+                    <span class="play-music-title"></span>
+                    <span class="play-music-time">——/——</span>
+                </div>
+                <div class="play-bar-inner">
+                    <div class="play-bar">
+                        <div class="play-bar-con"></div>
+                        <div class="play-bar-ctr"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="play-mode-wrap play-mode-0 play-item play-icon" id="play-mode"></div>
+            <div class="play-volume-wrap play-item">
+                <i class="play-volume-icon play-icon"></i>
+                <div class="play-volume-inner">
+                    <div class="play-bar">
+                        <div class="play-volume-con"></div>
+                        <div class="play-volume-ctr"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/尾部-->
+    <script src="./static/lib/jquery.js"></script>
+    <script src="./static/lib/jquery.jplayer.js"></script>
+    <script src="./static/lib/jquery.mousewheel.js"></script>
+    <script src="./static/lib/jquery.jscrollpane.min.js"></script>
+</body>
+</html>

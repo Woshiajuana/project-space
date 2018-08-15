@@ -1,0 +1,354 @@
+@import "../../assets/scss/_reset";
+@import "../../assets/scss/_define";
+@import "../../assets/scss/jquery.jscrollpane";
+%bcgicon{
+    background: url(../../assets/images/player-icon.png) no-repeat;
+}
+body{
+    background: url(../../assets/images/music-player-bg.jpg) no-repeat center top;
+    background-attachment: fixed;
+    min-width: 1280px;
+}
+.header-wrap{
+    height: 78px;
+}
+.session{
+    @extend %clearfix;
+    width: 1280px;
+    margin: 0 auto;
+}
+.logo{
+    @extend %fl;
+    width: 160px;
+    height: 78px;
+    background: url(../../assets/images/player-logo.png) no-repeat;
+}
+.user-info{
+    @extend %clearfix;
+    @extend %fr;
+    @extend %cfff;
+    padding-top: 13px;
+    height: 34px;
+    span{
+        @extend %cfff;
+        line-height: 34px;
+    }
+}
+.user-head{
+    @extend %fl;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    img{
+        @extend %db;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+}
+//.user-prompt{
+//    margin-top: 10px;
+//}
+.user-name{
+    margin: 0 10px 0 10px;
+}
+.user-text{
+    @extend %cp;
+}
+.body-wrap{
+    @extend %clearfix;
+    padding-bottom: 120px;
+}
+.left{
+    @extend %fl;
+    width: 810px;
+}
+.list-wrap{
+    @extend %w100;
+}
+.list-item-title,
+.list-item{
+    @extend %clearfix;
+    &.active{
+        .list-item-part{
+            color: #fff;
+        }
+        .icon{
+            @extend %dib;
+            background: url(../../assets/images/wave.gif) no-repeat;
+            width: 10px;
+            height: 10px;
+        }
+        .index{
+            @extend %dn;
+        }
+    }
+    .icon{
+        @extend %dn;
+    }
+    .index{
+        @extend %dib;
+    }
+}
+.music-list{
+    .list-item{
+        &:nth-child(odd){
+            background-color: rgba(0,0,0,.05);
+        }
+    }
+}
+.list-item-part{
+    @extend %fl;
+    @extend %cfff;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    &.check{
+        padding-left: 14px;
+        width: 60px;
+    }
+    &.title-name{
+        width: 436px;
+        span{
+            @extend %cp;
+            @extend %dn;
+            color: #fff;
+        }
+    }
+    &.name{
+        @extend %cp;
+        width: 436px;
+    }
+    &.author{
+        width: 232px;
+    }
+    &.time{
+
+    }
+}
+.check-all-box,
+.check-box{
+    @extend %cp;
+    @extend %fl;
+    margin-top: 17px;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    &.active{
+        .check-inner{
+            @extend %db;
+        }
+    }
+}
+.check-inner{
+    @extend %dn;
+    border-radius: 2px;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 2px 0 0 2px;
+}
+.check-box-prompt{
+    margin-left: 8px;
+}
+.right{
+    margin-left: 860px;
+}
+.music-pic{
+    width: 320px;
+    height: 320px;
+    background-color: #fff;
+    padding: 10px;
+}
+.music-pic-image{
+    @extend %dn;
+    width: 320px;
+    height: 320px;
+}
+.music-title,
+.music-words-wrap{
+    @extend %tac;
+    @extend %cfff;
+    width: 340px;
+    p{
+        @extend %cfff;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+}
+.music-title{
+    @extend %fwn;
+    font-size: 16px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.music-words-wrap{
+    height: 320px;
+}
+.music-words-inner{
+    @extend %w100;
+    @extend %h100;
+    @extend %oh;
+    @extend %pr;
+}
+.music-words-con{
+    @extend %pa;
+    @extend %h100;
+    @extend %t0;
+    @extend %l0;
+    @extend %b0;
+    right: -20px;
+    overflow-y: auto;
+    li.hover{
+        //color: red;
+    }
+}
+.footer-wrap{
+    @extend %pf;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background-color: rgba(0,0,0,.4);
+}
+.footer-inner{
+    @extend %clearfix;
+    padding-top: 30px;
+    height: 50px;
+}
+.play-item{
+    @extend %fl;
+}
+.play-ctr-wrap{
+    @extend %clearfix;
+    padding-left: 42px;
+    padding-right: 42px;
+}
+.play-ctr-item{
+    @extend %fl;
+    margin-right: 42px;
+    &.up{
+        @extend %bcgicon;
+        background-position: 0 0;
+    }
+    &.play{
+        background: url(../../assets/images/player-pause-icon.png) no-repeat;
+    }
+    &.pause{
+        @extend %bcgicon;
+        background-position: -20px 0;
+    }
+    &.down{
+        @extend %bcgicon;
+        background-position: -40px 0;
+    }
+}
+.play-bar-wrap{
+    height: 20px;
+    width: 640px;
+}
+.play-prompt{
+    height: 16px;
+    line-height: 14px;
+    padding-left: 8px;
+    padding-right: 8px;
+    span{
+        font-size: 12px;
+        color: #999;
+    }
+}
+.play-music-title{
+    @extend %fl;
+}
+.play-music-time{
+    @extend %fr;
+}
+.play-bar-inner{
+    @extend %cp;
+    @extend %w100;
+    @extend %pr;
+    padding: 2px 0;
+    height: 2px;
+}
+.play-bar{
+    height: 2px;
+    background-color: #fff;
+}
+.play-volume-con,
+.play-bar-con{
+    @extend %h100;
+    width: 0;
+    background-color: #3290A4;
+    transition: all 0.3s;
+}
+.play-volume-ctr,
+.play-bar-ctr{
+    @extend %cp;
+    @extend %pa;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #13B9E5;
+    top: 50%;
+    margin-top: -4px;
+    left: 0;
+    transition: all 0.3s;
+}
+.play-icon{
+    @extend %cp;
+    width: 20px;
+    height: 20px;
+}
+.play-mode-wrap{
+    margin-left: 40px;
+    margin-right: 27px;
+    &.play-mode-0{
+        background: url(../../assets/images/mode-0.png) no-repeat;
+        background-size: 100%;
+    }
+    &.play-mode-1{
+        background: url(../../assets/images/mode-1.png) no-repeat;
+        background-size: 100%;
+    }
+    &.play-mode-2{
+        background: url(../../assets/images/mode-2.png) no-repeat;
+        background-size: 100%;
+    }
+}
+.play-volume-wrap{
+    height: 20px;
+}
+.play-volume-icon{
+    @extend %fl;
+    @extend %bcgicon;
+    margin-right: 10px;
+    width: 24px;
+    background-position: -84px 0;
+}
+.play-volume-inner{
+    @extend %cp;
+    @extend %fl;
+    @extend %pr;
+    width: 120px;
+    padding: 2px 0;
+    height: 2px;
+    margin-top: 7px;
+}
+.player{
+    @extend %pa;
+    width: 0;
+    height: 0;
+}
+.jspDrag{
+    background-color: #fff;
+}
+.jspVerticalBar,
+.jspTrack{
+    background-color: transparent;
+}
+.jspScrollable{
+    outline: none;
+}

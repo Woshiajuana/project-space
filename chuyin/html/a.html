@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>APlayer Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+<body>
+<a href="javascript:;" onclick="isopen()">点击判断是否打开过播放页面</a>
+<ul id="musiclist">
+    <li data-name="我的未来式1" data-artist="群星1" data-url="880211.mp3" data-cover="../images/music-player-img.jpg" data-lrc="1.lrc">Line-1</li>
+    <li data-name="我的未来式2" data-artist="群星2" data-url="880211.mp3" data-cover="../images/music-player-img.jpg" data-lrc="1.lrc">Line-2</li>
+    <li data-name="我的未来式3" data-artist="群星3" data-url="880211.mp3" data-cover="../images/music-player-img.jpg" data-lrc="1.lrc">Line-3</li>
+    <li data-name="我的未来式4" data-artist="群星4" data-url="880211.mp3" data-cover="../images/music-player-img.jpg" data-lrc="1.lrc">Line-4</li>
+</ul>
+</body>
+<script src="../js/jquery-1.7.1.min.js"></script>
+<script>
+    
+
+    
+    function isopen() {
+        if(!localStorage.getItem('isopen')) {
+            populateStorage();
+        } else {
+            setStyles();
+        }
+    }
+
+
+    function populateStorage() {
+
+        localStorage.setItem("isopen",'0');
+        window.open('music_player.html')
+    }
+
+    function setStyles() {
+        //alert('有')
+        //alert(localStorage.getItem('isopen'))
+        localStorage.setItem('playlist',"test1231232131123213213")
+    }
+
+
+    $(function () {
+        var _locallist = [];
+
+        $("#musiclist li").click(function () {
+            var myObject={};
+            myObject.name=$(this).attr("data-name");
+            myObject.artist=$(this).attr("data-artist");
+            myObject.url=$(this).attr("data-url");
+            myObject.cover=$(this).attr("data-cover");
+            myObject.lrc=$(this).attr("data-lrc");
+
+
+            if(!localStorage.getItem('isopen')) {
+                localStorage.setItem("isopen",'0');
+                _locallist = [];
+                _locallist.push(myObject);
+                localStorage.setItem('playlist',JSON.stringify(_locallist));
+                window.open('music_player.html');
+            } else {
+
+                _locallist_des = JSON.parse(localStorage.getItem('playlist'));
+                _locallist = [];
+                _locallist.push(myObject);
+                for(var i=0;i<_locallist_des.length;i++){
+                    _locallist.push(_locallist_des[i]);
+                }
+                localStorage.setItem('playlist',JSON.stringify(_locallist));
+            }
+        });
+    })
+</script>
+</html>

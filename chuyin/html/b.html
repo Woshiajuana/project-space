@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>APlayer Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+</head>
+<body>
+<ul>
+    <li><label>my‐key</label><span class="my‐key"></span></li>
+    <li><label>my‐old</label><span class="my‐old"></span></li>
+    <li><label>my‐new</label><span class="my‐new"></span></li>
+    <li><label>my‐url</label><span class="my‐url"></span></li>
+    <li><label>my‐storage</label><span class="my‐storage"></span></li>
+</ul>
+</body>
+<script>
+    window.addEventListener('storage', function(e) {
+        //alert('变了')
+        if(e.key == "playlist"){
+            alert('变了这个')
+        }else{
+            alert('变了其他')
+        }
+        document.querySelector('.my‐key').textContent = e.key;
+        document.querySelector('.my‐old').textContent = e.oldValue;
+        document.querySelector('.my‐new').textContent = e.newValue;
+        document.querySelector('.my‐url').textContent = e.url;
+        document.querySelector('.my‐storage').textContent = e.storageArea;
+    });
+
+    window.onbeforeunload=function(){
+        localStorage.removeItem('isopen');
+    };
+</script>
+</html>
