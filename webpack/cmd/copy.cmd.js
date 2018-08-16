@@ -9,23 +9,17 @@ const { copyArr } = config;
 class Copy {
     start (src, dst) {
         fs.exists(dst, (exists) => {
-            console.log(exists)
-            if (exists) {//不存在
-                console.log(1)
-                // this.copy(src, dst);
+            if (exists) {
+                this.copy(src, dst);
             } else {//存在
-                console.log(2)
-                console.log(dst)
-                this.mkdirsSync(dst);
-                // fs.mkdir('dist/lib', () => {//创建目录
-                //     this.copy(src, dst)
-                // })
+                this.mkDirsSync(dst);
+                this.copy(src, dst)
             }
         });
         return this;
     }
 
-    mkdirsSync (dirpath, mode) {
+    mkDirsSync (dirpath, mode) {
         try
         {
             if (!fs.existsSync(dirpath)) {
@@ -33,8 +27,7 @@ class Copy {
                 dirpath.split(/[/\\]/).forEach(function (dirname) {  //这里指用/ 或\ 都可以分隔目录  如  linux的/usr/local/services   和windows的 d:\temp\aaaa
                     if (pathtmp) {
                         pathtmp = Path.join(pathtmp, dirname);
-                    }
-                    else {
+                    } else {
                         pathtmp = dirname;
                     }
                     if (!fs.existsSync(pathtmp)) {
