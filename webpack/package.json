@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev1": "webpack-dev-server --hot --inline  --watch --config ./build/webpack.config.js",
     "dev": "node cmd -c&&webpack --watch --config ./build/webpack.config.js",
+    "build": "node cmd -c&&webpack --watch --config ./build/webpack.config.js",
     "serve": "serve -p 42580"
   },
   "repository": {
@@ -40,6 +42,7 @@
     "style-loader": "^0.20.1",
     "url-loader": "^1.0.1",
     "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1",
     "wow-cool": "0.0.3"
   },
   "browserslist": [

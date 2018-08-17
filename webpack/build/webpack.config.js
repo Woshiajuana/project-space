@@ -122,6 +122,14 @@ const config = {
     node: {
         fs: 'empty'
     },
+    // 起本地服务，我起的dist目录
+    devServer: {
+        contentBase: "./dist/",
+        historyApiFallback: true,
+        inline: true,
+        hot: true,
+        host: '20.0.18.93',//我的局域网ip
+    }
 };
 
 for (let key in entry) {
