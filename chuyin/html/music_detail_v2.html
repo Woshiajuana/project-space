@@ -23,6 +23,11 @@
         position: absolute; top: -40px; left: -40px;}
         .banner-add-icon{background: url("../images/music-details-add-icon.png") no-repeat; width: 16px; height: 16px;
         position: absolute; bottom: 16px; right: 16px; background-size: 100%;}
+        .banner-mask{ position: absolute; width: 120px; height: 120px; border-radius: 50%;
+        top:50%;left: 50%;margin-left: -60px;margin-top: -60px;border: 5px solid rgba(0,0,0,.6); text-align: center; line-height: 120px;}
+        .banner-mask-bg{position: absolute; width: 114px; height: 114px; border-radius: 50%; background-color: rgba(0,0,0,.6);
+        top:50%;left: 50%;margin-left: -57px;margin-top: -57px;}
+        .banner-mask span {font-size: 14px; color: #fff; position: relative;}
     </style>
 </head>
 <body class="mainbody">
@@ -75,6 +80,10 @@
                         <img class="" src="../images/bannermusic-1.jpg">
                         <div class="banner-add">
                             <i class="banner-add-icon"></i>
+                        </div>
+                        <div class="banner-mask">
+                            <div class="banner-mask-bg"></div>
+                            <span>封面审核中</span>
                         </div>
                     </div>
                 </div>
