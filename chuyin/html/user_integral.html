@@ -8,6 +8,28 @@
     <link type="text/css" href="../css/b_v2.css" rel="stylesheet" />
     <link type="text/css" href="../css/user_v2.css" rel="stylesheet" />
     <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <style type="text/css">
+        .pop-wrap{ z-index: 9999;position: fixed; background-color: rgba(0,0,0,0.5); top: 0; left: 0; right: 0; bottom: 0;}
+        .pop-inner{position: absolute; width: 960px; height: 540px; top: 50%; left: 50%; margin-left: -480px; margin-top: -270px;
+        background-color: #fff;}
+        .pop-header{ padding-left: 20px;height: 40px; position: relative; background-color: #18b2d8;}
+        .pop-header h3 {color: #fff;font-size: 14px;text-align: center; line-height: 40px;}
+        .pop-close{position: absolute; width: 40px; height: 40px; right: 0;top: 50%; margin-top: -20px;cursor: pointer;
+        background: url("../images/pop-close-icon.png") no-repeat center;}
+        .pop-tab{height: 30px;margin-top: 30px;text-align: center;}
+        .pop-tab-item{display: inline-block;width: 140px;height: 100%; border-bottom: 2px solid #fff; cursor: pointer;}
+        .pop-tab-item.active{border-bottom: 2px solid #18b2d8}
+        .pop-tab-item span{color: #333; font-size: 14px;}
+        .pop-con-head{width: 920px; height: 24px;border-bottom: 1px solid #fff; background-color: #18b2d8; margin: 20px auto 0;}
+        .pop-con-list li span,
+        .pop-con-head span{float: left; width: 50%;height: 100%;box-sizing: border-box;text-align: center;}
+        .pop-con-list li span:first-child,
+        .pop-con-head span:first-child{border-right: 1px solid #fff}
+        .pop-con{width: 920px; margin: 0 auto; height: 360px; overflow-y: auto;}
+        .pop-con-list{width: 100%; font-size: 14px; color: #666;}
+        .pop-con-list li {height: 24px;background-color: #edf9fc}
+        .pop-con-list li:nth-child(odd) {background-color: #d1f0f7;}
+    </style>
 </head>
 <body class="mainbody">
 <div class="headerbody">
@@ -169,7 +191,7 @@
         </div>
     </div>
 </div>
-<div class="UED_hide" id="tip-warn-1">
+<div class="UED_hide" id="tip-warn-1" style="display: none">
     <div class="tipbox-new">
         <h2>徽章展示管理</h2>
         <div class="tipbox-new-body">
@@ -284,18 +306,60 @@
     </div>
     <a class="tip-close" href="javascript:;"></a>
 </div>
+
+
+<div class="pop-wrap">
+    <div class="pop-inner">
+        <div class="pop-header">
+            <h3>标题</h3>
+            <i class="pop-close"></i>
+        </div>
+        <div class="pop-tab">
+            <div class="pop-tab-item active"><span>积分获取规则</span></div>
+            <div class="pop-tab-item"><span>积分等级规则</span></div>
+            <div class="pop-tab-item"><span>积分兑换规则</span></div>
+        </div>
+        <div class="pop-con-head"></div>
+        <div class="pop-con">
+            <ul class="pop-con-list">
+                <li><span>1</span><span>2</span></li>
+                <li><span>1</span><span>2</span></li>
+                <li><span>1</span><span>2</span></li>
+                <li><span>1</span><span>2</span></li>
+                <li><span>1</span><span>2</span></li>
+                <li><span>1</span><span>2</span></li>
+                <li><span>1</span><span>2</span></li>
+                <li><span>1</span><span>2</span></li>
+                <li><span>1</span><span>2</span></li>
+                <li><span>1</span><span>2</span></li>
+                <li><span>1</span><span>2</span></li>
+                <li><span>1</span><span>2</span></li>
+                <li><span>1</span><span>2</span></li>
+                <li><span>1</span><span>2</span></li>
+                <li><span>1</span><span>2</span></li>
+                <li><span>1</span><span>2</span></li>
+                <li><span>1</span><span>2</span></li>
+                <li><span>1</span><span>2</span></li>
+                <li><span>1</span><span>2</span></li>
+                <li><span>1</span><span>2</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
 <script src="../js/jquery-1.7.1.min.js"></script>
 <script src="../js/jq.layer.js"></script>
 <script>
-    $(function () {
-        $('.exchange-tab li').click(function () {
-            $('.exchange-tab li').removeClass("on");
-            $(this).addClass("on");
-        });
-
-        $.LAYER.show({id:'tip-warn-1'});
-
-    })
+//    $(function () {
+//        $('.exchange-tab li').click(function () {
+//            $('.exchange-tab li').removeClass("on");
+//            $(this).addClass("on");
+//        });
+//
+//        $.LAYER.show({id:'tip-warn-1'});
+//
+//    })
 </script>
 </body>
 </html>
