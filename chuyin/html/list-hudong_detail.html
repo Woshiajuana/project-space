@@ -25,7 +25,26 @@
         .reply-like{background: url("../images/reply-like-icon.png") no-repeat; padding-left: 20px; cursor: pointer}
         .reply-like.active{background: url("../images/reply-like-active-icon.png") no-repeat;}
         .pinlun-submint{overflow: visible;}
-        .bqbox{bottom: 30px; top: auto}
+
+        .bqbox{width: 310px;}
+        .bqbox{bottom: 30px; top: auto; padding-bottom: 50px;}
+        .bqbox-inner{width: 300px;position: relative; height: 180px; overflow: hidden;}
+        .bqbox-inner-con{ position: absolute;top: 0;left: 0;right: -20px;bottom: 0; overflow-y: auto;}
+        .bqbox-inner-con >ul {padding: 0 !important;}
+        .bqbox-inner-con >ul >li{padding: 0!important; margin: 0 !important;}
+        .bqbox-inner-con li { width: 60px; height: 60px; overflow: hidden;}
+        .bqbox-inner-con li img,
+        .bqbox-inner-con li a {width: 50px; height: 50px; display: block;}
+        .bqbox-inner-con li a {margin: 5px;}
+        .bqbox-inner-con >ul li:hover{background-color: #f2f2f2;}
+        .bqbox-tab{position: absolute;left: 0;height: 40px;bottom: 0;right: 0; background-color: #f2f2f2;}
+        .bqbox-tab-inner{width: 240px;float: left;height: 100%;}
+        .bqbox-tab-con{height: 100%; padding: 0 !important;}
+        .bqbox-tab-item{width: 40px!important; height: 100%!important;float: left; cursor: pointer;
+         padding: 0 !important;}
+        .bqbox-tab-item img{width: 20px; height: 20px; margin: 10px;}
+        .bqbox-tab-item.active{background-color: #fff;}
+        .bqbox-btn{height: 100%;float: right;}
     </style>
 </head>
 <body class="mainbody">
@@ -162,36 +181,62 @@
                     <div class="sub-pinlun-submint">
                         <span class="subheaderimg"><img src="../images/pro-img-7.jpg"></span>
                         <div class="sub-pinlun-submint-box">
-                            <div class="headerbox"><a href="javascript:;" class="face">表情</a>
+                            <div class="headerbox">
+                                <a href="javascript:;" class="face">表情</a>
                                 <div class="bqbox">
-                                    <ul>
-                                        <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
-                                        <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
-                                        <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
-                                        <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
-                                        <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
-                                        <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
-                                        <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
-                                        <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
-                                        <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
-                                        <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
-                                        <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
-                                        <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
-                                        <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
-                                        <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
-                                        <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
-                                        <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
-                                        <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
-                                        <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
-                                        <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
-                                        <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
-                                        <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
-                                        <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
-                                        <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
-                                        <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
-                                    </ul>
+                                    <div class="bqbox-inner">
+                                        <div class="bqbox-inner-con">
+                                            <ul>
+                                                <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
+                                                <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
+                                                <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
+                                                <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
+                                                <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
+                                                <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
+                                                <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
+                                                <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
+                                                <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
+                                                <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
+                                                <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
+                                                <li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>
+                                             </ul>
+                                        </div>
+                                    </div>
                                     <a class="close" href="javascript:;">X</a>
-                                </div></div>
+                                    <div class="bqbox-tab">
+                                        <div class="bqbox-tab-inner">
+                                            <ul class="bqbox-tab-con">
+                                                <li class="bqbox-tab-item active">
+                                                    <img src="../images/new-ico-2.png">
+                                                </li>
+                                                <li class="bqbox-tab-item">
+                                                    <img src="../images/new-ico-2.png">
+                                                </li>
+                                                <li class="bqbox-tab-item">
+                                                    <img src="../images/new-ico-2.png">
+                                                </li>
+                                                <li class="bqbox-tab-item">
+                                                    <img src="../images/new-ico-2.png">
+                                                </li>
+                                                <li class="bqbox-tab-item">
+                                                    <img src="../images/new-ico-2.png">
+                                                </li>
+                                                <li class="bqbox-tab-item">
+                                                    <img src="../images/new-ico-2.png">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="bqbox-btn">
+                                            <div class="bqbox-tab-item">
+                                                <img src="../images/bqbox-pre.png">
+                                            </div>
+                                            <div class="bqbox-tab-item">
+                                                <img src="../images/bqbox-next.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <textarea>请填写帖子内容</textarea>
                         </div>
                         <div class="btnbox">
