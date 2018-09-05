@@ -38,8 +38,8 @@
         .bqbox-inner-con li a {margin: 5px;}
         .bqbox-inner-con >ul li:hover{background-color: #f2f2f2;}
         .bqbox-tab{position: absolute;left: 0;height: 40px;bottom: 0;right: 0; background-color: #f2f2f2;}
-        .bqbox-tab-inner{width: 240px;float: left;height: 100%;}
-        .bqbox-tab-con{height: 100%; padding: 0 !important;}
+        .bqbox-tab-inner{width: 240px;float: left;height: 100%; overflow: hidden;}
+        .bqbox-tab-con{height: 100%; padding: 0 !important;transition: all 0.2s; margin-left: 0;}
         .bqbox-tab-item{width: 40px!important; height: 100%!important;float: left; cursor: pointer;
          padding: 0 !important;}
         .bqbox-tab-item img{width: 20px; height: 20px; margin: 10px;}
@@ -224,13 +224,22 @@
                                                 <li class="bqbox-tab-item">
                                                     <img src="../images/new-ico-2.png">
                                                 </li>
+                                                <li class="bqbox-tab-item">
+                                                    <img src="../images/new-ico-2.png">
+                                                </li>
+                                                <li class="bqbox-tab-item">
+                                                    <img src="../images/new-ico-2.png">
+                                                </li>
+                                                <li class="bqbox-tab-item">
+                                                    <img src="../images/new-ico-2.png">
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="bqbox-btn">
-                                            <div class="bqbox-tab-item">
+                                            <div class="bqbox-tab-item per">
                                                 <img src="../images/bqbox-pre.png">
                                             </div>
-                                            <div class="bqbox-tab-item">
+                                            <div class="bqbox-tab-item next">
                                                 <img src="../images/bqbox-next.png">
                                             </div>
                                         </div>
@@ -437,14 +446,75 @@
 
             }
         });
-        $(".face").click(
-                function () {
-                    $(this).parent().parent().find(".bqbox").show();
-                }
-        );
-        $('.bqbox a.close').click(function () {
-            $(this).parent().hide();
-        });
+
+
+
+
+        const BQBoxController = (function () {
+            var timer = false,
+                addEvent = function () {
+                    $(".face").click(
+                        function () {
+                            $(this).parent().parent().find(".bqbox").show();
+                        }
+                    );
+                    $('.bqbox a.close').click(function () {
+                        $(this).parent().hide();
+                    });
+                    $('.bqbox-tab').on('click', '.bqbox-tab-con .bqbox-tab-item', function () {
+                        $(this).siblings().removeClass('active');
+                        $(this).addClass('active');
+                    }).on('click', '.bqbox-btn .per', function () {
+                        if (timer) return;
+                        timer = true;
+                        next($(this).parents('.bqbox-tab').find('.bqbox-tab-con'),-1)
+                    }).on('click', '.bqbox-btn .next', function () {
+                        if (timer) return;
+                        timer = true;
+                        next($(this).parents('.bqbox-tab').find('.bqbox-tab-con'),1)
+                    })
+                },
+                setWidth = function () {
+                    var $el = $('.bqbox-tab-con'),
+                        num = $el.children().length || 0;
+                    $el.css('width', 40 * num + 'px');
+                    if (6 >= num) {
+                        $('.bqbox-btn').hide();
+                    } else {
+                        $('.bqbox-btn').show();
+                    }
+                },
+                next = function ($el, type) {
+                    var num = $el.children().length || 0,
+                        ml = $el.css('margin-left'),
+                        ml = ml ? +ml.replace('px', '') : 0,
+                        max = 40 * (num - 6);
+                    if(type === 1) {
+                        if (Math.abs(ml) >= max) {
+                            ml = 0;
+                        } else {
+                            ml = ml - 40;
+                        }
+                    } else {
+                        if (Math.abs(ml) > max) {
+                            ml = 0;
+                        } else if (0 === ml) {
+                            ml = -max;
+                        }  else {
+                            ml = ml + 40;
+                        }
+                    }
+                    $el.css('margin-left', ml + 'px');
+                    setTimeout(() => {
+                        timer = false;
+                    }, 300);
+                },
+                init = function () {
+                    addEvent();
+                    setWidth();
+                };
+            init()
+        })()
     })
 </script>
 </body>
