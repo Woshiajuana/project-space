@@ -30,6 +30,11 @@
         .pop-con-list li {height: 24px;background-color: #edf9fc}
         .pop-con-list li:nth-child(odd) {background-color: #d1f0f7;}
         .pop-con-prompt{line-height: 1.5; text-indent: 2em; margin: 5px 0;}
+
+        .clearfix{zoom:1;}
+        .clearfix:after{content:'\20';display:block;height:0;clear:both;}
+        .user-icon-wrap{width: 150px; margin-left: 72px;}
+        .user-icon-wrap img{float: left; width: 35px; height: 35px;margin: 0 2px 2px 0;}
     </style>
 </head>
 <body class="mainbody">
@@ -154,7 +159,21 @@
                 <li><label>坐标</label><span>好像还在火星...</span></li>
                 <li><label>关于我</label><span>赶紧说点儿什么吧折行效果～赶紧说点儿什么吧折行效果～</span></li>
                 <li><label>团队标示</label><span></span></li>
-                <li><label>用户徽章</label><span></span></li>
+                <li>
+                    <label>用户徽章</label>
+                    <div class="user-icon-wrap clearfix">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </div>
+                </li>
             </ul>
         </div>
         <div class="user-rbox">
@@ -309,7 +328,7 @@
 </div>
 
 
-<div class="pop-wrap">
+<div class="pop-wrap" style="display: none">
     <div class="pop-inner">
         <div class="pop-header">
             <h3>标题</h3>
