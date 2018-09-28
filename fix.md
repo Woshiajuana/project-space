@@ -60,8 +60,59 @@
 
 ```
     // 新增样式
-    //需要置灰的按钮添加此样式
+    // 需要置灰的按钮添加此样式
     .button-disabled { cursor: default !important; border: 1px solid #ddd !important; color: #ddd !important;}
+```
+
+# 9.小组列表	列表展示	不知道哪个是认证过的	列表上没有指示出哪个是认证过的	列表头像上加上角标，认证团队
+
+```
+    // 新增样式
+    .search-group-list a{position: relative;}
+    .search-group-list .auth-icon{width: 50px;height: 50px;position: absolute;top: 0;left: 0;}
+    // 列表结构
+    <ul class="search-group-list">
+        <li>
+            <a href="javascript:;" onclick="joinInGroup(53)" class="join">申请加入</a>
+            <a target="_blank" href="group.html?id=NTM=">
+                <img src="http://poppro.ozzyad.com/uploads/1535529656_210.png?ran=2578700">
+                <img class="auth-icon" src="../images/rzxzym-icon.png"/>
+            </a>
+            <h3><a target="_blank" style="color:black;text-decoration:none;" href="group.html?id=NTM=">测试123</a></h3>
+            <dl><dt>最近更新：</dt><dd>2018-09-28</dd></dl><dl><dt>成立时间：</dt><dd>2018-08-29 16:01:07</dd></dl><dl><dt>参加人数：</dt><dd>1人</dd></dl><dl><dt>管理员：</dt><dd>天天天晴</dd></dl><dl><dt>招募：</dt><dd>绘画</dd></dl></li>
+    </ul>
+```
+
+# 10.积分兑换	兑换积分不清晰	看不到需要多少积分，得鼠标悬停在图片上才行，不是很突出	在名字下方加上  积分：xx分
+
+```
+    // 新增样式
+    .exchange-box p{color: #666; line-height: 1.5;}
+    // 新增html
+    <li>
+        <div></div>
+        <h3>初音未来2017</h3>
+        <p>1积分</p>
+        <a href="javascript:;">兑换</a>
+    </li>
+```
+
+# 11.经验显示	没有经验显示的区域	整个页面中都没有显示经验的区域，经验进度条上的数字并不能很清楚的表示这是经验值	就在经验条里面加入“经验值：当前经验值/该等级总经验值”	样式见示例2
+
+```
+    // 新增样式
+    .jf-ico-2 span{text-align: center; position: relative;line-height: 15px;}
+    .jf-ico-2 i{position: absolute;height: 100%;left: 0;top: 0;}
+    .jf-icon-text{color: #fff;font-size: 12px;position: relative}
+    // 新增html
+    <p class="jf-ico-2">
+        <label>我的等级:</label>
+        <span>
+            <i style="width: 50%;"></i>
+            <b class="jf-icon-text">366/500</b>
+        </span>
+        <strong>Lv.12</strong>
+    </p>
 ```
 
 
