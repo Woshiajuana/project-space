@@ -58,3 +58,10 @@
 
 # 8.认证按钮区分	认证按钮已认证是也是显示蓝色，并且鼠标移上是手指点击的样式，会有歧义	如果已认证，认证按钮需要灰掉，鼠标移入的样式改为箭头
 
+```
+    // 新增样式
+    //需要置灰的按钮添加此样式
+    .button-disabled { cursor: default !important; border: 1px solid #ddd !important; color: #ddd !important;}
+```
+
+
