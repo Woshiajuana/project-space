@@ -7,7 +7,12 @@
     <link type="text/css" href="../css/b.css" rel="stylesheet" /><link type="text/css" href="../css/b_v2.css" rel="stylesheet" />
     <link type="text/css" href="../css/detail.css" rel="stylesheet" />
     <link rel="shortcut icon" href="../images/favicon.ico"/>
-     <link type="text/css" href="../js/layer/skin/default/layer.css" rel="stylesheet" />
+    <link type="text/css" href="../js/layer/skin/default/layer.css" rel="stylesheet" />
+    <style type="text/css">
+        .detail-base-info{ color: #999;}
+        .detail-base-info span{ height: 20px;display: inline-block;color: #999; font-size: 12px; margin-right: 20px;}
+        .detail-base-info .icon{ padding-left: 22px; }
+    </style>
 </head>
 <body class="mainbody">
 <div class="headerbody">
@@ -40,7 +45,7 @@
         <li><a href="list-txt.html" class="on">文字作品</a></li>
         <li><a href="activity.html">专题活动</a></li>
         <li><a href="groups.html">小组创作</a></li><li><a href="/html/list-hudong.html">官方互动</a></li>
-   
+
     </ul>
 </div>
 <div class="group-user-admin wp">
@@ -51,10 +56,14 @@
     </div>
     <div class="detail-box">
         <div class="detail-box-l">
-            <h2></h2>
+            <h2>标题标题标题标题标题标题标题标题标题标题</h2>
+            <p class="detail-base-info">
+                <span class="icon">2012</span>
+                <span>上传时间：2018-08-06</span>
+            </p>
             <div class="detail-txt-box">
                 <div class="detail-txt-info">
-            
+
                 </div>
             </div>
             <div class="detail-info-box">
@@ -101,7 +110,7 @@
             </div>
 
             <ul class="pinglun-list">
-                
+
             </ul>
             <div class="pagination" id="pagination">
             </div>
@@ -115,7 +124,7 @@
             <div>
                 <div  class="detail-desc-box-title"><a href="javascript:;" id="addvideo">追加</a><span>关联视频（<span class="videoNum">0</span>）</span></div>
                 <ul class="detail-r-list">
-                    
+
                 </ul>
             </div>
         </div>
@@ -244,7 +253,7 @@ function words_deal(obj,maxnum,countobj)
         		success:function(r){
         			if (r.code == 0) {
         			 $.LAYER.show({id:'tip-group-transfer'});
-        				
+
         			}else{
         			alert(r.msg);
         			}
