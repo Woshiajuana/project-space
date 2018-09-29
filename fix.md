@@ -103,7 +103,7 @@
     // 新增样式
     .jf-ico-2 span{text-align: center; position: relative;line-height: 15px;}
     .jf-ico-2 i{position: absolute;height: 100%;left: 0;top: 0;}
-    .jf-icon-text{color: #fff;font-size: 12px;position: relative}
+    .jf-icon-text{color: #333;font-size: 12px;position: relative}
     // 新增html
     <p class="jf-ico-2">
         <label>我的等级:</label>
@@ -133,4 +133,19 @@
     // 修改样式
     .sex-icon{width: 15px; height: 15px;}
 ```
+
+# 15.认证图标	背景色问题	由于个人主页的背景是黑灰条纹背景，而其他地方是白色背景，导致制作图片色调无法统一	将认证图标放到个人资料的用户昵称后面
+
+```
+    // 新增样式
+    .user-auth-icon{width: 20px; height: 20px; float: right;}
+    // 新增html
+    <li>
+        <label>用户昵称</label>
+        <span>名字十个字十个字个字</span>
+        <!--<a href="javascript:;">点击认证</a>-->
+        <img class="user-auth-icon" src="../images/logo.png"/>
+    </li>
+```
+
 
