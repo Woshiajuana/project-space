@@ -183,4 +183,33 @@
     </div>
 ```
 
+# 20.播放列表	列表太长	列表显示的太长，歌曲一多会导致需要下拉，那就可能没办法看到歌词，而且下方的操作栏会挡住歌名，视觉体验上不好	控制整个列表高度，大约15首左右，多的使用内部滚动条
+
+```
+    // 新增样式
+    .music-list{height: 750px;overflow: hidden; position: relative}
+    .music-list ul {position: absolute; top: 0; left: 0; right: -18px; bottom: 0;
+    padding-bottom: 220px; overflow-y: auto;}
+    // 修改页面html结构
+    <div class="left" id="music-wrap">
+        <ul class="list-wrap">
+            <li class="list-item-title">
+                <div class="list-item-part check">
+                    <div class="check-all-box" id="check-all">
+                        <div class="check-inner"></div>
+                    </div>
+                    <span class="check-box-prompt">全选</span>
+                </div>
+                <div class="list-item-part title-name">
+                    <span id="list-delete">删除</span>
+                </div>
+                <div class="list-item-part author">作者</div>
+                <div class="list-item-part time">时长</div>
+            </li>
+        </ul>
+        <div class="list-wrap music-list">
+            <ul id="music-list"></ul>
+        </div>
+    </div>
+```
 

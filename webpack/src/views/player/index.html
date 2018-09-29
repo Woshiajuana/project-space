@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>POPPRO | 首页</title>
     <!--<link rel="shortcut icon" href="../images/favicon.ico"/>-->
+    <style type="text/css">
+        .music-list{height: 750px;overflow: hidden; position: relative}
+        .music-list ul {position: absolute; top: 0; left: 0; right: -18px; bottom: 0;
+        padding-bottom: 220px; overflow-y: auto;}
+    </style>
 </head>
 <body>
     <!--头部-->
@@ -44,7 +49,9 @@
                         <div class="list-item-part time">时长</div>
                     </li>
                 </ul>
-                <ul class="list-wrap music-list" id="music-list"></ul>
+                <div class="list-wrap music-list">
+                    <ul id="music-list"></ul>
+                </div>
             </div>
             <div class="right">
                 <div class="music-pic"><img class="music-pic-image" id="music-pic-image" src="" alt=""></div>
