@@ -148,4 +148,39 @@
     </li>
 ```
 
+# 16.帖子删除	暂时没有删除功能	删除帖子只能在我的帖子中进行，在详情没有相关按钮，操作不是很方便	在详情页也加入删除按钮
+
+```
+    // 新增样式
+    .delete-btn{float: right; height: 20px; line-height: 20px; background: url(../images/reply-delete-icon.png) no-repeat; padding-left: 25px;
+    cursor: pointer;font-size: 12px;color: #666; margin-top: 5px;}
+    // 新增html
+    <h2>如果初音未来穿越到星际争霸 <span class="delete-btn">删除帖子</span></h2>
+```
+
+# 17.认证展示	认证图标不知为何物	虽然认证后有图标，但不知道是什么意思，没有明显的说明	鼠标悬停在图标上显示认证的名称
+
+```
+    // 在认证图标上新增title属性
+```
+
+# 18.发帖图片	插入图片没有提示	插入图片按钮这里鼠标移入没有变化，无法知道是否有用	鼠标移入图片按钮区域变为手指
+
+```
+    // 新增样式
+    .uploadifive-button{cursor: pointer;}
+```
+
+# 19.回复提示	回复提示字体	不可回复的帖子内，回复插件内的文字颜色太显眼，不像不可回复的类型	改成淡灰色，发表按钮也灰色
+
+```
+    // 新增样式
+    .sub-pinlun-submint-box p {line-height: 148px; text-align: center;}
+    .btnbox a.a-btn-disable{background-color: #666;}
+    // 发表按钮新增
+    <div class="btnbox">
+        <a class="a-btn-disable" href="javascript:;">发表</a>
+    </div>
+```
+
 
