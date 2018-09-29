@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <title>POPPRO | TOP10</title>
+    <link rel="stylesheet" href="../css/b.css?312312">
+    <script src="../js/lib/flexible.js"></script>
+</head>
+<body>
+<div class="main-head">
+    <a href="./main.html" class="page-home"></a>
+    <h1>本周排行榜</h1>
+    <a href="javascript:;" class="page-menu"></a>
+</div>
+
+<div class="pagebody nofootpage">
+    <div class="top10-list">
+        <ul>
+            <!--<li>
+                <span class="imgbox">
+                    <img src="../images/pro-1.png">
+                    <i class="top3">1</i>
+                </span>
+                <h3>C.M.B.森罗博物馆之事件目录森罗博物馆之C.M.B.森罗博物馆之事件目录森罗博物馆之</h3>
+                <p>作者名称</p>
+                <span class="dianzhan">8888</span>
+            </li>
+            <li>
+                <span class="imgbox">
+                    <img src="../images/pro-1.png">
+                    <i class="top3">2</i>
+                </span>
+                <h3>C.M.B.森罗博物馆之事件目录森罗博物馆之C.M.B.森罗博物馆之事件目录森罗博物馆之</h3>
+                <p>作者名称</p>
+                <span class="dianzhan">8888</span>
+            </li>
+            <li>
+                <span class="imgbox">
+                    <img src="../images/pro-1.png">
+                    <i class="top3">3</i>
+                </span>
+                <h3>C.M.B.森罗博物馆之事件目录森罗博物馆之C.M.B.森罗博物馆之事件目录森罗博物馆之</h3>
+                <p>作者名称</p>
+                <span class="dianzhan">8888</span>
+            </li>
+            <li>
+                <span class="imgbox">
+                    <img src="../images/pro-1.png">
+                    <i>4</i>
+                </span>
+                <h3>C.M.B.森罗博物馆之事件目录森罗博物馆之C.M.B.森罗博物馆之事件目录森罗博物馆之</h3>
+                <p>作者名称</p>
+                <span class="dianzhan">8888</span>
+            </li>
+            <li>
+                <span class="imgbox">
+                    <img src="../images/pro-1.png">
+                    <i>5</i>
+                </span>
+                <h3>C.M.B.森罗博物馆之事件目录森罗博物馆之C.M.B.森罗博物馆之事件目录森罗博物馆之</h3>
+                <p>作者名称</p>
+                <span class="dianzhan">8888</span>
+            </li>
+            <li>
+                <span class="imgbox">
+                    <img src="../images/pro-1.png">
+                    <i>6</i>
+                </span>
+                <h3>C.M.B.森罗博物馆之事件目录森罗博物馆之C.M.B.森罗博物馆之事件目录森罗博物馆之</h3>
+                <p>作者名称</p>
+                <span class="dianzhan">8888</span>
+            </li>
+            <li>
+                <span class="imgbox">
+                    <img src="../images/pro-1.png">
+                    <i>7</i>
+                </span>
+                <h3>C.M.B.森罗博物馆之事件目录森罗博物馆之C.M.B.森罗博物馆之事件目录森罗博物馆之</h3>
+                <p>作者名称</p>
+                <span class="dianzhan">8888</span>
+            </li>
+            <li>
+                <span class="imgbox">
+                    <img src="../images/pro-1.png">
+                    <i>8</i>
+                </span>
+                <h3>C.M.B.森罗博物馆之事件目录森罗博物馆之C.M.B.森罗博物馆之事件目录森罗博物馆之</h3>
+                <p>作者名称</p>
+                <span class="dianzhan">8888</span>
+            </li>
+            <li>
+                <span class="imgbox">
+                    <img src="../images/pro-1.png">
+                    <i>9</i>
+                </span>
+                <h3>C.M.B.森罗博物馆之事件目录森罗博物馆之C.M.B.森罗博物馆之事件目录森罗博物馆之</h3>
+                <p>作者名称</p>
+                <span class="dianzhan">8888</span>
+            </li>
+            <li>
+                <span class="imgbox">
+                    <img src="../images/pro-1.png">
+                    <i>10</i>
+                </span>
+                <h3>C.M.B.森罗博物馆之事件目录森罗博物馆之C.M.B.森罗博物馆之事件目录森罗博物馆之</h3>
+                <p>作者名称</p>
+                <span class="dianzhan">8888</span>
+            </li>-->
+        </ul>
+    </div>
+</div>
+<script src="/js/jquery-1.7.1.min.js"></script>
+<script src="../js/b.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/project.js"></script>
+<script>
+	$(function(){
+		//top10 列表
+		$.ajax({
+			url: "/work/top10",
+			type: "POST",
+			dataType : 'json',
+			data: {webType:"wap"},
+			async: true,
+			success: function (r){
+				if(r.length<=0){
+					$("top10-list").html('<div class="data-null">暂时还没有作品！</div>');
+				}else{
+					var html = '<ul>';
+					var j=1;
+					for(var i in r){
+						if(i<3){
+							var top3='<i class="top3">'+j+'</i>';
+						}else{
+							var top3='<i>'+j+'</i>';
+						}
+						j++;
+						html+='<li><span class="imgbox"><a href="'+r[i]['wLink']+'" >'+
+					'<img src="'+r[i]['pic']+'"></a>'+top3+'</span>'+'<h3><a href="'+r[i]['wLink']+'" style="text-decoration:none;color:#999;">'+r[i]['title']+'</a></h3>'+
+				    '<p><a href="'+r[i]['uLink']+'" style="text-decoration:none;color:#999;">'+r[i]['nick']+'</a></p><span class="dianzhan">'+r[i]['voteCount']+'</span></li>';		
+					}
+					html+="</ul>";
+					$('.top10-list').html(html);
+				}
+			}
+		});
+		
+	})
+</script>
+	
+</body>
+</html>

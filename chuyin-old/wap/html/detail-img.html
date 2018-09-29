@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <title>POPPRO | 画作／3D 建模</title>
+    <link rel="stylesheet" href="../css/b.css?312312">
+    <script src="../js/lib/flexible.js"></script>
+</head>
+<body>
+<div class="main-head">
+    <a href="./main.html" class="page-home"></a>
+    <h1></h1>
+    <a href="javascript:;" class="page-menu"></a>
+</div>
+<div class="pagebody subpage">
+    <div class="detail-top">
+        <div class="detail-top-l">
+  
+        </div>
+        <div class="detail-top-r">
+            <a href="javascript:" class="ico-detail-top-3">举报</a>
+            <a href="javascript:collect(detailCollectCallback);" class="ico-detail-top-2"></a>
+            <a href="javascript:vote(workType,detailVoteCallback);" class="ico-detail-top-1"></a>
+        </div>
+    </div>
+    <div class="detail-imgbox">
+      
+    </div>
+    <div class="detail-txt-box">
+        <div class="detail-tag">
+            <!-- <span>初音未来</span><span>巡音流歌</span><span>巡音</span><span>初音未来</span><span>巡音</span><span>巡音流歌</span><span>巡音</span>-->
+        </div>
+        <div class="detail-xuke">
+            <h3>作品许可</h3>
+            <p></p>
+        </div>
+        <div class="detail-jianjie">
+            <h3>作品简介</h3>
+            <p></p>
+        </div>
+    </div>
+</div>
+<div class="sendmsg-box">
+    <input type="text" placeholder="吐个槽～" class="msgtxt">
+    <a href="javascript:;" class="detail-msg-ico">
+    </a>
+    <a href="javascript:;" class="detail-share-ico">
+
+    </a>
+
+    <a href="javascript:comment();" class="sendbtn" style="display: none">发送</a>
+</div>
+
+
+<div class="tousubox" style="display: none">
+    <textarea></textarea>
+    <div class="btnbox">
+        <a href="javascript:;" class="cancel">取消</a>
+        <a href="javascript:to_conplain();">提交</a>
+    </div>
+</div>
+<div class="tousubg" style="display: none"></div>
+
+<div class="sharebox" style="display: none">
+    <h3>分享</h3>
+        <li><img src="../images/ico-share1@1x.png" ><p>微信好友</p></li>
+        <li><img src="../images/ico-share2@1x.png" ><p>微信朋友圈</p></li>
+        <li><img src="../images/ico-share3@1x.png" ><p>QQ</p></li>
+        <li><img src="../images/ico-share4@1x.png" ><p>微博</p></li>
+    </ul>
+    <a href="javascript:;" class="shareclose">取消</a>
+</div>
+<div class="sharebg" style="display: none"></div>
+
+<script src="/js/jquery-1.7.1.min.js"></script>
+<script src="../js/zepto.1.1.4.min.js"></script>
+<script src="../js/b.js"></script>
+<script src="../js/project.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/page/detail_img.js"></script>
+<script>
+
+
+    $('.msgtxt').focus(function () {
+        $('.detail-msg-ico').hide();
+        $('.detail-share-ico').hide();
+        $('.sendbtn').show();
+        $('.msgtxt').addClass('msgtxt1')
+    })
+
+    $('.msgtxt').on('input propertychange',function () {
+        //console.log($('.msgtxt').val().length)
+        if($('.msgtxt').val().length == 0){
+            $('.detail-msg-ico').show();
+            $('.detail-share-ico').show();
+            $('.sendbtn').hide();
+            $('.msgtxt').removeClass('msgtxt1')
+        }
+        else{
+            $('.detail-msg-ico').hide();
+            $('.detail-share-ico').hide();
+            $('.sendbtn').show();
+            $('.msgtxt').addClass('msgtxt1')
+        }
+    })
+
+    $('.sendbtn').click(function () {
+        $('.detail-msg-ico').show();
+        $('.detail-share-ico').show();
+        $('.sendbtn').hide();
+        $('.msgtxt').removeClass('msgtxt1')
+    });
+    
+    
+    $('.ico-detail-top-3').click(function () {
+    	if(!checkLogin()){
+ 	       alertbox('温馨提示','请先登录','确定');
+ 			return;
+ 		}
+        $('.tousubox').show()
+        $('.tousubg').show()
+    })
+
+    $('.cancel').click(function () {
+        $('.tousubox').hide()
+        $('.tousubg').hide()
+    })
+    
+    $('.detail-share-ico').click(function () {
+        $('.sharebox').show();
+        $('.sharebg').show();
+    })
+
+    $('.shareclose').click(function () {
+        $('.sharebox').hide();
+        $('.sharebg').hide();
+    })
+
+
+</script>
+</body>
+</html>

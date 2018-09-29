@@ -1,0 +1,575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="POPPRO是由Crypton Future Media公司官方独家授权的初音未来官方中文投稿网站。" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>POPPRO | 官方互动</title>
+    <link type="text/css" href="../css/b.css" rel="stylesheet" /><link type="text/css" href="../css/b_v2.css" rel="stylesheet" />
+    <link type="text/css" href="../css/b_v2.css" rel="stylesheet" />
+    <link type="text/css" href="../css/hd.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link type="text/css" href="../js/layer/skin/default/layer.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../css/uploadify.css">
+    <link rel="stylesheet" type="text/css" href="../css/uploadifive.css">
+    <script src="../js/jquery-1.7.1.min.js"></script>
+    <script src="../js/jquery.uploadifive.min.js" type="text/javascript"></script>
+    <script src="../js/util/jquery.uploadify1.js"></script>
+    <script src="../js/layer/layer.js"></script>
+    <script src="../js/jq.layer.js"></script>
+    <script src="../js/util/pager.js"></script>
+    <script src="../js/util/base64.js"></script>
+    <script src="../js/util/ajuanAnchor.js"></script>
+    <script src="../js/util.js"></script>
+    <script src="../js/project.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/page/hudong.js"></script>
+    <style type="text/css">
+        .hulist li h4:after{content:'\20';  display:block;  height:0;  clear:both;}
+        .null-wrap{height: 50px; line-height: 50px;text-align: center;background-color: #fff;border-bottom: 1px solid #ddd}
+        .null-text{font-size: 14px; color: #999;}
+        .hulist >li >p,
+        .hulist >li >h4 >span{text-overflow: ellipsis; overflow: hidden; white-space: nowrap; height: 21px;}
+        .hulist >li >h4 >span{max-width: 725px;}
+        .hulist >li >p{width: 760px;}
+        .pagination-1{ padding-bottom: 20px}
+        .delete-icon{background: url("../images/reply-delete-icon.png") no-repeat !important;}
+        .hulist >li >p{width: 760px; margin: 12px 0 !important;}
+        .yuedu{background: url(../images/mian-eye-ico.png) no-repeat left center;padding-left: 20px;}
+        .pl{text-align: center !important;}
+        .hd-l .pagination{padding: 30px 0}
+        .pinlun-submint{overflow: visible;}
+        .bqbox{bottom: 30px; top: auto}
+        .hd-l .hulist li.great h4 a {color: #18b2d8;}
+        .hd-l .hulist li h4 a {color: #333333;}
+        .bqbox{width: 310px;}
+        .bqbox{bottom: 30px; top: auto; padding-bottom: 50px;}
+        .bqbox-inner{width: 300px;position: relative; height: 180px; overflow: hidden;}
+        .bqbox-inner-con{ position: absolute;top: 0;left: 0;right: -20px;bottom: 0; overflow-y: auto;}
+        .bqbox-inner-con >ul {padding: 0 !important;}
+        .bqbox-inner-con >ul >li{padding: 0!important; margin: 0 !important;}
+        .bqbox-inner-con li { width: 60px; height: 60px; overflow: hidden;}
+        .bqbox-inner-con li img,
+        .bqbox-inner-con li a {width: 50px; height: 50px; display: block;}
+        .bqbox-inner-con li a {margin: 5px;}
+        .bqbox-inner-con >ul li:hover{background-color: #f2f2f2;}
+        .bqbox-tab{position: absolute;left: 0;height: 40px;bottom: 0;right: 0; background-color: #f2f2f2;}
+        .bqbox-tab-inner{width: 320px;float: left;height: 100%;}
+        .bqbox-tab-con{height: 100%; padding: 0 !important;}
+        .bqbox-tab-item{width: 40px!important; height: 100%!important;float: left; cursor: pointer;
+            padding: 0 !important;}
+        .bqbox-tab-item img{width: 20px; height: 20px; margin: 10px;}
+        .bqbox-tab-item.active{background-color: #fff;}
+        .bqbox-btn{height: 100%;float: right;}
+        .pinlun-submint {
+            overflow: visible !important;
+        }
+        .bqbox-tab-inner{overflow: hidden;}
+        .uploadifive-button{width: 24px !important;}
+    </style>
+</head>
+<body class="mainbody">
+<div class="headerbody">
+    <div class="header wp">
+        <h1 class="logo"><img src="../images/logo.png"></h1>
+        <div class="searchbox">
+            <div class="searchboxbody">
+                <a class="select" href="javascript:;" id="search-select"><img src="../images/search-ico-1-on.jpg" id="search-select-1"><img src="../images/search-ico-2-on.jpg" style="display: none"  id="search-select-2"><img src="../images/search-ico-3-on.jpg" style="display: none"  id="search-select-3"><img src="../images/search-ico-5-on.png" style="display: none"  id="search-select-4"><img src="../images/search-ico-6-on.png" style="display: none"  id="search-select-5"></a>
+                <input type="text" class="input" placeholder="初音">
+                <input type="button" class="btn">
+            </div>
+            <ul id="search-type">
+                <li><a href="javascript:;" class="on" id="search-type-1"><img src="../images/search-ico-1.jpg" class="imgunon"><img src="../images/search-ico-1-on.jpg" class="imgon">音乐</a></li>
+                <li><a href="javascript:;" id="search-type-3"><img src="../images/search-ico-3.jpg" class="imgunon"><img src="../images/search-ico-3-on.jpg" class="imgon">图片／3D</a></li>
+                <li><a href="javascript:;" id="search-type-2"><img src="../images/search-ico-2.jpg" class="imgunon"><img src="../images/search-ico-2-on.jpg" class="imgon">文字</a></li>
+                <li><a href="javascript:;" id="search-type-4"><img src="../images/search-ico-5.png" class="imgunon"><img src="../images/search-ico-5-on.png" class="imgon">用户</a></li>
+                <li><a href="javascript:;" id="search-type-5"><img src="../images/search-ico-6.png" class="imgunon"><img src="../images/search-ico-6-on.png" class="imgon">小组</a></li>
+            </ul>
+        </div>
+        <ul class="top-login">
+            <li><a href="message.html" class="t-msg-link" style='display:none;'>消息<span>3</span></a></li>
+            <li>
+            </li>
+            <li><a href="post-music.html" class="t-send-link">我要投稿</a></li>
+        </ul>
+    </div>
+</div>
+<div class="navbox">
+    <ul class="wp">
+        <li><a href="main.html">首页</a></li>
+        <li><a href="list-music.html">音乐作品</a></li>
+        <li><a href="list-img.html">画作/3D 建模</a></li>
+        <li><a href="list-txt.html">文字作品</a></li>
+        <li><a href="activity.html">专题活动</a><span class="navhot"></span></li>
+        <li><a href="groups.html">小组创作</a></li>
+        <li><a class="on" href="list-hudong.html">官方互动</a></li>
+
+    </ul>
+</div>
+<div class="mainbox wp mb50">
+    <div class="position"><a href="list-hudong.html">官方互动</a>  > <span id="platName">互动列表</span></div>
+    <div class="hd-l">
+        <h3 class="toptab">
+            <a href="javascript:;" style="display: none" class="add-link">发帖</a>
+            <a href="javascript:;" class="on">最新</a>
+            <a href="javascript:;">最热</a>
+            <a href="javascript:;">精华</a>
+        </h3>
+        <ul class="hulist">
+            <!--<li class="hot">-->
+                <!--<h4><span>【置顶】如果初音未来穿越到星际争霸</span>-->
+                    <!--<a href="javascript:;" class="showimg-ico">-->
+                        <!--<img src="../images/pro-2.jpg">-->
+                    <!--</a>-->
+                <!--</h4>-->
+                <!--<p>走出了装甲车，许多士兵正在把弹药箱取下来摆放好，合金防爆盾牌被插在沙地上充当掩护组成一个环形防御阵地。miku...</p>-->
+                <!--<div>-->
+                    <!--<span>哈喽力哥哈喽力哥哈喽</span>-->
+                    <!--<span>2018-06-03 20:46:18</span>-->
+                    <!--<span>596,092</span>-->
+                    <!--<span class="txt">来自：<strong>画作讨论</strong></span>-->
+                <!--</div>-->
+                <!--<span class="pl"><i>330</i>评论</span>-->
+            <!--</li>-->
+            <!--<li class="great">-->
+                <!--<h4>【置顶】如果初音未来穿越到星际争霸</h4>-->
+                <!--<p>走出了装甲车，许多士兵正在把弹药箱取下来摆放好，合金防爆盾牌被插在沙地上充当掩护组成一个环形防御阵地。miku...</p>-->
+                <!--<div>-->
+                    <!--<span>哈喽力哥哈喽力哥哈喽</span>-->
+                    <!--<span>2018-06-03 20:46:18</span>-->
+                    <!--<span>596,092</span>-->
+                    <!--<span class="txt">来自：<strong>画作讨论</strong></span>-->
+                <!--</div>-->
+                <!--<span class="pl"><i>330</i>评论</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<h4>【置顶】如果初音未来穿越到星际争霸</h4>-->
+                <!--<p>走出了装甲车，许多士兵正在把弹药箱取下来摆放好，合金防爆盾牌被插在沙地上充当掩护组成一个环形防御阵地。miku...</p>-->
+                <!--<div>-->
+                    <!--<span>哈喽力哥哈喽力哥哈喽</span>-->
+                    <!--<span>2018-06-03 20:46:18</span>-->
+                    <!--<span>596,092</span>-->
+                    <!--<span class="txt">来自：<strong>画作讨论</strong></span>-->
+                <!--</div>-->
+                <!--<span class="pl"><i>330</i>评论</span>-->
+            <!--</li>-->
+        </ul>
+        <div class="pagination" id="page">
+            <!--<a href="javascript:;" class="on">1</a><a href="javascript:;">2</a><a href="javascript:;">3</a><a href="javascript:;">4</a><a href="javascript:;">5</a><span>...</span><a href="javascript:;">112</a><a href="javascript:;">&gt;</a>-->
+        </div>
+        <div class="null-wrap" style="display: none;">
+            <span class="null-text">暂无数据</span>
+        </div>
+        <div id="fatie" class="submit-txt-box" style="display: none">
+            <div class="logintip" style="display: none;" id="noLoginReply">您尚未登录，请先行【<a href="login.html">注册/登录</a>】</div>
+            <h3>发帖</h3>
+            <input id="noteTitle" maxlength="20" type="text" class="input-1" placeholder="请填写标题"><br>
+            <div class="pinlunbox">
+                <div class="pinlunbox-top">
+                    <div class="headerbox">
+                        <a href="javascript:;" class="face">表情</a>
+                        <!--<a href="javascript:;" class="img">图片</a>-->
+                        <input id="file_upload_h5" style="display:none" name="file_upload_h5" type="file">
+                        <input id="file_upload_pic" style="display:none" name="file_upload_pic" type="file">
+                        <!--<a href="javascript:;" class="img">-->
+                            <!--图片-->
+                            <!--&lt;!&ndash;<input type="file">&ndash;&gt;-->
+                            <!--<input id="file_upload_pic" style="display:none" name="file_upload" type="file" >-->
+                            <!--<input id="file_upload_h5" style="display:none" name="file_upload_h5" type="file">-->
+                        <!--</a>-->
+                        <div class="bqbox">
+                            <div class="bqbox-inner">
+                                <div class="bqbox-inner-con">
+                                    <ul>
+                                        <!--<li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>-->
+                                        <!--<li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>-->
+                                    </ul>
+                                </div>
+                            </div>
+                            <a class="close" href="javascript:;">X</a>
+                            <div class="bqbox-tab">
+                                <div class="bqbox-tab-inner">
+                                    <ul class="bqbox-tab-con">
+                                        <li class="bqbox-tab-item active">
+                                            <img src="../images/new-ico-2.png">
+                                        </li>
+                                        <li class="bqbox-tab-item">
+                                            <img src="../images/new-ico-2.png">
+                                        </li>
+                                        <li class="bqbox-tab-item">
+                                            <img src="../images/new-ico-2.png">
+                                        </li>
+                                        <li class="bqbox-tab-item">
+                                            <img src="../images/new-ico-2.png">
+                                        </li>
+                                        <li class="bqbox-tab-item">
+                                            <img src="../images/new-ico-2.png">
+                                        </li>
+                                        <li class="bqbox-tab-item">
+                                            <img src="../images/new-ico-2.png">
+                                        </li>
+                                        <li class="bqbox-tab-item">
+                                            <img src="../images/new-ico-2.png">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--<div class="bqbox-btn">-->
+                                    <!--<div class="bqbox-tab-item per">-->
+                                        <!--<img src="../images/bqbox-pre.png">-->
+                                    <!--</div>-->
+                                    <!--<div class="bqbox-tab-item next">-->
+                                        <!--<img src="../images/bqbox-next.png">-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--<a href="javascript:;" class="face">表情</a>-->
+                    <!--<a href="javascript:;" class="img">图片</a>-->
+                    <!--<input class="face" id="file_upload_pic1" style="display:none" name="file_upload" type="file" >-->
+                    <!--<input class="face" id="file_upload_h51" style="display:none" name="file_upload_h5" type="file">-->
+                    <!--<input class="img" id="file_upload_pic" style="display:none" name="file_upload" type="file" >-->
+                    <!--<input class="img" id="file_upload_h5" style="display:none" name="file_upload_h5" type="file">-->
+                    <!--<input type="hidden" id="picname">-->
+                </div>
+                <!--<textarea contentEditable="true" wrap="hard" id="noteContent" class="textarea-1" placeholder="请填写帖子内容"></textarea>-->
+                <p contentEditable="true" style="overflow:scroll;" id="noteContent" class="textarea-1" placeholder="请填写帖子内容"></p>
+            </div>
+            <p class="btnbox">
+                <a href="javascript:;" onclick="createNote()">发表</a>
+            </p>
+        </div>
+    </div>
+    <div class="hd-r">
+        <h3 class="right-title-1">版块总览</h3>
+        <div class="right-list-box">
+            <ul class="gailan">
+                <!--<li num="1"><span>1,341</span>画作讨论</li> &lt;!&ndash;class="on"&ndash;&gt;-->
+                <!--<li num="2"><span>1,341</span>音乐讨论</li>-->
+                <!--<li num="3"><span>1,341</span>文字讨论</li>-->
+                <!--<li num="4"><span>1,341</span>专题活动</li>-->
+                <!--<li num="5"><span>1,341</span>小组创作</li>-->
+                <!--<li num="6"><span>1,341</span>布啰推荐</li>-->
+                <!--<li num="7"><span>1,341</span>问题反馈</li>-->
+            </ul>
+        </div>
+        <h3 class="right-title-2">最热帖子</h3>
+        <div class="right-list-box">
+            <ul class="hotlist">
+                <!--<li>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                    <!--<strong class="ranking-1">1</strong>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                    <!--<strong class="ranking-2">2</strong>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                    <!--<strong class="ranking-3">3</strong>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                    <!--<strong>4</strong>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                    <!--<strong>5</strong>-->
+                <!--</li>-->
+            </ul>
+        </div>
+        <h3 class="right-title-3" id="likeNoteShow">我的收藏</h3>
+        <div class="right-list-box mt0" id="likeNoteBox">
+            <ul class="favlist">
+                <!--<li>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队部...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队部...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队部...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队部...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队部...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                <!--</li>-->
+            </ul>
+        </div>
+        <div class="pagination-1" id="likePage">
+        </div>
+        <h3 class="right-title-3" id="myNoteShow">我的帖子</h3>
+        <div class="right-list-box mt0" id="myNoteBox">
+            <ul class="favlist">
+                <!--<li>-->
+                    <!--<span class="fav delete-icon"></span>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队部...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<span class="fav delete-icon"></span>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队部...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<span class="fav delete-icon"></span>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队部...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                <!--</li>-->
+            </ul>
+        </div>
+
+        <div class="pagination-1" id="myPageList">
+            <!--<a href="javascript:;" class="on">1</a>-->
+            <!--<a href="javascript:;">2</a>-->
+            <!--<a href="javascript:;">3</a>-->
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-body">
+        <h2>
+            <img src="../images/logo-footer.png">
+        </h2>
+        <ul class="footer-ico-box">
+            <li class="footer-ico-1">
+                <h3>官方微信</h3>
+                <p>关注POPPRO最新动态</p>
+            </li>
+            <li class="footer-ico-2">
+                <h3>初音未来 V4 中文版</h3>
+                <p><a target="_blank" style="text-decoration:none; color:#b0b0b2; " href="https://item.taobao.com/item.htm?spm=a230r.1.14.21.108f93131LkcYB&id=557546981640&ns=1&abbucket=1#detail" >点击购买</a></p>
+            </li>
+        </ul>
+        <div class="footer-link">
+            <a href="http://www.poppro.cn/html/aboutus.html?hId=MQ==">关于POPPRO</a><span>|</span><a href="mailto:kfpoppro@scla.com.cn">联系我们</a><span>|</span><a href="http://www.poppro.cn/html/aboutus.html?hId=Mw==">网站协议</a><span>|</span><a href="mailto:bhpoppro@scla.com.cn">客服/版权申诉</a>
+            <p>公司名称：上海新创华文化发展有限公司 | 公司地址：上海市静安区万荣路1053号6号楼 | 公司电话：(8621)51095308</p><p>&copy; Crypton Future Media, INC. www.piapro.net | 网站备案号：沪ICP备17015563号-1 | 网络文化经营许可证：沪网文（2017）11256-869号</p>
+        </div>
+    </div>
+</div>
+<script type="application/javascript">
+    $(function(){
+        // getEmojiList(function(r){
+        //     if (r.code == 0) {
+        //         emojiData = r.data;
+        //         var innerHtml = '';
+        //         var insideHtml = '';
+        //         for (var i=0; i<r.data.length; i++) {
+        //             innerHtml += '<li><a href="javascript:;" onclick="addFirstEmoji('+"'"+r['data'][i]['imgUrl']+"'"+')"><img width="20" height="20" src="'+r['data'][i]['imgUrl']+'"> </a></li>';
+        //         }
+        //         $('#firstReply ul').html(innerHtml)
+        //     }
+        // })
+
+        $('.add-link').click(function(){
+            var aAnchor = ajuanAnchor();
+            aAnchor.anchorPosition('fatie', 500);
+        })
+
+        getEmojiTypeList();
+
+        $(".face").click(
+            function () {
+                var isShow = $(this).parent().parent().find(".bqbox").css('display');
+                if (isShow == 'none') {
+                    $('.bqbox').hide();
+                    $(this).parent().parent().find(".bqbox").show();
+                }
+                else {
+                    $(this).parent().parent().find(".bqbox").hide();
+                }
+            }
+        );
+        $('.bqbox a.close').click(function () {
+            $(this).parent().hide();
+        });
+        getHotNote();
+        getPlatform();
+        getNoteList(sort, 1);
+        getLikeNote(1);
+        if(checkLogin()) {
+            getMyNote(1);
+        }
+        else {
+            $('#myNoteShow,#myNoteBox,#myPageList,#likeNoteShow,#likeNoteBox,#likePage').hide();
+        }
+
+        $('.toptab a').click(function(){
+            var index = $(this).index();
+            if (index == 0) {
+                //发帖
+            }
+            else {
+                $('.toptab a').removeClass('on');
+                $(this).addClass('on');
+                getNoteList(index, 1);
+            }
+        })
+
+        const BQBoxController = (function () {
+            var timer = false,
+                addEvent = function () {
+                    $(".face").click(
+                        function () {
+                            $(this).parent().parent().find(".bqbox").show();
+                        }
+                    );
+                    $('.bqbox a.close').click(function () {
+                        $(this).parent().hide();
+                    });
+                    $('.bqbox-tab').on('click', '.bqbox-tab-con .bqbox-tab-item', function () {
+                        $(this).siblings().removeClass('active');
+                        $(this).addClass('active');
+                    }).on('click', '.bqbox-btn .per', function () {
+                        if (timer) return;
+                        timer = true;
+                        next($(this).parents('.bqbox-tab').find('.bqbox-tab-con'),-1)
+                    }).on('click', '.bqbox-btn .next', function () {
+                        if (timer) return;
+                        timer = true;
+                        next($(this).parents('.bqbox-tab').find('.bqbox-tab-con'),1)
+                    })
+                },
+                setWidth = function () {
+                    var $el = $('.bqbox-tab-con'),
+                        num = $el.children().length || 0;
+                    $el.css('width', 40 * num + 'px');
+                    if (6 >= num) {
+                        $('.bqbox-btn').hide();
+                    } else {
+                        $('.bqbox-btn').show();
+                    }
+                },
+                next = function ($el, type) {
+                    alert(1);
+                    var num = $el.children().length || 0,
+                        ml = $el.css('margin-left'),
+                        ml = ml ? +ml.replace('px', '') : 0,
+                        max = 40 * (num - 6);
+                    if(type === 1) {
+                        if (Math.abs(ml) >= max) {
+                            ml = 0;
+                        } else {
+                            ml = ml - 40;
+                        }
+                    } else {
+                        if (Math.abs(ml) > max) {
+                            ml = 0;
+                        } else if (0 === ml) {
+                            ml = -max;
+                        } else {
+                            ml = ml + 40;
+                        }
+                    }
+                    $el.css('margin-left', ml + 'px');
+                    setTimeout(() => {
+                        timer = false;
+                    }, 300);
+                },
+                init = function () {
+                    addEvent();
+                    setWidth();
+                };
+            init()
+        })()
+
+        if (isUseH5()) {
+            $('#file_upload_h5,#file_upload_h51').show();
+            $('#file_upload_pic,#file_upload_pic1').hide();
+            $('#file_upload_h5').uploadifive({
+                'auto'             : true,
+                'fileType': ['image/jpeg','image/png','image/gif','image/jpg'],
+                'checkScript'      : '',
+                'uploadScript'     : '/hudong/upload',
+                'color': 'blue',
+                'buttonText':'图片',
+                'height': 30,
+                'width': 60,
+                'buttonClass':'img',
+                'multi' : false,
+                'queueSizeLimit':1,
+                'fileSizeLimit':'2000',
+                'removeCompleted':false,
+                'auto' : true,
+                'onUploadComplete' : function(file, data) {
+                    $('.close').click();
+                    var dataObj = JSON.parse(data);
+                    var imgUrl;
+                    var addHtml = '';
+                    if(dataObj.code == 0){
+                        imgUrl = dataObj.msg;
+                        if (dataObj.width > 680) {
+                            addHtml += '<img width="680" class="picshow" src="'+imgUrl+'">';
+                        }
+                        else {
+                            addHtml += '<img class="picshow" src="'+imgUrl+'">';
+                        }
+                        document.getElementById('noteContent').focus();
+                        insertHtmlAtCaret(addHtml,$('#noteContent'));
+                        // $('#noteContent').append(addHtml);
+                    }else{
+                        alert(dataObj.msg);
+                    }
+
+                }
+            });
+        }
+        else {
+            $('#file_upload_h5,#file_upload_h51').hide();
+            $('#file_upload_pic,#file_upload_pic1').show();
+            //ie 7 8 9 flash上传
+            $('#file_upload_pic').uploadify({
+                'swf'      : '/swf/uploadify.swf',
+                'uploader' : '/hudong/upload',
+                'color': 'blue',
+                'buttonText':'图片',
+                'fileTypeExts': '*.jpg;*.jpeg;*.png;*.gif',
+                'height': 38,
+                'width': 116,
+                'buttonClass':'select-file',
+                'multi' : false,
+                //'uploadLimit':1,
+                'queueSizeLimit':1,
+                'fileSizeLimit':'2000',
+                'removeCompleted':false,
+                'auto' : true,
+                'onUploadSuccess': function (file, data, response) {
+                    var dataObj = JSON.parse(data);
+                    var imgUrl;
+                    var addHtml = '';
+                    if(dataObj.code == 0){
+                        imgUrl = dataObj.msg;
+                        if (dataObj.width > 680) {
+                            addHtml += '<img class="emojishow" width="680" src="'+imgUrl+'">';
+                        }
+                        else {
+                            addHtml += '<img class="emojishow" src="'+imgUrl+'">';
+                        }
+                        document.getElementById('noteContent').focus();
+                        insertHtmlAtCaret(addHtml,$('#noteContent'));
+                        // $('#noteContent').append(addHtml);
+                    }else{
+                        alert(dataObj.msg);
+                    }
+                }
+            });
+        }
+
+    })
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="POPPRO是由Crypton Future Media公司官方独家授权的初音未来官方中文投稿网站。" />
+    <title>POPPRO | 用户主页</title>
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link type="text/css" href="../css/b.css" rel="stylesheet" /><link type="text/css" href="../css/b_v2.css" rel="stylesheet" />
+    <link type="text/css" href="../css/user.css" rel="stylesheet" />
+    <link type="text/css" href="../js/layer/skin/default/layer.css" rel="stylesheet" />
+    <style>
+	.user-music-listbox a{
+	text-decoration:none;
+	}
+	.user-img-list a{
+	text-decoration:none;
+	}
+	.user-txt-listbox a{
+	text-decoration:none;
+	}
+
+    .user-img-list >li >div >span,
+    .user-img-list >li >div >a{vertical-align: middle}
+	</style>
+	 <style>
+.sex-icon,.personal-icon{display: inline-block;}
+.sex-icon{width: 20px;height: 20px;}
+.personal-icon{width: 25px;height: 25px;}
+.user-name span, .user-name img{vertical-align:middle; margin-left: 5px;}
+.user-name{font-size: 18px; color: #fff;}
+.user-name span{font-size: 12px;color: #18b2d8;font-weight: normal;}
+</style>
+</head>
+<body class="mainbody">
+<div class="headerbody">
+<div class="header wp">
+    <h1 class="logo"><img src="../images/logo.png"></h1>
+    <div class="searchbox">
+        <div class="searchboxbody">
+            <a class="select" href="javascript:;" id="search-select"><img src="../images/search-ico-1-on.jpg" id="search-select-1"><img src="../images/search-ico-2-on.jpg" style="display: none"  id="search-select-2"><img src="../images/search-ico-3-on.jpg" style="display: none"  id="search-select-3"><img src="../images/search-ico-5-on.png" style="display: none"  id="search-select-4"><img src="../images/search-ico-6-on.png" style="display: none"  id="search-select-5"></a>
+            <input type="text" class="input" placeholder="初音">
+            <input type="button" class="btn">
+        </div>
+        <ul id="search-type">
+            <li><a href="javascript:;" class="on" id="search-type-1"><img src="../images/search-ico-1.jpg" class="imgunon"><img src="../images/search-ico-1-on.jpg" class="imgon">音乐</a></li>
+            <li><a href="javascript:;" id="search-type-3"><img src="../images/search-ico-3.jpg" class="imgunon"><img src="../images/search-ico-3-on.jpg" class="imgon">图片／3D</a></li>
+            <li><a href="javascript:;" id="search-type-2"><img src="../images/search-ico-2.jpg" class="imgunon"><img src="../images/search-ico-2-on.jpg" class="imgon">文字</a></li>
+                <li><a href="javascript:;" id="search-type-4"><img src="../images/search-ico-5.png" class="imgunon"><img src="../images/search-ico-5-on.png" class="imgon">用户</a></li>
+                <li><a href="javascript:;" id="search-type-5"><img src="../images/search-ico-6.png" class="imgunon"><img src="../images/search-ico-6-on.png" class="imgon">小组</a></li>
+        </ul>
+    </div>
+    <ul class="top-login">
+                 <li><a href="message.html" class="t-msg-link" style='display:none;'>消息<span>3</span></a></li>
+        <li></li>
+        <li><a href="post-music.html" class="t-send-link">我要投稿</a></li>
+    </ul>
+</div>
+</div><div class="navbox"><ul class="wp">
+        <li><a href="main.html" class="on">首页</a></li>
+        <li><a href="list-music.html">音乐作品</a></li>
+        <li><a href="list-img.html">画作／3D 建模</a></li>
+        <li><a href="list-txt.html">文字作品</a></li>     
+        <li><a href="activity.html">专题活动</a></li>
+        <li><a href="groups.html">小组创作</a></li><li><a href="/html/list-hudong.html">官方互动</a></li>
+       
+    </ul>
+</div>
+
+    <div class="user-top">
+        <div class="user-top-body">
+            <span class="portrait"></span>
+            <h3 class="user-name"></h3>
+            <ul class="user-nav">
+                <li><a href="user-main.html" class="on"></a></li>
+                <li><a href="user-info.html"></a></li>
+                <li><a href="user-favorite.html"></a></li>
+                <li><a href="user-group.html"></a></li>
+                <li><a href="user-works.html"></a></li>
+                <li><a href="user_integral.html"></a></li>
+            </ul>
+            <div class="user-count">
+                <p><span></span>粉丝</p>
+                <p><span></span>关注</p>
+            </div>
+        </div>
+    </div>
+    <div class="user-main">
+        <div class="user-main-l">
+            <ul class="search-nav">
+                <li><a href="javascript:;" class="on" id="tab-1">音乐（<span id="music_count"></span>）</a></li>
+                <li><a href="javascript:;" id="tab-2">画作/3D 建模（<span id="pic_count"></span>）</a></li>
+                <li><a href="javascript:;" id="tab-3">文字（<span id="txt_count"></span>）</a></li>
+            </ul>
+            <div class="user-music-listbox" id="tabbox-1">
+            </div>
+            <div style="display:none"  class="user-img-listbox" id="tabbox-2">
+            </div>
+            <div style="display:none"  class="user-txt-listbox" id="tabbox-3">
+        </div>
+        <div class="pagination" id="pagination">
+        </div>
+
+    </div>
+    <div class="user-main-r">
+        <div class="user-rbox">
+            <h3><a href="javascript:;">编辑</a>个人资料</h3>
+            <ul class="user-info">
+               <li><label>用户昵称</label><span>名字十个字十个字个字</span><a href="./user_check_base.html">点击认证</a></li>
+                <li><label>用户性别</label><span></span></li>
+                <li><label>坐标</label><span></span></li>
+                <li><label>关于我</label><span></span></li>
+                <li><label>团队标示</label>
+                <div class="user-icon-wrap clearfix">
+               
+				</div>
+                </li>
+                <li><label>用户徽章</label>
+                <div class="user-icon-wrap clearfix">
+	
+					</div>
+   			</li>
+            </ul>
+        </div>
+        <div class="user-rbox">
+            <h3>经常使用的标签</h3>
+            <ul class="user-taglist">
+                <li><a href="#">初音未来</a></li>
+                <li><a href="#">巡音流歌</a></li>
+                <li><a href="#">镜音 铃</a></li>
+                <li><a href="#">镜音 连</a></li>
+                <li><a href="#">MEIKO</a></li>
+                <li><a href="#">KAITO</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="footer">
+<div class="footer-body">
+    <h2>
+        <img src="../images/logo-footer.png">
+    </h2>
+    <ul class="footer-ico-box">
+        <li class="footer-ico-1">
+            <h3>官方微信</h3>
+            <p>关注POPPRO最新动态</p>
+        </li>
+        <li class="footer-ico-2">
+            <h3>初音未来 V4 中文版</h3>
+             <p><a target="_blank" style="text-decoration:none; color:#b0b0b2; " href="https://item.taobao.com/item.htm?spm=a230r.1.14.21.108f93131LkcYB&id=557546981640&ns=1&abbucket=1#detail" >点击购买</a></p>
+        </li>
+    </ul>
+    <div class="footer-link">
+<a href="http://www.poppro.cn/html/aboutus.html?hId=MQ==">关于POPPRO</a><span>|</span><a href="mailto:kfpoppro@scla.com.cn">联系我们</a><span>|</span><a href="http://www.poppro.cn/html/aboutus.html?hId=Mw==">网站协议</a><span>|</span><a href="mailto:bhpoppro@scla.com.cn">客服/版权申诉</a>
+        <p>公司名称：上海新创华文化发展有限公司 | 公司地址：上海市静安区万荣路1053号6号楼 | 公司电话：(8621)51095308</p><p>&copy; Crypton Future Media, INC. www.piapro.net | 网站备案号：沪ICP备17015563号-1 | 网络文化经营许可证：沪网文（2017）11256-869号</p>
+    </div>
+</div>
+
+<div class="UED_hide" id="tip-warn-1" style="display:none;">
+    <div class="tipbox-new">
+        <h2>徽章展示管理</h2>
+        <div class="tipbox-new-body">
+            <p>请点击选择下方列表中需要向好友展示的徽章，选中的徽章将在用户账户里进行展示。</p>
+            <div class="tipico-list">
+            <ul class ="badgelist">
+
+
+            </ul>
+            </div>
+
+            <div class="select-tipico-list">
+            <ul class ="headlist">
+
+
+            </ul>
+            </div>
+            <div class="tipbox-new-footer">
+                <span class="">全选</span>
+                <a href="javascript:cancel();" class="dis">取消</a>
+                <a href="javascript:sendshowlist();">确定</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+<script src="../js/jquery-1.7.1.min.js"></script>
+<script src="../js/util/pager.js"></script>
+<script src="../js/layer/layer.js"></script>
+<script src="/js/jq.layer.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/project.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/page/user-main.js"></script>
+<script src="../js/page/integral.js"></script>
+<script>
+$(function () {
+    $('#tab-1').click(function () {
+        $('#tab-1,#tab-2,#tab-3').removeClass("on");
+        $(this).addClass("on");
+
+        $('#tabbox-1,#tabbox-2,#tabbox-3').hide();
+        $('#tabbox-1').show();
+    })
+    $('#tab-2').click(function () {
+        $('#tab-1,#tab-2,#tab-3').removeClass("on");
+        $(this).addClass("on");
+
+        $('#tabbox-1,#tabbox-2,#tabbox-3').hide();
+        $('#tabbox-2').show();
+
+    })
+    $('#tab-3').click(function () {
+        $('#tab-1,#tab-2,#tab-3').removeClass("on");
+        $(this).addClass("on");
+
+        $('#tabbox-1,#tabbox-2,#tabbox-3').hide();
+        $('#tabbox-3').show();
+    })
+
+})
+
+</script>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <title>POPPRO | 专题活动</title>
+    <link rel="stylesheet" href="../css/b.css?312312">
+    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+    <script src="../js/lib/flexible.js"></script>
+</head>
+<body>
+<div class="main-head">
+    <h1>专题活动</h1>
+</div>
+<div class="pagebody">
+    <div class="banner swiper-container">
+        <div class="swiper-wrapper">
+            <!--<div class="swiper-slide">
+                <img src="../images/banner1.png">
+            </div>
+            <div class="swiper-slide">
+                <img src="../images/banner1.png">
+            </div>
+            <div class="swiper-slide">
+                <img src="../images/banner1.png">
+            </div>-->
+        </div>
+    </div>
+    <div class="tabbox tabbox-1">
+        <ul class="threetab">
+            <li class="on">征集中</li>
+            <li>评选中</li>
+            <li>已结束</li>
+        </ul>
+        <span class="bottom-line" style="width:33%"></span>
+    </div>
+    <div class="tabmain-1">
+        <ul class="zhenggaolist">           
+        </ul>           
+        <a href="javascript:acPage(zloffset);" class="addmore">点击加载更多</a>
+    </div>
+    <div class="tabmain-2" style="display:none">
+        <ul class="zhenggaolist">
+           <!--  <li>
+                <span class="imgbox">
+                    <img src="../images/detail-img-2.png">
+                </span>
+                <div class="zhenggao-r">
+                    <span class="flag-1">评选中</span>
+                    <h4>客家 卡片插图大募集客家 卡片插图大募客家 卡片插图大募集客家 卡片插图大募...</h4>
+                    <p class="leixing"><img src="../images/collection-1.png" >类型</p>
+                    <p class="dis">作品评选中…</p>
+                </div>
+            </li>-->
+        </ul>  
+           <a href="javascript:pxPage(pxoffset);" class="addmore">点击加载更多</a> 
+    </div>
+    <div class="tabmain-3" style="display:none">
+        <!--<div class="data-null">
+            	暂时还没有活动哦！
+        </div>-->
+        <ul class="zhenggaolist" style="">
+           <!-- <li>
+                <span class="imgbox">
+                    <img src="../images/detail-img-2.png">
+                </span>
+                <div class="zhenggao-r">
+                    <span class="flag-1">已结束</span>
+                    <h4>客家 卡片插图大募集客家 卡片插图大募客家 卡片插图大募集客家 卡片插图大募...</h4>
+                    <p class="dis">结果已公布</p>
+                </div>
+            </li>-->
+        </ul>
+           <a href="javascript:endPage(jsoffset);" class="addmore">点击加载更多</a>
+    </div>
+    
+</div>
+<footer>
+        <li><a href="./main.html"><img src="../images/nav1@2x.png"><img src="../images/nav1-on@2x.png" class="on"><span>首页</span></a></li>
+        <li><a href="javascript:;" class="on"><img src="../images/nav2@2x.png"><img src="../images/nav2-on@2x.png" class="on"><span>专题活动</span></a></li>
+        <li><a href="./groups.html"><img src="../images/nav3@2x.png"><img src="../images/nav3-on@2x.png" class="on"><span>小组</span></a></li>
+        <li><a href="./usermain.html"><img src="../images/nav4@2x.png"><img src="../images/nav4-on@2x.png" class="on"><span>我的</span></a></li>
+    </ul>
+   
+</footer>
+<script src="/js/jquery-1.7.1.min.js"></script>
+<script src="../js/zepto.1.1.4.min.js"></script>
+<script src="../js/swiper-3.4.2.min.js"></script>
+<script src="../js/b.js"></script>
+<script src="../js/page/zhenggao.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        autoplay: 5000,//可选选项，自动滑动
+        loop:true,
+    })
+
+    var tab_num = 33.33;
+    $('.tabbox ul li').click(function () {
+        $('.tabbox ul li').removeClass('on');
+        $(this).addClass('on');
+        $(".bottom-line").css('left',$(this).index()*tab_num +'%');
+        if($(this).index() == 0){
+            $('.tabmain-1').show();
+            $('.tabmain-2').hide();
+            $('.tabmain-3').hide();
+        }else if($(this).index() == 1){
+            $('.tabmain-1').hide();
+            $('.tabmain-2').show();
+            $('.tabmain-3').hide();
+        }else{
+            $('.tabmain-1').hide();
+            $('.tabmain-2').hide();
+            $('.tabmain-3').show();
+        }
+    });
+
+</script>
+</body>
+</html>

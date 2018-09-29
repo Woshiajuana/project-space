@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <title>POPPRO | 设置</title>
+    <link rel="stylesheet" href="../css/b.css?312312">
+    <script src="../js/lib/flexible.js"></script>
+</head>
+<body>
+<div class="main-head">
+    <a href="./main.html" class="page-home"></a>
+    <h1>设置</h1>
+    <a href="javascript:;" class="page-menu"></a>
+</div>
+
+<div class="pagebody nofootpage1">
+    <div class="settingbox">
+        <ul>
+            <li><a href="./showtxt.html?hId=MQ==&type=1">关于POPPRO<i class="arrw-r"></i></a></li>
+            <li><a href="./showtxt.html?hId=Mg==&type=1">联系我们<i class="arrw-r"></i></a></li>
+            <li><a href="./showtxt.html?hId=Mw==&type=1">用户条款<i class="arrw-r"></i></a></li>
+            <li><a href="mailto:bhpoppro@scla.com.cn">客服/版权申诉<i class="arrw-r"></i></a></li>
+        </ul>
+    </div>
+    <div class="btnbox">
+        <a href="javascript:logout();" class="submit-btn">退出账号</a>
+    </div>
+</div>
+<script src="/js/jquery-1.7.1.min.js"></script>
+<script src="../js/zepto.1.1.4.min.js"></script>
+<script src="../js/b.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/project.js"></script>
+<script>
+	$(function(){
+		if(!checkLogin()){
+			location.href="./login.html";
+		}
+	})
+</script>
+</body>
+</html>

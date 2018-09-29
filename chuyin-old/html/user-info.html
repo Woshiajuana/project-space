@@ -1,0 +1,400 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="POPPRO是由Crypton Future Media公司官方独家授权的初音未来官方中文投稿网站。" />
+    <title>POPPRO | 用户信息</title>
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link type="text/css" href="../css/b.css" rel="stylesheet" /><link type="text/css" href="../css/b_v2.css" rel="stylesheet" />
+    <link type="text/css" href="../css/user.css" rel="stylesheet" />
+    <link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+      <link type="text/css" href="../js/layer/skin/default/layer.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/jquery.Jcrop.min.css" type="text/css" />
+    <link rel="stylesheet" href="../css/uploadifive.css" type="text/css" />
+    <style>
+	.tip-1{
+	color:#f00;
+	}
+	</style>
+	    <style>
+.sex-icon,.personal-icon{display: inline-block;}
+.sex-icon{width: 20px;height: 20px;}
+.personal-icon{width: 25px;height: 25px;}
+.user-name span, .user-name img{vertical-align:middle; margin-left: 5px;}
+.user-name{font-size: 18px; color: #fff;}
+.user-name span{font-size: 12px;color: #18b2d8;font-weight: normal;}
+</style>
+</head>
+<body class="mainbody">
+<div class="headerbody">
+<div class="header wp">
+    <h1 class="logo"><img src="../images/logo.png"></h1>
+    <div class="searchbox">
+        <div class="searchboxbody">
+            <a class="select" href="javascript:;" id="search-select"><img src="../images/search-ico-1-on.jpg" id="search-select-1"><img src="../images/search-ico-2-on.jpg" style="display: none"  id="search-select-2"><img src="../images/search-ico-3-on.jpg" style="display: none"  id="search-select-3"><img src="../images/search-ico-5-on.png" style="display: none"  id="search-select-4"><img src="../images/search-ico-6-on.png" style="display: none"  id="search-select-5"></a>
+            <input type="text" class="input" placeholder="初音">
+            <input type="button" class="btn">
+        </div>
+        <ul id="search-type">
+            <li><a href="javascript:;" class="on" id="search-type-1"><img src="../images/search-ico-1.jpg" class="imgunon"><img src="../images/search-ico-1-on.jpg" class="imgon">音频</a></li>
+            <li><a href="javascript:;" id="search-type-3"><img src="../images/search-ico-3.jpg" class="imgunon"><img src="../images/search-ico-3-on.jpg" class="imgon">图片／3D</a></li>
+            <li><a href="javascript:;" id="search-type-2"><img src="../images/search-ico-2.jpg" class="imgunon"><img src="../images/search-ico-2-on.jpg" class="imgon">文字</a></li>
+                <li><a href="javascript:;" id="search-type-4"><img src="../images/search-ico-5.png" class="imgunon"><img src="../images/search-ico-5-on.png" class="imgon">用户</a></li>
+                <li><a href="javascript:;" id="search-type-5"><img src="../images/search-ico-6.png" class="imgunon"><img src="../images/search-ico-6-on.png" class="imgon">小组</a></li>
+        </ul>
+    </div>
+    <ul class="top-login">
+                 <li><a href="message.html" class="t-msg-link" style='display:none;'>消息<span>3</span></a></li>
+        <li></li>
+        <li><a href="post-music.html" class="t-send-link">我要投稿</a></li>
+    </ul>
+</div>
+</div><div class="navbox"><ul class="wp">
+        <li><a href="main.html" class="on">首页</a></li>
+        <li><a href="list-music.html">音乐作品</a></li>
+        <li><a href="list-img.html">画作／3D 建模</a></li>
+        <li><a href="list-txt.html">文字作品</a></li>     
+        <li><a href="activity.html">专题活动</a></li>
+        <li><a href="groups.html">小组创作</a></li><li><a href="/html/list-hudong.html">官方互动</a></li>
+       
+    </ul>
+</div>
+
+    <div class="user-top">
+        <div class="user-top-body">
+            <span class="portrait"></span>
+            <h3 class="user-name"></h3>
+            <ul class="user-nav">
+                <li><a href="user-main.html"></a></li>
+                <li><a href="user-info.html" class="on"></a></li>
+                <li><a href="user-favorite.html"></a></li>
+                <li><a href="user-group.html"></a></li>
+                <li><a href="user-works.html"></a></li>
+                <li><a href="user_integral.html"></a></li>
+            </ul>
+            <div class="user-count">
+                <p><span></span>粉丝</p>
+                <p><span></span>关注</p>
+            </div>
+        </div>
+    </div>
+    <div class="user-main">
+        <div class="user-info-l">
+            <ul id="show_xgmm">
+                <li><a href="user-info.html" class="on" id="jc_zl">基础资料</a></li>
+                <li style="display:none"><a href="user-password.html" >修改密码</a></li>
+                <li style="display:none"><a href="user-bind.html">关联绑定</a></li>
+            </ul>
+        </div>
+        <div class="user-info-r ChinaArea">
+            <h2>基础资料</h2>
+            <ul class="user-form">
+                <li style="display:none"><label class="label-l">昵称</label><span style="line-height:32px;" id="read_username"><input type="text" placeholder="" class="input-1" ></span><span class="tip-1" style="color:red" id="username_error" ></span></li>
+                <li style="display:none"><label class="label-l">邮箱地址</label><span style="line-height:32px;" id="read_email"><input type="text" placeholder="" readonly="readonly" class="input-1"></span></li>
+                <li style="display:none"><label class="label-l">真实姓名</label><span style="line-height:32px;" id="read_nick"><input type="text" placeholder="" class="input-1"></span><span class="tip-1" style="display:none;color:red" id="name_error">格式错误请重新输入</span></li>
+                <li style="display:none"><label class="label-l">手机号码</label><span style="line-height:32px;" id="read_mobile"><input type="text" id="mobile1" readonly="readonly" placeholder="手机号请去关联绑定" class="input-1"></span><span class="tip-1" id="mobile_error" style="color:red"></span></li>
+                <li style="display:none"><label class="label-l">地址</label><span style="line-height:32px;" id="ChinaArea"><select class="select-1" id="province" name="province"><option>省/直辖市</option></select><select class="select-1" id="city" name="city"><option>城市</option></select><input type="text" placeholder="详细地址" class="input-2" id="addr"></span></li>
+                <li style="display:none"><label class="label-l">性别</label><span style="line-height:32px;" id="read_sex"><input type="radio" name="sex" value="1" class="radio-1" checked><label class="label-2" >男</label> <input type="radio" name="sex" value="2" class="radio-1"><label class="label-2">女</label></span></li>
+                <li style="display:none"><label class="label-l">生日</label><span style="line-height:32px;" id="read_birthday"><input type="text" class="input-1" name="birthday" id="datepicker"></span></li>
+                <li style="display:none"><label class="label-l">个人介绍</label><span style="line-height:32px;" id="read_personalDesc"><textarea class="textarea-1" id="personalDesc">内容不超过100个字</textarea><p class="txt-count"></span><span id="descbox-count"><i>0</i>/100</span></p></li>
+            </ul>
+            <div class="upload-header">
+                <!--span></span>-->
+                <span class="imgbox"></span>
+                <!-- <a href="javascript:;" id="upload-btn">上传头像</a> -->
+             <input id="file_upload_pic" style="display:none" name="file_upload" type="file" >
+             <input id="file_upload_h5" style="display:none" name="file_upload_h5" type="file">
+            </div>
+            <p class="btn-box">
+                <a href="javascript:perfect();" class="submit-btn" style="display:none">保存</a>
+            </p>
+        </div>
+        <!--   客人态 -->
+       
+    </div>
+<div class="footer">
+    <div class="footer-body">
+        <h2>
+            <img src="../images/logo-footer.png">
+        </h2>
+        <ul class="footer-ico-box">
+            <li class="footer-ico-1">
+                <h3>官方微信</h3>
+                <p>关注POPPRO最新动态</p>
+            </li>
+            <li class="footer-ico-2">
+                <h3>初音未来 V4 中文版</h3>
+                 <p><a target="_blank" style="text-decoration:none; color:#b0b0b2; " href="https://item.taobao.com/item.htm?spm=a230r.1.14.21.108f93131LkcYB&id=557546981640&ns=1&abbucket=1#detail" >点击购买</a></p>
+            </li>
+        </ul>
+        <div class="footer-link">
+<a href="http://www.poppro.cn/html/aboutus.html?hId=MQ==">关于POPPRO</a><span>|</span><a href="mailto:kfpoppro@scla.com.cn">联系我们</a><span>|</span><a href="http://www.poppro.cn/html/aboutus.html?hId=Mw==">网站协议</a><span>|</span><a href="mailto:bhpoppro@scla.com.cn">客服/版权申诉</a>
+            <p>公司名称：上海新创华文化发展有限公司 | 公司地址：上海市静安区万荣路1053号6号楼 | 公司电话：(8621)51095308</p><p>&copy; Crypton Future Media, INC. www.piapro.net | 网站备案号：沪ICP备17015563号-1 | 网络文化经营许可证：沪网文（2017）11256-869号</p>
+        </div>
+    </div>
+</div>
+<div class="UED_hide" id="tip-upload">
+    <div class="showbox showbox-2">
+        <h2>图片上传</h2>
+        <div class="uploadbox">
+            <div class="imgcropperbox" style="height: 500px; margin: auto; width: 500px;">
+                <img id="image" src="../images/bannermusic.jpg" style="width:100%">
+                <input type="text" id="showcropperinfo" style="display: none">
+            </div>
+            <div class="btnbox">
+            	<!-- <span style="color:grey; font-size:13px;">*滑动滚轴可调整图片大小</span><br><br> -->
+                <!-- <a href="javascript:;" id="file_upload_pic">选择图片</a> --><a href="javascript:;" id="handleImg">确定裁剪</a>
+            </div>
+        </div>
+    </div>
+    <a class="tip-close" href="javascript:;"></a>
+</div>
+</body>
+<script src="../js/jquery-1.7.1.min.js"></script>
+<script src="../js/jquery.Jcrop.min.js"></script>
+<script src="../js/util/pager.js"></script>
+<script src="../js/util/jquery.uploadify.js"></script>
+<script src="../js/jquery.uploadifive.min.js"></script>
+<script src="/js/jq.layer.js"></script>
+<script src="../js/layer/layer.js"></script>
+<script type="text/javascript" src="../js/location/location.js"></script>
+<script type="text/javascript" src="../js/location/YlChinaArea.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/project.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/page/user-info.js"></script>
+<script>
+    $(function () {
+   //     $( "#datepicker" ).datepicker({
+  //          inline: true,
+   //     dateFormat:"yy-mm-dd",
+   //     changeYear: true,
+  //          yearRange: '1900:2090'
+  //  });
+
+        $('#tab-1').click(function () {
+            $('#tab-1,#tab-2,#tab-3').removeClass("on");
+            $(this).addClass("on");
+
+            $('#tabbox-1,#tabbox-2,#tabbox-3').hide();
+            $('#tabbox-1').show();
+        })
+        $('#tab-2').click(function () {
+            $('#tab-1,#tab-2,#tab-3').removeClass("on");
+            $(this).addClass("on");
+
+            $('#tabbox-1,#tabbox-2,#tabbox-3').hide();
+            $('#tabbox-2').show();
+
+        })
+        $('#tab-3').click(function () {
+            $('#tab-1,#tab-2,#tab-3').removeClass("on");
+            $(this).addClass("on");
+
+            $('#tabbox-1,#tabbox-2,#tabbox-3').hide();
+            $('#tabbox-3').show();
+        })
+
+        $('#upload-btn').click(function () {
+            $('#file_upload_pic').click();
+        });
+
+        $("#personalDesc").bind("input propertychange",'textarea',function(){
+            words_deal($(this),100,$('#descbox-count'))
+        });
+    })
+
+    var jcrop_api;
+    $(function(){
+    	if (isUseH5()) {
+    		$('#file_upload_h5').show();
+        	$('#file_upload_h5').uploadifive({
+    			'auto'             : true,
+    			'checkScript'      : '',
+    			
+        		'color': 'blue',
+        		'buttonText':'上传图片',
+        		'fileType': ['image/jpeg','image/png','image/gif','image/jpg'],
+        		'height': 30,
+             	'width': 100,
+             	'buttonClass':'uploadbtn2',
+        		'multi' : false,
+        		'queueSizeLimit':1,
+        		'fileSizeLimit':'2000',
+        		'auto' : true,
+    			'uploadScript'     : '/user/upload',
+    			'onUploadComplete' : function(file, data) {
+    				$('.close').click();
+    				 var dataObj = JSON.parse(data);
+    				 var dataObj = JSON.parse(data);
+    			     var img = new Image();  
+            		 if(dataObj.code == 0){
+            			$('.imgbox').html('<img id="user_head" style="width:100px;height:100px" src="'+userInfo.head+'">'); 
+            			$.LAYER.show({id:'tip-upload'});
+            			img.src = dataObj.msg;
+            			img.onload = function(){
+            				if (img.width > img.height) {
+            					$('.imgcropperbox').html('<img id="image" style="width:100%" src="'+dataObj.msg+'">');
+            				}
+            				else {
+            					$('.imgcropperbox').html('<img id="image" style="height:100%" src="'+dataObj.msg+'">');
+            				}
+            				$('#image').Jcrop({
+                		      	bgFade:     true,
+                		      	bgOpacity: .2,
+                		     	allowResize:true,
+                		      	/* aspectRatio: 1/1, */
+                		      	onChange:getcord,
+                		    },function(){
+                		      	jcrop_api = this;
+                		      	jcrop_api.setSelect(['0','0','100','100'])
+                		      	$('#handleImg').unbind('click');
+                		      	$('#handleImg').click(function(){
+                		    	  	console.log(jcrop_api.tellSelect());
+                		    	  	console.log(jcrop_api.getWidgetSize());
+                		    	  	var realInfo = jcrop_api.getWidgetSize();
+                		    	  	var info = jcrop_api.tellSelect();
+                		    	  	var percent_x = info.x/realInfo[0];
+                		    	  	var percent_y = info.y/realInfo[1];
+                		    	  	var percent_w = info.w/realInfo[0];
+                		    	  	var percent_h = info.h/realInfo[1];
+                		    	  	handleImg(dataObj.msg,percent_x,percent_y,percent_w,percent_h,0,function(r){
+                		    	  		if (r.code == 0) {
+                                 			$('.imgbox').html('<img id="user_head" style="width:100px;height:100px" src="'+r.picName+'">');
+                                          	$.LAYER.close();
+                                 		}
+                		    	  	})
+                       		 	})
+                		     });
+            			};
+                     	/* picSmall = dataObj.msg;*/
+              		}else{
+              			alert(dataObj.msg);
+              		}
+    			}
+    		});
+    	}
+    	else {
+    		$('#file_upload_pic').uploadify({
+        		'swf'      : '/swf/uploadify.swf',
+        		'uploader' : '/user/upload',
+        		'color': 'blue',
+        		'buttonText':'上传图片',
+        		'fileTypeExts': '*.jpg;*.jpeg;*.png;*.gif',
+        		'height': 30,
+             	'width': 100,
+             	'buttonClass':'uploadbtn2',
+        		'multi' : false,
+        		//'uploadLimit':1,
+        		'queueSizeLimit':1,
+        		'fileSizeLimit':'2000',
+        		'auto' : true,
+        		'onUploadSuccess': function (file, data, response) {
+        			     var dataObj = JSON.parse(data);
+        			     var img = new Image();  
+                		 if(dataObj.code == 0){
+                			$('.uploadify-queue').html('<img id="user_head" style="width:100px;height:100px" src="'+userInfo.head+'">'); 
+                			$.LAYER.show({id:'tip-upload'});
+                			img.src = dataObj.msg;
+                			img.onload = function(){
+                				if (img.width > img.height) {
+                					$('.imgcropperbox').html('<img id="image" style="width:100%" src="'+dataObj.msg+'">');
+                				}
+                				else {
+                					$('.imgcropperbox').html('<img id="image" style="height:100%" src="'+dataObj.msg+'">');
+                				}
+                				$('#image').Jcrop({
+                    		      	bgFade:     true,
+                    		      	bgOpacity: .2,
+                    		     	allowResize:true,
+                    		      	/* aspectRatio: 1/1, */
+                    		      	onChange:getcord,
+                    		    },function(){
+                    		      	jcrop_api = this;
+                    		      	jcrop_api.setSelect(['0','0','100','100'])
+                    		      	$('#handleImg').unbind('click');
+                    		      	$('#handleImg').click(function(){
+                    		    	  	console.log(jcrop_api.tellSelect());
+                    		    	  	console.log(jcrop_api.getWidgetSize());
+                    		    	  	var realInfo = jcrop_api.getWidgetSize();
+                    		    	  	var info = jcrop_api.tellSelect();
+                    		    	  	var percent_x = info.x/realInfo[0];
+                    		    	  	var percent_y = info.y/realInfo[1];
+                    		    	  	var percent_w = info.w/realInfo[0];
+                    		    	  	var percent_h = info.h/realInfo[1];
+                    		    	  	handleImg(dataObj.msg,percent_x,percent_y,percent_w,percent_h,0,function(r){
+                    		    	  		if (r.code == 0) {
+                                     			$('.uploadify-queue').html('<img id="user_head" style="width:100px;height:100px" src="'+r.picName+'">');
+                                              	$.LAYER.close();
+                                     		}
+                    		    	  	})
+                           		 	})
+                    		     });
+                			};
+                         	/* picSmall = dataObj.msg;*/
+                  		}else{
+                  			alert(dataObj.msg);
+                  		}
+        		}
+        	}); 
+    	}
+    	
+    	$('#upload-btn').click(function(){
+    		$.LAYER.show({id:'tip-upload'});
+    	})
+    	
+    	function getcord() {
+ 	       /* console.log(jcrop_api.tellSelect())
+ 	       console.log(jcrop_api.tellScaled())
+ 	       console.log("===============================================") */ 
+ 	 	};
+
+        $(".tip-close").click(
+                function(){$.LAYER.close();}
+        )
+
+        //$.LAYER.show({id:'tip-upload'});
+
+        //$('#image').cropper({
+           // aspectRatio: 1 / 1,
+            //crop: function(e) {
+//                // Output the result data for cropping image.
+//                console.log(e.x);
+//                console.log(e.y);
+//                console.log(e.width);
+//                console.log(e.height);
+//                console.log(e.rotate);
+//                console.log(e.scaleX);
+//                console.log(e.scaleY);
+              //  $("#showcropperinfo").val(e.x+','+e.y+","+e.width+","+e.height)
+
+           // }
+       //});
+    })
+
+    function words_deal(obj,maxnum,countobj)
+    {
+        var curLength=obj.val().length;
+
+        console.log(curLength)
+        if(curLength>=maxnum)
+        {
+            countobj.removeClass();
+            countobj.addClass('txtmax');
+            var num=obj.val().substr(0,maxnum);
+            obj.val(num);
+            //alert("超过字数限制，多出的字将被截断！" );
+            countobj.find("i").html(maxnum)
+        }else if(curLength<1){
+            countobj.removeClass()
+            countobj.find("i").html('0')
+        }else
+        {
+            countobj.removeClass();
+            countobj.addClass('txtmin')
+            countobj.find("i").html(curLength)
+        }
+    }
+</script>
+</html>

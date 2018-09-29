@@ -1,0 +1,222 @@
+@charset "UTF-8";
+.loginbox {
+  width: 908px;
+  height: 513px;
+  background: #fff;
+  border: 1px solid #eeeeee;
+  margin: 50px auto 80px auto; }
+
+.loginbox-l {
+  padding: 0 0 0 49px;
+  float: left;
+  margin: 49px 0 49px 0; }
+  .loginbox-l h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 30px; }
+  .loginbox-l ul li {
+    clear: both; }
+    .loginbox-l ul li label {
+      display: block;
+      font-size: 14px;
+      color: #333;
+      line-height: 30px; }
+    .loginbox-l ul li .input-1 {
+      width: 298px;
+      height: 30px;
+      border: 1px solid #dddddd;
+      margin-bottom: 20px;
+      text-indent: 5px; }
+    .loginbox-l ul li .input-2 {
+      width: 198px;
+      height: 30px;
+      border: 1px solid #dddddd;
+      margin-bottom: 20px;
+      text-indent: 5px;
+      float: left;
+      margin-right: 10px; }
+    .loginbox-l ul li .forgot-pass {
+      color: #ccc;
+      font-size: 14px;
+      text-decoration: underline;
+      margin-left: 20px; }
+  .loginbox-l ul .save-week {
+    font-size: 14px; }
+    .loginbox-l ul .save-week input {
+      float: left;
+      margin: 5px 10px 0 0; }
+  .loginbox-l ul .xieyi {
+    font-size: 14px;
+    color: #18b2d8; }
+    .loginbox-l ul .xieyi input {
+      float: left;
+      margin: 5px 10px 0 0; }
+    .loginbox-l ul .xieyi a {
+      color: #18b2d8;
+      text-decoration: none; }
+  .loginbox-l .loginbtn {
+    margin: 20px 0; }
+    .loginbox-l .loginbtn a {
+      width: 120px;
+      height: 50px;
+      display: inline-block;
+      background: #18b2d8;
+      font-size: 20px;
+      color: #fff;
+      text-align: center;
+      line-height: 50px;
+      text-decoration: none;
+      border-radius: 3px;
+      -moz-border-radius: 3px; }
+  .loginbox-l .goto-reg {
+    font-size: 14px; }
+    .loginbox-l .goto-reg a {
+      color: #18b2d8; }
+
+.loginbox-r {
+  height: 415px;
+  padding: 60px 49px 0 49px;
+  float: right;
+  margin: 49px 0 49px 0;
+  border-left: 1px solid #eeeeee; }
+  .loginbox-r h3 {
+    font-size: 14px;
+    color: #333333;
+    font-weight: normal;
+    text-align: center; }
+  .loginbox-r a {
+    background-image: url("../images/other-login.png");
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin: 0 10px; }
+  .loginbox-r .other-login-1 {
+    background-position: -9px -4px; }
+  .loginbox-r .other-login-2 {
+    background-position: -79px -4px; }
+  .loginbox-r .other-login-3 {
+    background-position: -149px -4px; }
+  .loginbox-r p {
+    padding: 25px 0; }
+
+/*reg 定制*/
+.regbtn {
+  margin: 20px 0; }
+  .regbtn a {
+    width: 160px;
+    height: 50px;
+    display: inline-block;
+    background: #18b2d8;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    border-radius: 3px;
+    -moz-border-radius: 3px; }
+
+.goto-email {
+  width: 180px;
+  height: 50px;
+  display: inline-block;
+  background: #18b2d8;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  display: block; }
+
+.regbox-r {
+  height: 415px;
+  padding: 60px 49px 0 49px;
+  float: right;
+  margin: 49px 0 49px 0;
+  border-left: 1px solid #eeeeee;
+  line-height: 30px; }
+  .regbox-r a {
+    color: #18b2d8;
+    display: block; }
+
+.regmail {
+  background: url("../images/reg-mail.png") no-repeat;
+  padding-left: 100px;
+  margin-left: 84px;
+  margin-top: 56px; }
+  .regmail p {
+    padding: 30px 0; }
+  .regmail h2 {
+    font-size: 20px;
+    color: #333;
+    height: 44px;
+    line-height: 44px; }
+  .regmail dl {
+    color: #999999;
+    line-height: 25px;
+    font-size: 14px;
+    padding-top: 30px; }
+    .regmail dl a {
+      color: #18b2d8; }
+
+.regmail-2 {
+  text-align: center; }
+  .regmail-2 h3 {
+    font-size: 20px;
+    color: #333;
+    padding: 50px 0; }
+  .regmail-2 .title-txt {
+    text-align: center;
+    display: block;
+    line-height: 50px;
+    font-size: 14px; }
+  .regmail-2 .input-1 {
+    width: 298px;
+    height: 30px;
+    border: 1px solid #dddddd;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    -moz-border-radius: 3px; }
+
+.sex-select {
+  margin: auto; }
+  .sex-select input {
+    margin-right: 10px;
+    display: inline-block;
+    top: -15px;
+    position: relative;
+    margin-left: 20px; }
+  .sex-select img {
+    margin-right: 20px; }
+
+.goto-finish {
+  width: 160px;
+  height: 50px;
+  display: inline-block;
+  background: #18b2d8;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  margin-top: 10px; }
+
+.regmail-3 {
+  text-align: center;
+  padding-top: 69px; }
+  .regmail-3 h3 {
+    font-size: 20px;
+    color: #333;
+    padding: 30px 0 50px 0; }
+  .regmail-3 i {
+    font-style: normal; }
+  .regmail-3 a {
+    color: #18b2d8;
+    text-decoration: none;
+    display: block;
+    line-height: 40px; }
+
+/*# sourceMappingURL=login.css.map */

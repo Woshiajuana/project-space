@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <title>POPPRO | 小组</title>
+    <link rel="stylesheet" href="../css/b.css?312312">
+    <script src="../js/lib/flexible.js"></script>
+</head>
+<body>
+<div class="main-head">
+    <h1>小组介绍</h1>
+</div>
+
+<div class="pagebody nofootpage">
+    <div class="group-desc-box">
+    <h3>成立时间：2017-01-17</h3>
+
+        </div>
+</div>
+<script src="/js/jquery-1.7.1.min.js"></script>
+<script src="../js/zepto.1.1.4.min.js"></script>
+<script src="../js/b.js"></script>
+<script src="../js/project.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/page/user-group.js"></script>
+<script>
+    var tab_num = 50;
+    $('.tabbox ul li').click(function () {
+        $('.tabbox ul li').removeClass('on');
+        $(this).addClass('on');
+        $(".bottom-line").css('left',$(this).index()*tab_num +'%');
+        if($(this).index() == 0){
+            $('.group-list').show();
+            $('.group-list-2').hide();
+        }else{
+            $('.group-list').hide();
+            $('.group-list-2').show();
+        }
+    });
+</script>
+</body>
+</html>

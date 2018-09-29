@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset=UTF-8>
+    <meta name=description content="POPPRO是由Crypton Future Media公司官方独家授权的初音未来官方中文投稿网站。">
+    <meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>POPPRO | 首页</title>
+    <!--<link rel="shortcut icon" href="../images/favicon.ico"/>-->
+    <link type=text/css href=../css/jquery.jscrollpane.css rel=stylesheet media=all>
+<link href=../css/player.css rel=stylesheet></head>
+<body>
+    <!--头部-->
+    <div class=header-wrap>
+        <div class=session>
+
+        </div>
+    </div>
+    <!--/头部-->
+    <!--主体-->
+    <div class=body-wrap>
+        <div class=session>
+            <div class=left id=music-wrap>
+                <ul class=list-wrap>
+                    <li class=list-item-title>
+                        <div class="list-item-part check">
+                            <div class=check-all-box id=check-all>
+                                <div class=check-inner></div>
+                            </div>
+                            <span class=check-box-prompt>全选</span>
+                        </div>
+                        <div class="list-item-part title-name">
+                            <span id=list-delete>删除</span>
+                        </div>
+                        <div class="list-item-part author">作者</div>
+                        <div class="list-item-part time">时长</div>
+                    </li>
+                </ul>
+                <ul class="list-wrap music-list" id=music-list></ul>
+            </div>
+            <div class=right>
+                <div class=music-pic><img class=music-pic-image id=music-pic-image src="" alt=""></div>
+                <h3 class=music-title id=music-title></h3>
+                <div class=music-words-wrap>
+                    <div class=music-words-inner id=lrc_list>
+                        <!--<ul class="music-words-con" id="lrc_list"></ul>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/主体-->
+    <!--尾部-->
+    <div class=footer-wrap>
+        <div class="session footer-inner" id=player-warp>
+            <div class=player id=player></div>
+            <div class="play-ctr-wrap play-item">
+                <i class="play-ctr-item play-icon up"></i>
+                <i id=play-ctr class="play-ctr-item play-icon play"></i>
+                <i class="play-ctr-item play-icon down"></i>
+            </div>
+            <div class="play-bar-wrap play-item">
+                <div class=play-prompt>
+                    <span class=play-music-title></span>
+                    <span class=play-music-time>——/——</span>
+                </div>
+                <div class=play-bar-inner>
+                    <div class=play-bar>
+                        <div class=play-bar-con></div>
+                        <div class=play-bar-ctr></div>
+                    </div>
+                </div>
+            </div>
+            <div class="play-mode-wrap play-mode-0 play-item play-icon" id=play-mode></div>
+            <div class="play-volume-wrap play-item">
+                <i class="play-volume-icon play-icon"></i>
+                <div class=play-volume-inner>
+                    <div class=play-bar>
+                        <div class=play-volume-con></div>
+                        <div class=play-volume-ctr></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/尾部-->
+    <script src=../lib/jquery.js></script>
+    <script src=../lib/jquery.jplayer.js></script>
+    <script src=../lib/jquery.mousewheel.js></script>
+    <script src=../lib/jquery.jscrollpane.min.js></script>
+    <script type=text/javascript src=../js/player.js></script>
+    <script type=text/javascript src=/js/project.js></script>
+    <script>
+        $.post('/user/userinfo',{},function(r){
+            userInfo = r;
+            if(r.id == ''){
+                cookie('siteLogin',0,{'path':'/'});
+
+                $('.header-wrap .session').html('<div class=logo alt=logo></div>\n' +
+                    '           <div class=user-info>\n' +
+                    '            <span class=user-text><a href="javascript:toLogin();" class="t-login-link link-on">[登录］</a></span> | <span class=user-text><a href="https://www.poppro.cn/html/reg.html">[注册]</a></span>\n' +
+                    '        </div>');
+            }else{
+                $('.header-wrap .session').html('<div class=logo alt=logo></div>\n' +
+                    '            <div class=user-info>\n' +
+                    '            <div class=user-head>\n' +
+                    '            <img src='+r.head+' alt=头像>\n' +
+                    '        </div>\n' +
+                    '        <span class=user-name>'+r.username+'</span>\n' +
+                    '            <span class=user-text><a href="javascript:logout(1);">［退出］</a></span>\n' +
+                    '            </div>\n' +
+                    '            ');
+                cookie('sessionId',r.sessionId);
+            }
+        },'json');
+
+
+
+    </script>
+<style>
+     a {text-decoration: none;color: white}
+
+</style>
+
+</body>
+</html>

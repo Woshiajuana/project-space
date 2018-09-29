@@ -1,0 +1,57 @@
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+  padding:0;
+  margin:0;
+}
+html,body{
+  
+  -webkit-text-size-adjust:100%;
+  font-size:12px;
+}
+body{background-color:#fff;}
+fieldset, img {
+  border:0;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+ol, ul{
+  list-style:none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size:100%;
+  font-weight: normal;
+}
+
+q:before, q:after {
+  content:'';
+}
+
+a {
+  cursor:pointer; text-decoration:none;
+}
+
+.clearfix {
+  *zoom:1;
+}
+
+.clearfix:after {
+  content:".";
+  display:block;
+  clear:both;
+  visibility:hidden;
+  line-height:0;
+  height:0;
+}
+input,button{
+  background: #fff;
+  -webkit-appearance: none;
+  border-radius: 0px;
+  border:0;
+}
+ 
+ .hide{display: none}

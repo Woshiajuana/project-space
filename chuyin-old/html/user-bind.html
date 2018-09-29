@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="POPPRO是由Crypton Future Media公司官方独家授权的初音未来官方中文投稿网站。" />
+    <title>POPPRO | 手机绑定</title>
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link type="text/css" href="../css/b.css" rel="stylesheet" /><link type="text/css" href="../css/b_v2.css" rel="stylesheet" />
+    <link type="text/css" href="../css/user.css" rel="stylesheet" />
+    <link type="text/css" href="../js/layer/skin/default/layer.css" rel="stylesheet" />
+        <style>
+.sex-icon,.personal-icon{display: inline-block;}
+.sex-icon{width: 20px;height: 20px;}
+.personal-icon{width: 25px;height: 25px;}
+.user-name span, .user-name img{vertical-align:middle; margin-left: 5px;}
+.user-name{font-size: 18px; color: #fff;}
+.user-name span{font-size: 12px;color: #18b2d8;font-weight: normal;}
+</style>
+</head>
+<body class="mainbody">
+<div class="headerbody">
+<div class="header wp">
+    <h1 class="logo"><img src="../images/logo.png"></h1>
+    <div class="searchbox">
+        <div class="searchboxbody">
+            <a class="select" href="javascript:;" id="search-select"><img src="../images/search-ico-1-on.jpg" id="search-select-1"><img src="../images/search-ico-2-on.jpg" style="display: none"  id="search-select-2"><img src="../images/search-ico-3-on.jpg" style="display: none"  id="search-select-3"><img src="../images/search-ico-5-on.png" style="display: none"  id="search-select-4"><img src="../images/search-ico-6-on.png" style="display: none"  id="search-select-5"></a>
+            <input type="text" class="input" placeholder="初音">
+            <input type="button" class="btn">
+        </div>
+        <ul id="search-type">
+            <li><a href="javascript:;" class="on" id="search-type-1"><img src="../images/search-ico-1.jpg" class="imgunon"><img src="../images/search-ico-1-on.jpg" class="imgon">音乐</a></li>
+            <li><a href="javascript:;" id="search-type-3"><img src="../images/search-ico-3.jpg" class="imgunon"><img src="../images/search-ico-3-on.jpg" class="imgon">图片／3D</a></li>
+            <li><a href="javascript:;" id="search-type-2"><img src="../images/search-ico-2.jpg" class="imgunon"><img src="../images/search-ico-2-on.jpg" class="imgon">文字</a></li>
+                <li><a href="javascript:;" id="search-type-4"><img src="../images/search-ico-5.png" class="imgunon"><img src="../images/search-ico-5-on.png" class="imgon">用户</a></li>
+                <li><a href="javascript:;" id="search-type-5"><img src="../images/search-ico-6.png" class="imgunon"><img src="../images/search-ico-6-on.png" class="imgon">小组</a></li>
+        </ul>
+    </div>
+    <ul class="top-login">
+                 <li><a href="message.html" class="t-msg-link" style='display:none;'>消息<span>3</span></a></li>
+        <li></li>
+        <li><a href="post-music.html" class="t-send-link">我要投稿</a></li>
+    </ul>
+</div>
+</div><div class="navbox"><ul class="wp">
+        <li><a href="main.html" class="on">首页</a></li>
+        <li><a href="list-music.html">音乐作品</a></li>
+        <li><a href="list-img.html">画作／3D 建模</a></li>
+        <li><a href="list-txt.html">文字作品</a></li>     
+        <li><a href="activity.html">专题活动</a></li>
+        <li><a href="groups.html">小组创作</a></li><li><a href="/html/list-hudong.html">官方互动</a></li>
+       
+    </ul>
+</div>
+
+    <div class="user-top">
+        <div class="user-top-body">
+            <span class="portrait"></span>
+            <h3 class="user-name"></h3>
+            <ul class="user-nav">
+                <li><a href="user-main.html"></a></li>
+                <li><a href="user-info.html"  class="on"></a></li>
+                <li><a href="user-favorite.html"></a></li>
+                <li><a href="user-group.html"></a></li>
+                <li><a href="user-works.html"></a></li>
+                <li><a href="user_integral.html"></a></li>
+            </ul>
+            <div class="user-count">
+                <p><span></span>粉丝</p>
+                <p><span></span>关注</p>
+            </div>
+        </div>
+    </div>
+    <div class="user-main">
+        <div class="user-info-l">
+            <ul>
+                <li><a href="user-info.html">基础资料</a></li>
+                <li><a href="user-password.html">修改密码</a></li>
+                <li><a href="user-bind.html" class="on">关联绑定</a></li>
+            </ul>
+        </div>
+        <div class="user-info-r">
+            <h2>关联绑定</h2>
+            <ul class="user-bind">
+                <li>
+                    <a href="javascript:;" class="unbind-btn" style="display: none;" id="remove-phone">更换绑定</a>
+                    <a href="javascript:;" class="unbind-btn" id="bind-phone">立即绑定</a>
+                    <img src="../images/bing-ico-1.png">
+                    <p style="display: none;" id="mobile_p"><span>已绑定手机</span><br>
+                       <span id="user_mobile"></span></p>
+                    <p class="unbind" id="mobile_bind"><span>未绑定手机</span></p>
+                    
+                </li>
+                <li>
+                    <!--  <a href="javascript:;" class="unbind-btn" style="display: none;" id="remove-email">解除绑定</a>-->
+                    <a href="javascript:checkemail();" class="unbind-btn" id="bind-email">立即绑定</a>
+                    <img src="../images/bing-ico-2.png">
+                    <p style="display: none;" id="email_1"><span>已绑定邮箱</span><br>
+                       <span id="user_email"></span></p>
+                    <p class="unbind" id="email_2"><span>未绑定邮箱</span></p>
+                    </li>
+
+            </ul>
+        </div>
+    </div>
+<div class="footer">
+    <div class="footer-body">
+        <h2>
+            <img src="../images/logo-footer.png">
+        </h2>
+        <ul class="footer-ico-box">
+            <li class="footer-ico-1">
+                <h3>官方微信</h3>
+                <p>关注POPPRO最新动态</p>
+            </li>
+            <li class="footer-ico-2">
+                <h3>初音未来 V4 中文版</h3>
+                 <p><a target="_blank" style="text-decoration:none; color:#b0b0b2; " href="https://item.taobao.com/item.htm?spm=a230r.1.14.21.108f93131LkcYB&id=557546981640&ns=1&abbucket=1#detail" >点击购买</a></p>
+            </li>
+        </ul>
+        <div class="footer-link">
+<a href="http://www.poppro.cn/html/aboutus.html?hId=MQ==">关于POPPRO</a><span>|</span><a href="mailto:kfpoppro@scla.com.cn">联系我们</a><span>|</span><a href="http://www.poppro.cn/html/aboutus.html?hId=Mw==">网站协议</a><span>|</span><a href="mailto:bhpoppro@scla.com.cn">客服/版权申诉</a>
+            <p>公司名称：上海新创华文化发展有限公司 | 公司地址：上海市静安区万荣路1053号6号楼 | 公司电话：(8621)51095308</p><p>&copy; Crypton Future Media, INC. www.piapro.net | 网站备案号：沪ICP备17015563号-1 | 网络文化经营许可证：沪网文（2017）11256-869号</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="UED_hide" id="tip-email">
+    <div class="showbox showbox-2">
+        <h2>绑定邮箱</h2>
+        <div class="bindemail">
+            <ul class="bindform">
+                <li  class="clearfix"><label>您的邮箱地址：</label><input type="text" class="input-1"></li>
+                <li class="clearfix"><label>图形验证码：</label><input type="text" class="input-2"><img src="../images/yanzhengma.png" class="yanzhengma" id="captche_img"></li>
+            </ul>
+            <p class="bindbtnbox"><a href="javascript:bind_email();" class="tip-btn">确认绑定</a></p>
+        </div>
+    </div>
+    <a class="tip-close" href="javascript:;"></a>
+</div>
+
+<div class="UED_hide" id="tip-phone">
+    <div class="showbox showbox-2">
+        <h2>绑定手机</h2>
+        <div class="bindemail">
+            <ul class="bindform">
+                <li class="clearfix"><label>您的手机号码：</label><div class="city-code" > <span id="city-code">+86</span>
+                <ol id="city-code-list">
+
+<li data-num="+86"><span>+86</span>中国</li><li data-num="+1"><span>+1</span>美国</li><li data-num="+1"><span>+1</span>加拿大</li><li data-num="+852"><span>+852</span>香港</li><li data-num="+886"><span>+886</span>台湾</li><li data-num="+81"><span>+81</span>日本</li><li data-num="+82"><span>+82</span>韩国</li><li data-num="+61"><span>+61</span>澳大利亚</li><li data-num="+64"><span>+64</span>新西兰</li><li data-num="+44"><span>+44</span>英国</li><li data-num="+49"><span>+49</span>德国</li><li data-num="+33"><span>+33</span>法国</li><li data-num="+7"><span>+7</span>俄罗斯</li><li data-num="+63"><span>+63</span>菲律宾</li><li data-num="+84"><span>+84</span>越南</li><li data-num="+975"><span>+975</span>不丹</li><li data-num="+670"><span>+670</span>东帝汶</li><li data-num="+236"><span>+236</span>中非共和国</li><li data-num="+45"><span>+45</span>丹麦</li><li data-num="+380"><span>+380</span>乌克兰</li><li data-num="+998"><span>+998</span>乌兹别克斯坦</li><li data-num="+256"><span>+256</span>乌干达</li><li data-num="+598"><span>+598</span>乌拉圭</li><li data-num="+235"><span>+235</span>乍得</li><li data-num="+967"><span>+967</span>也门</li><li data-num="+374"><span>+374</span>亚美尼亚</li><li data-num="+972"><span>+972</span>以色列</li><li data-num="+964"><span>+964</span>伊拉克</li><li data-num="+98"><span>+98</span>伊朗</li><li data-num="+501"><span>+501</span>伯利兹</li><li data-num="+359"><span>+359</span>保加利亚</li><li data-num="+385"><span>+385</span>克罗地亚</li><li data-num="+1671"><span>+1671</span>关岛</li><li data-num="+220"><span>+220</span>冈比亚</li><li data-num="+354"><span>+354</span>冰岛</li><li data-num="+224"><span>+224</span>几内亚</li><li data-num="+245"><span>+245</span>几内亚比绍共和国</li><li data-num="+423"><span>+423</span>列支敦士登</li><li data-num="+242"><span>+242</span>刚果共和国</li><li data-num="+243"><span>+243</span>刚果民主共和国</li><li data-num="+218"><span>+218</span>利比亚</li><li data-num="+231"><span>+231</span>利比里亚</li><li data-num="+233"><span>+233</span>加纳</li><li data-num="+241"><span>+241</span>加蓬</li><li data-num="+36"><span>+36</span>匈牙利</li><li data-num="+211"><span>+211</span>南苏丹</li><li data-num="+27"><span>+27</span>南非</li><li data-num="+267"><span>+267</span>博茨瓦纳</li><li data-num="+974"><span>+974</span>卡塔尔</li><li data-num="+250"><span>+250</span>卢旺达</li><li data-num="+352"><span>+352</span>卢森堡</li><li data-num="+91"><span>+91</span>印度</li><li data-num="+62"><span>+62</span>印度尼西亚</li><li data-num="+593"><span>+593</span>厄瓜多尔</li><li data-num="+963"><span>+963</span>叙利亚</li><li data-num="+53"><span>+53</span>古巴</li><li data-num="+996"><span>+996</span>吉尔吉斯斯坦</li><li data-num="+253"><span>+253</span>吉布提</li><li data-num="+7"><span>+7</span>哈萨克斯坦</li><li data-num="+57"><span>+57</span>哥伦比亚</li><li data-num="+506"><span>+506</span>哥斯达黎加</li><li data-num="+237"><span>+237</span>喀麦隆</li><li data-num="+993"><span>+993</span>土库曼斯坦</li><li data-num="+90"><span>+90</span>土耳其</li><li data-num="+1869"><span>+1869</span>圣基茨和尼维斯</li><li data-num="+239"><span>+239</span>圣多美和普林西比</li><li data-num="+508"><span>+508</span>圣彼埃尔和密克隆岛</li><li data-num="+1784"><span>+1784</span>圣文森特和格林纳丁斯</li><li data-num="+1758"><span>+1758</span>圣露西亚</li><li data-num="+1721"><span>+1721</span>圣马丁岛（荷兰部分）</li><li data-num="+378"><span>+378</span>圣马力诺</li><li data-num="+592"><span>+592</span>圭亚那</li><li data-num="+255"><span>+255</span>坦桑尼亚</li><li data-num="+20"><span>+20</span>埃及</li><li data-num="+251"><span>+251</span>埃塞俄比亚</li><li data-num="+686"><span>+686</span>基里巴斯</li><li data-num="+992"><span>+992</span>塔吉克斯坦</li><li data-num="+221"><span>+221</span>塞内加尔</li><li data-num="+381"><span>+381</span>塞尔维亚</li><li data-num="+232"><span>+232</span>塞拉利昂</li><li data-num="+357"><span>+357</span>塞浦路斯</li><li data-num="+248"><span>+248</span>塞舌尔</li><li data-num="+52"><span>+52</span>墨西哥</li><li data-num="+228"><span>+228</span>多哥</li><li data-num="+1809"><span>+1809</span>多明尼加共和国</li><li data-num="+1767"><span>+1767</span>多米尼加</li><li data-num="+43"><span>+43</span>奥地利</li><li data-num="+58"><span>+58</span>委内瑞拉</li><li data-num="+880"><span>+880</span>孟加拉国</li><li data-num="+244"><span>+244</span>安哥拉</li><li data-num="+1264"><span>+1264</span>安圭拉</li><li data-num="+1268"><span>+1268</span>安提瓜和巴布达</li><li data-num="+376"><span>+376</span>安道尔</li><li data-num="+505"><span>+505</span>尼加拉瓜</li><li data-num="+234"><span>+234</span>尼日利亚</li><li data-num="+227"><span>+227</span>尼日尔</li><li data-num="+977"><span>+977</span>尼泊尔</li><li data-num="+970"><span>+970</span>巴勒斯坦领土</li><li data-num="+1242"><span>+1242</span>巴哈马</li><li data-num="+92"><span>+92</span>巴基斯坦</li><li data-num="+1246"><span>+1246</span>巴巴多斯</li><li data-num="+675"><span>+675</span>巴布亚新几内亚</li><li data-num="+595"><span>+595</span>巴拉圭</li><li data-num="+507"><span>+507</span>巴拿马</li><li data-num="+973"><span>+973</span>巴林</li><li data-num="+55"><span>+55</span>巴西</li><li data-num="+226"><span>+226</span>布基纳法索</li><li data-num="+257"><span>+257</span>布隆迪</li><li data-num="+30"><span>+30</span>希腊</li><li data-num="+680"><span>+680</span>帕劳</li><li data-num="+682"><span>+682</span>库克群岛</li><li data-num="+599"><span>+599</span>库拉索</li><li data-num="+238"><span>+238</span>开普</li><li data-num="+1345"><span>+1345</span>开曼群岛</li><li data-num="+39"><span>+39</span>意大利</li><li data-num="+677"><span>+677</span>所罗门群岛</li><li data-num="+371"><span>+371</span>拉脱维亚</li><li data-num="+47"><span>+47</span>挪威</li><li data-num="+420"><span>+420</span>捷克</li><li data-num="+373"><span>+373</span>摩尔多瓦</li><li data-num="+212"><span>+212</span>摩洛哥</li><li data-num="+377"><span>+377</span>摩纳哥</li><li data-num="+673"><span>+673</span>文莱</li><li data-num="+679"><span>+679</span>斐济</li><li data-num="+268"><span>+268</span>斯威士兰</li><li data-num="+421"><span>+421</span>斯洛伐克</li><li data-num="+386"><span>+386</span>斯洛文尼亚</li><li data-num="+94"><span>+94</span>斯里兰卡</li><li data-num="+65"><span>+65</span>新加坡</li><li data-num="+687"><span>+687</span>新喀里多尼亚</li><li data-num="+56"><span>+56</span>智利</li><li data-num="+855"><span>+855</span>柬埔寨</li><li data-num="+1473"><span>+1473</span>格林纳达</li><li data-num="+299"><span>+299</span>格陵兰岛</li><li data-num="+995"><span>+995</span>格鲁吉亚</li><li data-num="+32"><span>+32</span>比利时</li><li data-num="+222"><span>+222</span>毛里塔尼亚</li><li data-num="+230"><span>+230</span>毛里求斯</li><li data-num="+676"><span>+676</span>汤加</li><li data-num="+966"><span>+966</span>沙特阿拉伯</li><li data-num="+594"><span>+594</span>法属圭亚那</li><li data-num="+689"><span>+689</span>法属波利尼西亚</li><li data-num="+298"><span>+298</span>法罗群岛</li><li data-num="+48"><span>+48</span>波兰</li><li data-num="+1787"><span>+1787</span>波多黎各</li><li data-num="+387"><span>+387</span>波斯尼亚和黑塞哥维那</li><li data-num="+66"><span>+66</span>泰国</li><li data-num="+263"><span>+263</span>津巴布韦</li><li data-num="+504"><span>+504</span>洪都拉斯</li><li data-num="+509"><span>+509</span>海地</li><li data-num="+853"><span>+853</span>澳门</li><li data-num="+353"><span>+353</span>爱尔兰</li><li data-num="+372"><span>+372</span>爱沙尼亚</li><li data-num="+1876"><span>+1876</span>牙买加</li><li data-num="+1649"><span>+1649</span>特克斯和凯科斯群岛</li><li data-num="+1868"><span>+1868</span>特立尼达和多巴哥</li><li data-num="+591"><span>+591</span>玻利维亚</li><li data-num="+46"><span>+46</span>瑞典</li><li data-num="+41"><span>+41</span>瑞士</li><li data-num="+502"><span>+502</span>瓜地马拉</li><li data-num="+590"><span>+590</span>瓜德罗普岛</li><li data-num="+678"><span>+678</span>瓦努阿图</li><li data-num="+262"><span>+262</span>留尼汪</li><li data-num="+375"><span>+375</span>白俄罗斯</li><li data-num="+1441"><span>+1441</span>百慕大群岛</li><li data-num="+350"><span>+350</span>直布罗陀</li><li data-num="+965"><span>+965</span>科威特</li><li data-num="+269"><span>+269</span>科摩罗</li><li data-num="+51"><span>+51</span>秘鲁</li><li data-num="+216"><span>+216</span>突尼斯</li><li data-num="+370"><span>+370</span>立陶宛</li><li data-num="+252"><span>+252</span>索马里</li><li data-num="+962"><span>+962</span>约旦</li><li data-num="+264"><span>+264</span>纳米比亚</li><li data-num="+95"><span>+95</span>缅甸</li><li data-num="+40"><span>+40</span>罗马尼亚</li><li data-num="+1684"><span>+1684</span>美属萨摩亚</li><li data-num="+856"><span>+856</span>老挝</li><li data-num="+254"><span>+254</span>肯尼亚</li><li data-num="+358"><span>+358</span>芬兰</li><li data-num="+249"><span>+249</span>苏丹</li><li data-num="+597"><span>+597</span>苏里南</li><li data-num="+31"><span>+31</span>荷兰</li><li data-num="+258"><span>+258</span>莫桑比克</li><li data-num="+266"><span>+266</span>莱索托</li><li data-num="+503"><span>+503</span>萨尔瓦多</li><li data-num="+685"><span>+685</span>萨摩亚</li><li data-num="+351"><span>+351</span>葡萄牙</li><li data-num="+976"><span>+976</span>蒙古</li><li data-num="+1664"><span>+1664</span>蒙特塞拉特岛</li><li data-num="+34"><span>+34</span>西班牙</li><li data-num="+225"><span>+225</span>象牙海岸</li><li data-num="+229"><span>+229</span>贝宁</li><li data-num="+260"><span>+260</span>赞比亚</li><li data-num="+240"><span>+240</span>赤道几内亚</li><li data-num="+994"><span>+994</span>阿塞拜疆</li><li data-num="+93"><span>+93</span>阿富汗</li><li data-num="+213"><span>+213</span>阿尔及利亚</li><li data-num="+355"><span>+355</span>阿尔巴尼亚</li><li data-num="+971"><span>+971</span>阿拉伯联合酋长国</li><li data-num="+968"><span>+968</span>阿曼</li><li data-num="+54"><span>+54</span>阿根廷</li><li data-num="+247"><span>+247</span>阿森松岛</li><li data-num="+297"><span>+297</span>阿鲁巴</li><li data-num="+389"><span>+389</span>马其顿</li><li data-num="+960"><span>+960</span>马尔代夫</li><li data-num="+265"><span>+265</span>马拉维</li><li data-num="+596"><span>+596</span>马提尼克</li><li data-num="+60"><span>+60</span>马来西亚</li><li data-num="+269"><span>+269</span>马约特</li><li data-num="+356"><span>+356</span>马耳他</li><li data-num="+261"><span>+261</span>马达加斯加</li><li data-num="+223"><span>+223</span>马里</li><li data-num="+961"><span>+961</span>黎巴嫩</li><li data-num="+382"><span>+382</span>黑山</li>
+                </ol></div><input type="text" class="input-3" id="user-mobile" maxlength="11"></li>
+<!--                 <li class="clearfix"><label>验证码：</label><input type="text" class="input-2" id=""><span class="yzmimg"><img src="../images/hot.png"></span></li>
+ -->                <li class="clearfix"><label>短信验证码：</label><input type="text" class="input-2" id="mobile-code"><a href="javascript:sendcode(1);" class="sendmsg" id="sendmsg">发送短信验证码</a><a href="javascript:;" class="sendmsg-again" id="sendmsg-again">重新发送<i>60</i>S</a></li>
+            </ul>
+            <p class="bindbtnbox"><a href="javascript:bindphone();" class="tip-btn">确认绑定</a></p>
+        </div>
+    </div>
+    <a class="tip-close" href="javascript:;"></a>
+</div>
+<div class="UED_hide" id="tip-removephone">
+    <div class="showbox showbox-2">
+        <h2>更换绑定</h2>
+        <div class="bindemail">
+            <ul class="bindform">
+                <li class="clearfix"><label>请输入新手机号码：</label><div class="city-code"><span id="city-code1">+86</span>
+                    <ol id="city-code-list1">
+                        <li data-num="+86"><span>+86</span>中国</li><li data-num="+1"><span>+1</span>美国</li><li data-num="+1"><span>+1</span>加拿大</li><li data-num="+852"><span>+852</span>香港</li><li data-num="+886"><span>+886</span>台湾</li><li data-num="+81"><span>+81</span>日本</li><li data-num="+82"><span>+82</span>韩国</li><li data-num="+61"><span>+61</span>澳大利亚</li><li data-num="+64"><span>+64</span>新西兰</li><li data-num="+44"><span>+44</span>英国</li><li data-num="+49"><span>+49</span>德国</li><li data-num="+33"><span>+33</span>法国</li><li data-num="+7"><span>+7</span>俄罗斯</li><li data-num="+63"><span>+63</span>菲律宾</li><li data-num="+84"><span>+84</span>越南</li><li data-num="+975"><span>+975</span>不丹</li><li data-num="+670"><span>+670</span>东帝汶</li><li data-num="+236"><span>+236</span>中非共和国</li><li data-num="+45"><span>+45</span>丹麦</li><li data-num="+380"><span>+380</span>乌克兰</li><li data-num="+998"><span>+998</span>乌兹别克斯坦</li><li data-num="+256"><span>+256</span>乌干达</li><li data-num="+598"><span>+598</span>乌拉圭</li><li data-num="+235"><span>+235</span>乍得</li><li data-num="+967"><span>+967</span>也门</li><li data-num="+374"><span>+374</span>亚美尼亚</li><li data-num="+972"><span>+972</span>以色列</li><li data-num="+964"><span>+964</span>伊拉克</li><li data-num="+98"><span>+98</span>伊朗</li><li data-num="+501"><span>+501</span>伯利兹</li><li data-num="+359"><span>+359</span>保加利亚</li><li data-num="+385"><span>+385</span>克罗地亚</li><li data-num="+1671"><span>+1671</span>关岛</li><li data-num="+220"><span>+220</span>冈比亚</li><li data-num="+354"><span>+354</span>冰岛</li><li data-num="+224"><span>+224</span>几内亚</li><li data-num="+245"><span>+245</span>几内亚比绍共和国</li><li data-num="+423"><span>+423</span>列支敦士登</li><li data-num="+242"><span>+242</span>刚果共和国</li><li data-num="+243"><span>+243</span>刚果民主共和国</li><li data-num="+218"><span>+218</span>利比亚</li><li data-num="+231"><span>+231</span>利比里亚</li><li data-num="+233"><span>+233</span>加纳</li><li data-num="+241"><span>+241</span>加蓬</li><li data-num="+36"><span>+36</span>匈牙利</li><li data-num="+211"><span>+211</span>南苏丹</li><li data-num="+27"><span>+27</span>南非</li><li data-num="+267"><span>+267</span>博茨瓦纳</li><li data-num="+974"><span>+974</span>卡塔尔</li><li data-num="+250"><span>+250</span>卢旺达</li><li data-num="+352"><span>+352</span>卢森堡</li><li data-num="+91"><span>+91</span>印度</li><li data-num="+62"><span>+62</span>印度尼西亚</li><li data-num="+593"><span>+593</span>厄瓜多尔</li><li data-num="+963"><span>+963</span>叙利亚</li><li data-num="+53"><span>+53</span>古巴</li><li data-num="+996"><span>+996</span>吉尔吉斯斯坦</li><li data-num="+253"><span>+253</span>吉布提</li><li data-num="+7"><span>+7</span>哈萨克斯坦</li><li data-num="+57"><span>+57</span>哥伦比亚</li><li data-num="+506"><span>+506</span>哥斯达黎加</li><li data-num="+237"><span>+237</span>喀麦隆</li><li data-num="+993"><span>+993</span>土库曼斯坦</li><li data-num="+90"><span>+90</span>土耳其</li><li data-num="+1869"><span>+1869</span>圣基茨和尼维斯</li><li data-num="+239"><span>+239</span>圣多美和普林西比</li><li data-num="+508"><span>+508</span>圣彼埃尔和密克隆岛</li><li data-num="+1784"><span>+1784</span>圣文森特和格林纳丁斯</li><li data-num="+1758"><span>+1758</span>圣露西亚</li><li data-num="+1721"><span>+1721</span>圣马丁岛（荷兰部分）</li><li data-num="+378"><span>+378</span>圣马力诺</li><li data-num="+592"><span>+592</span>圭亚那</li><li data-num="+255"><span>+255</span>坦桑尼亚</li><li data-num="+20"><span>+20</span>埃及</li><li data-num="+251"><span>+251</span>埃塞俄比亚</li><li data-num="+686"><span>+686</span>基里巴斯</li><li data-num="+992"><span>+992</span>塔吉克斯坦</li><li data-num="+221"><span>+221</span>塞内加尔</li><li data-num="+381"><span>+381</span>塞尔维亚</li><li data-num="+232"><span>+232</span>塞拉利昂</li><li data-num="+357"><span>+357</span>塞浦路斯</li><li data-num="+248"><span>+248</span>塞舌尔</li><li data-num="+52"><span>+52</span>墨西哥</li><li data-num="+228"><span>+228</span>多哥</li><li data-num="+1809"><span>+1809</span>多明尼加共和国</li><li data-num="+1767"><span>+1767</span>多米尼加</li><li data-num="+43"><span>+43</span>奥地利</li><li data-num="+58"><span>+58</span>委内瑞拉</li><li data-num="+880"><span>+880</span>孟加拉国</li><li data-num="+244"><span>+244</span>安哥拉</li><li data-num="+1264"><span>+1264</span>安圭拉</li><li data-num="+1268"><span>+1268</span>安提瓜和巴布达</li><li data-num="+376"><span>+376</span>安道尔</li><li data-num="+505"><span>+505</span>尼加拉瓜</li><li data-num="+234"><span>+234</span>尼日利亚</li><li data-num="+227"><span>+227</span>尼日尔</li><li data-num="+977"><span>+977</span>尼泊尔</li><li data-num="+970"><span>+970</span>巴勒斯坦领土</li><li data-num="+1242"><span>+1242</span>巴哈马</li><li data-num="+92"><span>+92</span>巴基斯坦</li><li data-num="+1246"><span>+1246</span>巴巴多斯</li><li data-num="+675"><span>+675</span>巴布亚新几内亚</li><li data-num="+595"><span>+595</span>巴拉圭</li><li data-num="+507"><span>+507</span>巴拿马</li><li data-num="+973"><span>+973</span>巴林</li><li data-num="+55"><span>+55</span>巴西</li><li data-num="+226"><span>+226</span>布基纳法索</li><li data-num="+257"><span>+257</span>布隆迪</li><li data-num="+30"><span>+30</span>希腊</li><li data-num="+680"><span>+680</span>帕劳</li><li data-num="+682"><span>+682</span>库克群岛</li><li data-num="+599"><span>+599</span>库拉索</li><li data-num="+238"><span>+238</span>开普</li><li data-num="+1345"><span>+1345</span>开曼群岛</li><li data-num="+39"><span>+39</span>意大利</li><li data-num="+677"><span>+677</span>所罗门群岛</li><li data-num="+371"><span>+371</span>拉脱维亚</li><li data-num="+47"><span>+47</span>挪威</li><li data-num="+420"><span>+420</span>捷克</li><li data-num="+373"><span>+373</span>摩尔多瓦</li><li data-num="+212"><span>+212</span>摩洛哥</li><li data-num="+377"><span>+377</span>摩纳哥</li><li data-num="+673"><span>+673</span>文莱</li><li data-num="+679"><span>+679</span>斐济</li><li data-num="+268"><span>+268</span>斯威士兰</li><li data-num="+421"><span>+421</span>斯洛伐克</li><li data-num="+386"><span>+386</span>斯洛文尼亚</li><li data-num="+94"><span>+94</span>斯里兰卡</li><li data-num="+65"><span>+65</span>新加坡</li><li data-num="+687"><span>+687</span>新喀里多尼亚</li><li data-num="+56"><span>+56</span>智利</li><li data-num="+855"><span>+855</span>柬埔寨</li><li data-num="+1473"><span>+1473</span>格林纳达</li><li data-num="+299"><span>+299</span>格陵兰岛</li><li data-num="+995"><span>+995</span>格鲁吉亚</li><li data-num="+32"><span>+32</span>比利时</li><li data-num="+222"><span>+222</span>毛里塔尼亚</li><li data-num="+230"><span>+230</span>毛里求斯</li><li data-num="+676"><span>+676</span>汤加</li><li data-num="+966"><span>+966</span>沙特阿拉伯</li><li data-num="+594"><span>+594</span>法属圭亚那</li><li data-num="+689"><span>+689</span>法属波利尼西亚</li><li data-num="+298"><span>+298</span>法罗群岛</li><li data-num="+48"><span>+48</span>波兰</li><li data-num="+1787"><span>+1787</span>波多黎各</li><li data-num="+387"><span>+387</span>波斯尼亚和黑塞哥维那</li><li data-num="+66"><span>+66</span>泰国</li><li data-num="+263"><span>+263</span>津巴布韦</li><li data-num="+504"><span>+504</span>洪都拉斯</li><li data-num="+509"><span>+509</span>海地</li><li data-num="+853"><span>+853</span>澳门</li><li data-num="+353"><span>+353</span>爱尔兰</li><li data-num="+372"><span>+372</span>爱沙尼亚</li><li data-num="+1876"><span>+1876</span>牙买加</li><li data-num="+1649"><span>+1649</span>特克斯和凯科斯群岛</li><li data-num="+1868"><span>+1868</span>特立尼达和多巴哥</li><li data-num="+591"><span>+591</span>玻利维亚</li><li data-num="+46"><span>+46</span>瑞典</li><li data-num="+41"><span>+41</span>瑞士</li><li data-num="+502"><span>+502</span>瓜地马拉</li><li data-num="+590"><span>+590</span>瓜德罗普岛</li><li data-num="+678"><span>+678</span>瓦努阿图</li><li data-num="+262"><span>+262</span>留尼汪</li><li data-num="+375"><span>+375</span>白俄罗斯</li><li data-num="+1441"><span>+1441</span>百慕大群岛</li><li data-num="+350"><span>+350</span>直布罗陀</li><li data-num="+965"><span>+965</span>科威特</li><li data-num="+269"><span>+269</span>科摩罗</li><li data-num="+51"><span>+51</span>秘鲁</li><li data-num="+216"><span>+216</span>突尼斯</li><li data-num="+370"><span>+370</span>立陶宛</li><li data-num="+252"><span>+252</span>索马里</li><li data-num="+962"><span>+962</span>约旦</li><li data-num="+264"><span>+264</span>纳米比亚</li><li data-num="+95"><span>+95</span>缅甸</li><li data-num="+40"><span>+40</span>罗马尼亚</li><li data-num="+1684"><span>+1684</span>美属萨摩亚</li><li data-num="+856"><span>+856</span>老挝</li><li data-num="+254"><span>+254</span>肯尼亚</li><li data-num="+358"><span>+358</span>芬兰</li><li data-num="+249"><span>+249</span>苏丹</li><li data-num="+597"><span>+597</span>苏里南</li><li data-num="+31"><span>+31</span>荷兰</li><li data-num="+258"><span>+258</span>莫桑比克</li><li data-num="+266"><span>+266</span>莱索托</li><li data-num="+503"><span>+503</span>萨尔瓦多</li><li data-num="+685"><span>+685</span>萨摩亚</li><li data-num="+351"><span>+351</span>葡萄牙</li><li data-num="+976"><span>+976</span>蒙古</li><li data-num="+1664"><span>+1664</span>蒙特塞拉特岛</li><li data-num="+34"><span>+34</span>西班牙</li><li data-num="+225"><span>+225</span>象牙海岸</li><li data-num="+229"><span>+229</span>贝宁</li><li data-num="+260"><span>+260</span>赞比亚</li><li data-num="+240"><span>+240</span>赤道几内亚</li><li data-num="+994"><span>+994</span>阿塞拜疆</li><li data-num="+93"><span>+93</span>阿富汗</li><li data-num="+213"><span>+213</span>阿尔及利亚</li><li data-num="+355"><span>+355</span>阿尔巴尼亚</li><li data-num="+971"><span>+971</span>阿拉伯联合酋长国</li><li data-num="+968"><span>+968</span>阿曼</li><li data-num="+54"><span>+54</span>阿根廷</li><li data-num="+247"><span>+247</span>阿森松岛</li><li data-num="+297"><span>+297</span>阿鲁巴</li><li data-num="+389"><span>+389</span>马其顿</li><li data-num="+960"><span>+960</span>马尔代夫</li><li data-num="+265"><span>+265</span>马拉维</li><li data-num="+596"><span>+596</span>马提尼克</li><li data-num="+60"><span>+60</span>马来西亚</li><li data-num="+269"><span>+269</span>马约特</li><li data-num="+356"><span>+356</span>马耳他</li><li data-num="+261"><span>+261</span>马达加斯加</li><li data-num="+223"><span>+223</span>马里</li><li data-num="+961"><span>+961</span>黎巴嫩</li><li data-num="+382"><span>+382</span>黑山</li>
+
+                    </ol></div><input type="text" class="input-3" id="remove-mobile" maxlength="11"></li>
+
+<!--                 <li class="clearfix"><label>验证码：</label><input type="text" class="input-2" id=""><span class="yzmimg"><img src="../images/hot.png"></span></li>
+ -->                
+                <li class="clearfix"><label>短信验证码：</label><input type="text" class="input-2" id="remove-code"><a href="javascript:sendcode(2);" class="sendmsg" id="sendmsg1">发送短信验证码</a><a href="javascript:;" class="sendmsg-again" id="sendmsg-again1">重新发送<i>60</i>S</a></li>
+            </ul>
+            <p class="bindbtnbox"><a href="javascript:removephone();" class="tip-btn">确认换绑</a></p>
+        </div>
+    </div>
+    <a class="tip-close" href="javascript:;"></a>
+</div>
+
+<div class="UED_hide" id="tip-phone-success" >
+    <div class="msgbox msgbox-1">
+        <div class="msgbox-success">
+       <h4>手机号绑定成功！</h4>
+       <p>您绑定的手机号码为：13818898888</p>
+       <div class="btnbox"><a href="javascript:colse_bind();">确定</a></div>
+            </div>
+    </div>
+    <a class="tip-close" href="javascript:;"></a>
+</div>
+
+
+
+<div class="UED_hide" id="tip-mail-success">
+    <div class="msgbox msgbox-2">
+        <div class="msgbox-email">
+            <h4>验证邮件已发送到你的邮箱，<span id="your_email"></span></h4>
+            <p>点击邮件里的确认链接完成验证</p>
+            <div class="btnbox"><a href="http://mail.qq.com/" target="_blank">去邮箱验证</a></div>
+            <dl>
+                <dt>没有收到验证邮件？</dt>
+                <dd>1. 到广告邮件、垃圾邮件目录里找找看</dd>
+                <dd>2. 真没收到？<a href="javascript:resendemail();">重新发送验证邮件</a></dd>
+                <dd>3. 不小心填错了Email？<a href="https://www.poppro.cn/html/reg.html">再申请一个</a></dd>
+            </dl>
+        </div>
+    </div>
+    <a class="tip-close" href="javascript:;"></a>
+</div>
+
+<div class="UED_hide" id="tip-warn">
+    <div class="msgbox msgbox-1">
+        <div class="msgbox-warn">
+            <h4>操作失败！</h4>
+            <p>绑定失败请稍后重试</p>
+            <div class="btnbox"><a href="javascript:colse_bind();">确定</a> <a class="dis">取消</a></div>
+        </div>
+    </div>
+    <a class="tip-close" href="javascript:;"></a>
+</div>
+
+<div class="UED_hide" id="tip-warn-1">
+    <div class="msgbox msgbox-3">
+        <div class="msgbox-warn">
+            <p class="tip-txt-2">如使用地方卡充值，或所选充值面额与卡面不符，您将
+                充值失败，钱无法退回！</p>
+            <div class="btnbox"><a>确定</a> <a class="dis">取消</a></div>
+        </div>
+    </div>
+    <a class="tip-close" href="javascript:;"></a>
+</div>
+
+
+</body>
+<script src="../js/jquery-1.7.1.min.js"></script>
+<script src="../js/util/pager.js"></script>
+<script src="../js/layer/layer.js"></script>
+<script src="/js/jq.layer.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/project.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/page/user-bind.js"></script>
+<script>
+
+    $(function () {
+            //$.LAYER.show({id:'tip-removephone'});
+        var _isshow = 0;
+        var _isshow1 = 0;
+
+        $('#city-code').click(function () {
+                _isshow = 1;
+                $('#city-code-list').show();
+                setTimeout(function () {
+                    _isshow = 0;
+                },500)
+        })
+
+        $('#city-code1').click(function () {
+            _isshow1 = 1;
+            $('#city-code-list1').show();
+            setTimeout(function () {
+                _isshow1 = 0;
+            },500)
+        })
+
+        $('#city-code-list1 li').click(function () {
+            _isshow1 = 1;
+            setTimeout(function () {
+                _isshow1 = 0;
+            },500)
+            $('#city-code1').html($(this).attr('data-num'))
+            $('#city-code-list1').hide();
+        })
+
+        $('.showbox').on('click',function () {
+            if(_isshow == 0){
+                $('#city-code-list').hide();
+            }
+        });
+
+        $('.showbox').on('click',function () {
+            if(_isshow1 == 0){
+                $('#city-code-list1').hide();
+            }
+        });
+
+        $('#city-code-list li').click(function () {
+            _isshow = 1;
+            setTimeout(function () {
+                _isshow = 0;
+            },500)
+            $('#city-code').html($(this).attr('data-num'))
+            $('#city-code-list').hide();
+        })
+
+
+        $('#tab-1').click(function () {
+            $('#tab-1,#tab-2,#tab-3').removeClass("on");
+            $(this).addClass("on");
+
+            $('#tabbox-1,#tabbox-2,#tabbox-3').hide();
+            $('#tabbox-1').show();
+        })
+        $('#tab-2').click(function () {
+            $('#tab-1,#tab-2,#tab-3').removeClass("on");
+            $(this).addClass("on");
+
+            $('#tabbox-1,#tabbox-2,#tabbox-3').hide();
+            $('#tabbox-2').show();
+
+        })
+        $('#tab-3').click(function () {
+            $('#tab-1,#tab-2,#tab-3').removeClass("on");
+            $(this).addClass("on");
+
+            $('#tabbox-1,#tabbox-2,#tabbox-3').hide();
+            $('#tabbox-3').show();
+        })
+
+        $(".tip-close").click(
+                function(){$.LAYER.close();}
+        )
+
+        $("#bind-email").click(function () {
+            $.LAYER.show({id:'tip-email'});
+        });
+        $("#bind-phone").click(function () {
+            $.LAYER.show({id:'tip-phone'});
+        });
+       // $.LAYER.show({id:'tip-warn-1'});
+
+		$("#remove-phone").click(function(){
+			 $.LAYER.show({id:'tip-removephone'});
+		});
+    })
+
+
+var countdown=60;
+        function settime() {
+            if (countdown == 0) {
+                $('#sendmsg').show();
+                $('#sendmsg-again').hide();
+                countdown = 60;
+            } else {
+                countdown--;
+                $('#sendmsg-again i').html(countdown)
+            }
+            setTimeout(function() {
+                settime()
+            },1000)
+        }
+
+        function settime1() {
+
+            if (countdown == 0) {
+                $('#sendmsg1').show();
+                $('#sendmsg-again1').hide();
+                countdown = 60;
+            } else {
+                countdown--;
+                $('#sendmsg-again1 i').html(countdown)
+            }
+            setTimeout(function() {
+                settime1()
+            },1000)
+        }
+
+
+
+
+</script>
+</html>

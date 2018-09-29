@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <title>POPPRO | 小组创作</title>
+    <link rel="stylesheet" href="../css/b.css?312312">
+    <script src="../js/lib/flexible.js"></script>
+</head>
+<body>
+<div class="main-head">
+    <a href="./main.html" class="page-home"></a>
+    <h1>小组创作</h1>
+    <a href="javascript:;" class="page-menu"></a>
+</div>
+<div class="tabbox">
+        <li class="on">最新创建</li>
+        <li>最近活跃</li>
+    </ul>
+    <span class="bottom-line" style="width:50%"></span>
+</div>
+<div class="pagebody tabpage1">
+    <div class="group-list-body">
+        <div class="group-list group-list1">
+            <!-- <div class="groupbox">
+                <div class="imgbox"><img src="../images/pro-1.png" style="width: 100%"></div>
+                <h3>珈百璃的堕落</h3>
+                <ul>
+                    <li>最近更新：<span class="blue">2017/03/09 14:55</span></li>
+                    <li>成立时间：<span class="blue">2017/01/17</span></li>
+                    <li>参与人数：<span class="blue">3人</span></li>
+                    <li>管理员：  SMG</li>
+                    <li>招募：绘画／写作／动画制作</li>
+                </ul>
+                <span class="arrw-r"></span>
+            </div>
+            <div class="groupbox">
+                <div class="imgbox"><img src="../images/pro-1.png" style="width: 100%"></div>
+                <h3>珈百璃的堕落</h3>
+                <ul>
+                    <li>最近更新：<span class="blue">2017/03/09 14:55</span></li>
+                    <li>成立时间：<span class="blue">2017/01/17</span></li>
+                    <li>参与人数：<span class="blue">3人</span></li>
+                    <li>管理员：  SMG</li>
+                    <li>招募：绘画／写作／动画制作</li>
+                </ul>
+                <span class="arrw-r"></span>
+            </div> -->
+    	</div>
+        <div class="group-list group-list2" style="display: none">
+            <!-- <div class="groupbox">
+                <div class="imgbox"><img src="../images/pro-1.png" style="width: 100%"></div>
+                <h3>珈百璃的堕落1</h3>
+                <ul>
+                    <li>最近更新：<span class="blue">2017/03/09 14:55</span></li>
+                    <li>成立时间：<span class="blue">2017/01/17</span></li>
+                    <li>参与人数：<span class="blue">3人</span></li>
+                    <li>管理员：  SMG</li>
+                    <li>招募：绘画／写作／动画制作</li>
+                </ul>
+                <span class="arrw-r"></span>
+            </div>
+            <div class="groupbox">
+                <div class="imgbox"><img src="../images/pro-1.png" style="width: 100%"></div>
+                <h3>珈百璃的堕落</h3>
+                <ul>
+                    <li>最近更新：<span class="blue">2017/03/09 14:55</span></li>
+                    <li>成立时间：<span class="blue">2017/01/17</span></li>
+                    <li>参与人数：<span class="blue">3人</span></li>
+                    <li>管理员：  SMG</li>
+                    <li>招募：绘画／写作／动画制作</li>
+                </ul>
+                <span class="arrw-r"></span>
+            </div> -->
+        </div>
+        <div class="data-null" id="no-msg" style="display: none">
+				你还没有创建小组，快去创建一个吧！
+        </div>
+        <a href="javascript:;" class="addmore" style="display: none" onclick="addMore()">点击加载更多</a>
+    </div>
+</div>
+<footer>
+        <li><a href="./main.html" ><img src="../images/nav1@2x.png"><img src="../images/nav1-on@2x.png" class="on"><span>首页</span></a></li>
+        <li><a href="./zhenggao.html"><img src="../images/nav2@2x.png"><img src="../images/nav2-on@2x.png" class="on"><span>专题活动</span></a></li>
+        <li><a href="./groups.html" class="on"><img src="../images/nav3@2x.png"><img src="../images/nav3-on@2x.png" class="on"><span>小组</span></a></li>
+        <li><a href="./usermain.html"><img src="../images/nav4@2x.png"><img src="../images/nav4-on@2x.png" class="on"><span>我的</span></a></li>
+    </ul>
+</footer>
+<script src="/js/jquery-1.7.1.min.js"></script>
+<script src="../js/zepto.1.1.4.min.js"></script>
+<script src="../js/b.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/project.js"></script>
+<script src="../js/page/groups.js"></script>
+<script>
+    var tab_num = 50;
+    $('.tabbox ul li').click(function () {
+        $('.tabbox ul li').removeClass('on');
+        $(this).addClass('on');
+        $(".bottom-line").css('left',$(this).index()*tab_num +'%');
+        if($(this).index() == 0){
+            $('.group-list1').show();
+            $('.group-list2').hide();
+        }else{
+            $('.group-list1').hide();
+            $('.group-list2').show();
+        }
+    });
+    $('.tabbox ul li:eq(1)').click();
+</script>
+</body>
+</html>

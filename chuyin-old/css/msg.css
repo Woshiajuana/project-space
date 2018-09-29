@@ -1,0 +1,136 @@
+.msg-top {
+  width: 910px;
+  margin: auto;
+  padding-top: 25px;
+  margin-bottom: 20px; }
+  .msg-top ul {
+    text-align: center;
+    border-bottom: 4px solid #e6e6e6; }
+    .msg-top ul li {
+      display: inline-block;
+      position: relative;
+      margin-bottom: -4px;
+      padding: 0 20px; }
+      .msg-top ul li a {
+        color: #333;
+        text-decoration: none;
+        height: 54px;
+        line-height: 54px;
+        display: inline-block;
+        border-bottom: 4px solid #e6e6e6;
+        padding: 0 30px; }
+      .msg-top ul li a.on {
+        color: #18b2d8;
+        border-bottom: 4px solid #18b2d8; }
+      .msg-top ul li span {
+        font-size: 12px;
+        background: #f54d5a;
+        height: 16px;
+        display: inline-block;
+        line-height: 16px;
+        padding: 0 6px;
+        margin-left: 5px;
+        color: #fff;
+        border-radius: 16px;
+        -webkit-border-radius: 16px; }
+
+.msglist-box {
+  width: 908px;
+  margin: auto;
+  background: #fff;
+  border: 1px solid #eeeeee;
+  margin-bottom: 70px; }
+  .msglist-box dl {
+    margin: 50px 50px 0px 50px;
+    font-size: 14px;
+    overflow: hidden;
+    border-bottom: 1px solid #eeeeee; }
+    .msglist-box dl dt {
+      padding: 20px 0;
+      border-top: 1px solid #eeeeee;
+      position: relative;
+      top: -1px;
+      cursor: pointer;
+      background: url("../images/msg-unread.jpg") no-repeat left center;
+      padding-left: 30px;
+      font-weight: bold; }
+    .msglist-box dl dt.readed {
+      font-weight: normal;
+      background: url("../images/msg-readed.jpg") no-repeat left center; }
+    .msglist-box dl dd {
+      font-size: 12px;
+      color: #333;
+      background: #f9f9f9;
+      padding: 20px;
+      line-height: 24px;
+      display: none; }
+      .msglist-box dl dd p {
+        text-align: right;
+        padding-top: 10px; }
+      .msglist-box dl dd a {
+        color: #b8c0cc;
+        text-decoration: none;
+        background: url(../images/arrwclose.jpg) no-repeat right center;
+        padding-right: 15px; }
+    .msglist-box dl .btnbox {
+      padding-top: 15px; }
+      .msglist-box dl .btnbox span {
+        width: 60px;
+        height: 32px;
+        display: inline-block;
+        background: #18b2d8;
+        line-height: 32px;
+        color: #fff;
+        text-align: center;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        text-decoration: none;
+        font-size: 14px;
+        margin-right: 10px; }
+      .msglist-box dl .btnbox span.dis {
+        background: #b8c0cc; }
+  .msglist-box ul {
+    margin: 50px 50px 0px 50px; }
+    .msglist-box ul li {
+      overflow: hidden;
+      font-size: 14px;
+      color: #999999;
+      border-bottom: 1px solid #eeeeee;
+      padding: 20px 0;
+      line-height: 25px;
+      padding-right: 80px;
+      position: relative; }
+      .msglist-box ul li img {
+        float: left;
+        margin-right: 20px;
+        border-radius: 100px;
+        -webkit-border-radius: 100px;
+        width: 60px;
+        height: 60px; }
+      .msglist-box ul li .pl-txt {
+        float: left; }
+        .msglist-box ul li .pl-txt p {
+          color: #333; }
+      .msglist-box ul li a {
+        position: absolute;
+        width: 60px;
+        height: 32px;
+        background: #18b2d8;
+        text-align: center;
+        line-height: 32px;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        right: 0px;
+        margin-top: 20px; }
+      .msglist-box ul li a.dis {
+        background: #b8c0cc; }
+
+.nomsg {
+  font-size: 30px;
+  padding: 200px 0;
+  text-align: center;
+  color: #999999; }
+
+/*# sourceMappingURL=msg.css.map */

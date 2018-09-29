@@ -1,0 +1,22 @@
+Instructions for Sample Implementation
+
+
+1. Upload all the files contained in the 'Sample' folder to the same location on your server.
+
+2. Create a folder named 'uploads' in the root of your website with the permissions set to 755.
+
+3. Navigate to the location you uploaded the files to in your browser.
+
+4. Enjoy!  Contact us at support@uploadify.com if you have any questions.
+
+//吾爱翻译
+将 Sample 文件夹下的所有文件上传到你服务器上合适的地方。
+在网站根目录创建一个 uploads 目录，并将文件夹权限设置为755，作为上传文件保存目录。
+
+剩下的都是废话，不翻译了。
+
+个人补充：
+将sample下的文件上传到例如  /Public/uploadfive/  下面，然后在网页中，先引入jquery库，再引入jquery.uploadifive.min.js、uploadifive.css
+简单的使用实例在压缩包里的 index.php里查看。
+复杂的自定义options或者events，需要打开jquery.uploadifive.js查看，里面有简单的注释，跟flash版本的uploadify差别比较大，但是功能原理应该差不多，可以对照uploadify官网的doc目录学习使用。
+总而言之，5美元感觉亏了，连个手册都不给，草！！！！！

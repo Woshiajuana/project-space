@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <title>POPPRO | 用户资料</title>
+    <link rel="stylesheet" href="../css/b.css?312312">
+    <script src="../js/lib/flexible.js"></script>
+</head>
+<body>
+<div class="main-head">
+    <a href="./main.html" class="page-home"></a>
+    <h1>用户资料</h1>
+    <a href="javascript:;" class="page-menu"></a>
+</div>
+
+<div class="pagebody nofootpage1">
+    <div class="user-edit-top">
+        <div class="touxiang"><img src="../images/touxiang@1x.png" ></div>
+    </div>
+    <ul class="user-edit-form">
+        <li><label>昵称</label><input type="text" id="username"></li>
+        <li><label>性别</label><select id="user_sex"><option style="color:#c5c5cc">未选择</option><option value=1>男</option><option value=2>女</option></select></li>
+        <li><label>生日</label><input type="text" id="datapicker" class="datapicker"></li>
+    </ul>
+
+</div>
+<script src="/js/jquery-1.7.1.min.js"></script>
+<script src="../js/b.js"></script>
+<script src="../js/datapicker.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/project.js"></script>
+<script src="../js/page/user_edit.js"></script>
+<script>
+    var calendar = new datePicker();
+    calendar.init({
+        'trigger': '#datapicker', /*按钮选择器，用于触发弹出插件*/
+        'type': 'date',/*模式：date日期；datetime日期时间；time时间；ym年月；*/
+        'minDate':'1900-1-1',/*最小日期*/
+        'maxDate':'2100-12-31',/*最大日期*/
+        'onSubmit':function(){/*确认时触发事件*/
+            var theSelectData=calendar.value;
+        },
+        'onClose':function(){/*取消时触发事件*/
+        }
+    });
+</script>
+</body>
+</html>

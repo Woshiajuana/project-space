@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="POPPRO是由Crypton Future Media公司官方独家授权的初音未来官方中文投稿网站。" />
+    <title>POPPRO | 发表作品</title>
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link type="text/css" href="../css/b.css" rel="stylesheet" /><link type="text/css" href="../css/b_v2.css" rel="stylesheet" />
+    <link type="text/css" href="../css/post.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="../css/uploadify.css">
+    
+</head>
+<body class="mainbody">
+<div class="headerbody">
+<div class="header wp">
+    <h1 class="logo"><img src="../images/logo.png"></h1>
+    <div class="searchbox">
+        <div class="searchboxbody">
+            <a class="select" href="javascript:;" id="search-select"><img src="../images/search-ico-1-on.jpg" id="search-select-1"><img src="../images/search-ico-2-on.jpg" style="display: none"  id="search-select-2"><img src="../images/search-ico-3-on.jpg" style="display: none"  id="search-select-3"><img src="../images/search-ico-5-on.png" style="display: none"  id="search-select-4"><img src="../images/search-ico-6-on.png" style="display: none"  id="search-select-5"></a>
+            <input type="text" class="input" placeholder="初音">
+            <input type="button" class="btn">
+        </div>
+        <ul id="search-type">
+            <li><a href="javascript:;" class="on" id="search-type-1"><img src="../images/search-ico-1.jpg" class="imgunon"><img src="../images/search-ico-1-on.jpg" class="imgon">音乐</a></li>
+            <li><a href="javascript:;" id="search-type-3"><img src="../images/search-ico-3.jpg" class="imgunon"><img src="../images/search-ico-3-on.jpg" class="imgon">图片／3D</a></li>
+            <li><a href="javascript:;" id="search-type-2"><img src="../images/search-ico-2.jpg" class="imgunon"><img src="../images/search-ico-2-on.jpg" class="imgon">文字</a></li>
+                <li><a href="javascript:;" id="search-type-4"><img src="../images/search-ico-5.png" class="imgunon"><img src="../images/search-ico-5-on.png" class="imgon">用户</a></li>
+                <li><a href="javascript:;" id="search-type-5"><img src="../images/search-ico-6.png" class="imgunon"><img src="../images/search-ico-6-on.png" class="imgon">小组</a></li>
+        </ul>
+    </div>
+    <ul class="top-login">
+                 <li><a href="message.html" class="t-msg-link" style='display:none;'>消息<span>3</span></a></li>
+        <li></li>
+        <li><a href="post-music.html" class="t-send-link">我要投稿</a></li>
+    </ul>
+</div>
+</div><div class="navbox"><ul class="wp">
+        <li><a href="main.html">首页</a></li>
+        <li><a href="list-music.html">音乐作品</a></li>
+        <li><a href="list-img.html">画作／3D 建模</a></li>
+        <li><a href="list-txt.html" class="on">文字作品</a></li>     
+        <li><a href="activity.html">专题活动</a></li>
+        <li><a href="groups.html">小组创作</a></li><li><a href="/html/list-hudong.html">官方互动</a></li>
+        
+    </ul>
+</div>
+<div class="post-top">
+    <h3 class="post-title"><span></span></h3>
+    <ul>
+        <li><a href="post-music.html">音乐上传</a></li>
+        <li><a href="post-image.html">画作/3D 建模上传</a></li>
+        <li><a href="post-txt.html" class="on">文字上传</a></li>
+    </ul>
+</div>
+<div class="post-main">
+    <div class="post-l">
+        <div class="post-form">
+            <h3>作品标题<span id="titlebox-count"><i>0</i>/30</span></h3>
+            <div class="formbox"><input name="title" type="text" placeholder="请输入标题" class="input-1" id="titlebox"></div>
+            <h3>作品类型</h3>
+            <div class="upload-music-box">
+                <div class="upload-type">
+                   <!-- <input type="radio" name="upload-type" id="upload-type-btn1" value=1 checked><label>原创歌词</label><input type="radio"  value=2 name="upload-type" id="upload-type-btn2"><label>原创小说</label><input type="radio" value=3 name="upload-type" id="upload-type-btn3"><label>其他</label>-->
+                </div>
+            </div>
+            <h3>作品内容</h3>
+            <div class="formbox">
+                <textarea rows="" cols="" class="textarea-2 content catTxt" id="textarea-1"></textarea>
+                <p><span id="descbox-count"><i>0</i>/5000</span></p>
+            </div>
+            <h3>作品标签</h3>
+            <div class="tagsbox">
+                <dl class="tagMan">
+                    <dt>人物标签</dt>
+                </dl>
+                <dl class="tagUse">
+                    
+                </dl>
+                <dl>
+                    <dt>自定义标签</dt>
+                    <dd>
+                        <input type="text" class="input-1" placeholder="请输入自定义标签"><input type="button" class="add-btn" value="添加">
+                    </dd>
+                </dl>
+            </div>
+            <h3>发布规则</h3>
+            <div class="formbox authGuize">
+            <p>授权许可条件</p>
+           <div class="sqbox">
+                <ul>
+                    <li>
+                        <img src="../images/post-e1.png">
+                        <dl>
+                            <dt>仅限非营利使用</dt>
+                            <dd><input type="radio" checked="checked" name="authCondition"><label>是</label></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <img src="../images/post-e2.png">
+                        <dl>
+                            <dt>是否需要署名</dt>
+                            <dd><input type="radio" checked="checked" name="authSignatureNeed"><label>需要</label><input name="authSignature" type="text" class="txt-1" placeholder="请输入名字，20个字以内" maxlength="20"></dd>
+                            <dd><input type="radio" name="authSignatureNeed"><label>不需要</label></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <img src="../images/post-e3.png">
+                        <dl>
+                            <dt>是否允许改动作品</dt>
+                            <dd><input type="radio" checked="checked" name="authModify"><label>允许</label></dd>
+                            <dd><input type="radio" name="authModify"><label>不允许</label></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <img src="../images/post-e4.png">
+                        <dl>
+                            <dt>是否有其他要求</dt>
+                            <dd><input type="radio" checked="checked" name="authRequireNeed"><label>有</label><input name="authRequire" type="text" class="txt-2" placeholder="请输入要求，20个字以内" maxlength="20"></dd>
+                            <dd><input type="radio" name="authRequireNeed"><label>没有</label></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <p><input name="auth" type="checkbox" class="checkbox-1" >没有授权许可条件</p>
+            </div>
+
+            <div class="post-btn-box">
+                <a href="javascript:uploadTxt();">发布</a>
+            </div>
+        </div>
+    </div>
+    <!--<div class="flagbox-1">-->
+        <!--<h3>作品缩略图</h3>-->
+        <!--<div class="imgbox"><p>尚未上传缩略图</p></div>-->
+        <!--<p class="flagbox-1-tip">缩略图支持jpg、png、gif，不超过xxx大小</p>-->
+        <!--<input id="file_upload_pic" name="file_upload" type="file" multiple="true">-->
+        <!--<span class="arrw"></span>-->
+    <!--</div>-->
+    <div class="flagbox-2 tagList">
+        <h3>已选标签<span>0/10</span></h3>
+        <ul>
+
+        </ul>
+        <span class="arrw"></span>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-body">
+        <h2>
+            <img src="../images/logo-footer.png">
+        </h2>
+        <ul class="footer-ico-box">
+            <li class="footer-ico-1">
+                <h3>官方微信</h3>
+                <p>关注POPPRO最新动态</p>
+            </li>
+            <li class="footer-ico-2">
+                <h3>初音未来 V4 中文版</h3>
+                 <p><a target="_blank" style="text-decoration:none; color:#b0b0b2; " href="https://item.taobao.com/item.htm?spm=a230r.1.14.21.108f93131LkcYB&id=557546981640&ns=1&abbucket=1#detail" >点击购买</a></p>
+            </li>
+        </ul>
+        <div class="footer-link">
+<a href="http://www.poppro.cn/html/aboutus.html?hId=MQ==">关于POPPRO</a><span>|</span><a href="mailto:kfpoppro@scla.com.cn">联系我们</a><span>|</span><a href="http://www.poppro.cn/html/aboutus.html?hId=Mw==">网站协议</a><span>|</span><a href="mailto:bhpoppro@scla.com.cn">客服/版权申诉</a>
+            <p>公司名称：上海新创华文化发展有限公司 | 公司地址：上海市静安区万荣路1053号6号楼 | 公司电话：(8621)51095308</p><p>&copy; Crypton Future Media, INC. www.piapro.net | 网站备案号：沪ICP备17015563号-1 | 网络文化经营许可证：沪网文（2017）11256-869号</p>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../js/jquery-1.7.1.min.js"></script>
+<script src="../js/util/jquery.uploadify.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/project.js"></script>
+<script src="../js/common.js"></script>
+<script>
+
+    $(function () {
+    	getWorkCat(WORK_TXT,'upload-type');
+    	$("input[name='upload-type']:eq(0)").attr("checked","checked");
+        $('#tab-1').click(function () {
+            $('#tab-1,#tab-2').removeClass("on");
+            $(this).addClass("on");
+
+            $('#tabbox-1,#tabbox-2').hide();
+            $('#tabbox-1').show();
+        })
+        $('#tab-2').click(function () {
+            $('#tab-1,#tab-2').removeClass("on");
+            $(this).addClass("on");
+
+            $('#tabbox-1,#tabbox-2').hide();
+            $('#tabbox-2').show();
+
+        })
+
+
+        $("#titlebox").bind("input propertychange",'textarea',function(){
+            words_deal($(this),30,$('#titlebox-count'))
+        });
+
+        $("#textarea-1").bind("input propertychange",'textarea',function(){
+            words_deal($(this),5000,$('#descbox-count'))
+        });
+
+
+    })
+     
+
+
+    function words_deal(obj,maxnum,countobj)
+    {
+        var curLength=obj.val().length;
+
+        console.log(curLength)
+        if(curLength>=maxnum)
+        {
+            countobj.removeClass();
+            countobj.addClass('txtmax');
+            var num=obj.val().substr(0,maxnum);
+            obj.val(num);
+            //alert("超过字数限制，多出的字将被截断！" );
+            countobj.find("i").html(maxnum)
+        }else if(curLength<1){
+            countobj.removeClass()
+            countobj.find("i").html('0')
+        }else
+        {
+            countobj.removeClass();
+            countobj.addClass('txtmin')
+            countobj.find("i").html(curLength)
+        }
+    }
+
+</script>
+<script src="../js/page/work.js"></script>
+</html>

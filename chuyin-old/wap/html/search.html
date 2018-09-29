@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <title>POPPRO | 搜索</title>
+    <link rel="stylesheet" href="../css/b.css?312312">
+    <script src="../js/lib/flexible.js"></script>
+</head>
+<body>
+<div class="search-head">
+    <a href="./main.html" class="page-back"></a>
+    <div class="search-input-box">
+        <input type="text" class="search-input" placeholder="请输入关键词">
+    </div>
+    <a href="javascript:search();" class="search-cancel">搜索</a>
+</div>
+<div class="tabbox tabbox-2">
+    <ul class="fivetab">
+        <li>音乐</li>
+        <li>画作/3D</li>
+        <li>文字</li>
+        <li>用户</li>
+        <li>小组</li>
+    </ul>
+    <span class="bottom-line" style="width:20%"></span>
+</div>
+<div class="selectbox1">
+        <li><span>全部标签</span></li>
+        <li><span>全部分类</span></li>
+    </ul>
+</div>
+<div class="selectboxlist1" style="display: none">
+    </ul>
+</div>
+<div class="selectboxlist1" style="display: none">
+        
+    </ul>
+</div>
+<div class="maskbox1" style="display: none"></div>
+<div class="searchbody">
+    <div class="list-music">
+    	<ul>
+        <!-- <li>
+            <a href="javascript:;" class="play"></a>
+            <span class="timebox">03:43</span>
+            <div class="imgbox">
+                <img src="../images/pro-1.png">
+            </div>
+            <h3>珈百璃的堕落珈百璃的堕落珈百璃的堕落珈百璃的堕落珈百璃的堕落</h3>
+            <p>2017-06-21 作者名称</p>
+        </li> -->
+        
+        
+    </ul>
+    <a href="javascript:;" class="addmore">点击加载更多</a>
+    </div>
+    <div class="list-img" style="display: none">
+        <ul>
+            
+           <!--  <li>
+                <a>
+                    <img src="../images/pro-1.png" class="showimg">
+                </a>
+                <strong>極楽浄土幼年極楽浄土幼年名字超出名字超出名字超出名字超出</strong>
+                <p class="list-time">2017/01/31 08:43</p>
+                <span class="list-user">名字超出名字超出名字超出名字超出名字超出名字超出名字超出名字超出</span>
+            </li> -->
+        </ul>
+        <a href="javascript:;" class="addmore">点击加载更多</a>
+    </div>
+    <div class="list-txt" style="display: none">
+        <ul>
+           
+            <!-- <li>
+                <div class="imgbox"><img src="../images/pro-1.png" width="100%" ></div>
+                <div class="musiclist-info">
+                    <h3>C.M.B.森罗博物馆之事件目录 第M.B.森罗博物馆之事件目录事件目第12C.M.B.森罗博物馆之事件目录 第M.B.森罗博物馆之事件目录事件目第12</h3>
+                    <p>2017-06-21 作者名称</p>
+                </div>
+            </li> -->
+
+        </ul>
+        <a href="javascript:;" class="addmore">点击加载更多</a>
+    </div>
+    <div class="group-list" style="display: none">
+    	<div class="list">
+        <!-- <div class="groupbox">
+            <div class="imgbox"><img src="../images/pro-1.png" style="width: 100%"></div>
+            <h3>珈百璃的堕落</h3>
+            <ul>
+                <li>最近更新：<span class="blue">2017/03/09 14:55</span></li>
+                <li>成立时间：<span class="blue">2017/01/17</span></li>
+                <li>参与人数：<span class="blue">3人</span></li>
+                <li>管理员：  SMG</li>
+                <li>招募：绘画／写作／动画制作</li>
+            </ul>
+            <span class="arrw-r"></span>
+        </div> -->
+        </div>
+        <a href="javascript:;" class="addmore">点击加载更多</a>
+    </div>
+    <div class="guanzhu-list" style="display:none;">
+        <ul>
+          <!--   <li>
+                <a href="javascript:;">
+                    <img src="../images/img-user.jpg" >
+                    <span>    </span>
+                </a>
+            </li> -->
+            
+        </ul>
+        <a href="javascript:;" class="addmore">点击加载更多</a>
+    </div>
+
+</div>
+<script src="/js/jquery-1.7.1.min.js"></script>
+<script src="../js/zepto.1.1.4.min.js"></script>
+<script src="../js/b.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/project.js"></script>
+<script src="../js/page/search.js"></script>
+<script>
+    var tab_num = 20;
+    $('.tabbox ul li').click(function () {
+        $(".bottom-line").css('left',$(this).index()*tab_num +'%');
+        if($(this).index() == 0){
+            $('.list-music,.list-img,.list-txt,.group-list,.guanzhu-list').hide();
+            $('.list-music').show();
+            $('.selectbox1').show();
+            $('.searchbody').removeClass('searchbody1')
+        }else if($(this).index() == 1){
+            $('.list-music,.list-img,.list-txt,.group-list,.guanzhu-list').hide()
+            $('.list-img').show();
+            $('.selectbox1').show();
+            $('.searchbody').removeClass('searchbody1')
+        }else if($(this).index() == 2){
+            $('.list-music,.list-img,.list-txt,.group-list,.guanzhu-list').hide()
+            $('.list-txt').show();
+            $('.selectbox1').show();
+            $('.searchbody').removeClass('searchbody1')
+        }else if($(this).index() == 3){
+            $('.list-music,.list-img,.list-txt,.group-list,.guanzhu-list').hide()
+            $('.guanzhu-list').show();
+            $('.selectbox1').hide();
+            $('.searchbody').removeClass('searchbody1');
+            $('.searchbody').addClass('searchbody1')
+        }else{
+            $('.list-music,.list-img,.list-txt,.group-list,.guanzhu-list').hide()
+            $('.group-list').show();
+            $('.selectbox1').hide();
+            $('.searchbody').removeClass('searchbody1');
+            $('.searchbody').addClass('searchbody1')
+        }
+    });
+
+/*     $('.selectbox1 ul li').click(function () {
+        $('.selectbox1 ul li').removeClass('on')
+        $(this).addClass('on')
+        $('.selectboxlist1').show();
+        $('.maskbox1').show();
+    });
+
+    $('.maskbox1').click(function () {
+        $('.selectboxlist1').hide();
+        $('.maskbox1').hide();
+    }) */
+
+</script>
+</body>
+</html>

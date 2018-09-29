@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="POPPRO是由Crypton Future Media公司官方独家授权的初音未来官方中文投稿网站。" />
+    <title>POPPRO | 专题活动</title>
+    <meta itemprop="name" content="POPPRO | 专题活动" />
+	<meta itemprop="image" content="https://www.poppro.cn/images/logo.png" />
+    <link type="text/css" href="../css/b.css" rel="stylesheet" /><link type="text/css" href="../css/b_v2.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <style>
+	.collection-body a{
+		text-decoration:none;
+		color:#999;
+		}
+	</style>
+</head>
+<body class="mainbody">
+<div class="headerbody">
+<div class="header wp">
+    <h1 class="logo"><img src="../images/logo.png"></h1>
+    <div class="searchbox">
+        <div class="searchboxbody">
+            <a class="select" href="javascript:;" id="search-select"><img src="../images/search-ico-1-on.jpg" id="search-select-1"><img src="../images/search-ico-2-on.jpg" style="display: none"  id="search-select-2"><img src="../images/search-ico-3-on.jpg" style="display: none"  id="search-select-3"><img src="../images/search-ico-5-on.png" style="display: none"  id="search-select-4"><img src="../images/search-ico-6-on.png" style="display: none"  id="search-select-5"></a>
+            <input type="text" class="input" placeholder="初音">
+            <input type="button" class="btn">
+        </div>
+        <ul id="search-type">
+            <li><a href="javascript:;" class="on" id="search-type-1"><img src="../images/search-ico-1.jpg" class="imgunon"><img src="../images/search-ico-1-on.jpg" class="imgon">音乐</a></li>
+            <li><a href="javascript:;" id="search-type-3"><img src="../images/search-ico-3.jpg" class="imgunon"><img src="../images/search-ico-3-on.jpg" class="imgon">图片／3D</a></li>
+            <li><a href="javascript:;" id="search-type-2"><img src="../images/search-ico-2.jpg" class="imgunon"><img src="../images/search-ico-2-on.jpg" class="imgon">文字</a></li>
+                <li><a href="javascript:;" id="search-type-4"><img src="../images/search-ico-5.png" class="imgunon"><img src="../images/search-ico-5-on.png" class="imgon">用户</a></li>
+                <li><a href="javascript:;" id="search-type-5"><img src="../images/search-ico-6.png" class="imgunon"><img src="../images/search-ico-6-on.png" class="imgon">小组</a></li>
+        </ul>
+    </div>
+    <ul class="top-login">
+                 <li><a href="message.html" class="t-msg-link" style='display:none;'>消息<span>3</span></a></li>
+        <li></li>
+        <li><a href="post-music.html" class="t-send-link">我要投稿</a></li>
+    </ul>
+</div>
+    </div><div class="navbox"><ul class="wp">
+            <li><a href="main.html" >首页</a></li>
+            <li><a href="list-music.html">音乐作品</a></li>
+            <li><a href="list-img.html">画作／3D 建模</a></li>
+            <li><a href="list-txt.html">文字作品</a></li>
+            <li><a href="activity.html" class="on">专题活动</a></li>
+            <li><a href="groups.html">小组创作</a></li><li><a href="/html/list-hudong.html">官方互动</a></li>
+
+        </ul>
+    </div>
+<div class="position wp">
+    <a href="main.html">首页</a><span>&gt;</span><a href="activity.html">专题活动</a><span>&gt;</span><span id="activity_title"></span>
+</div>
+<div class="collection-info wp">
+    <div class="collection-info-l">
+        <div id="ac_picurl"></div>
+        <div class="collection-tab">
+            <ul id="collection-tab">
+                <li id="collection-tab-1"  class="on">活动详情<span></span></li>
+                <li id="collection-tab-2">作品一览<span></span></li>
+                <li id="collection-tab-3">结果公布<span></span></li>
+            </ul>
+        </div>
+        <div id="collection-tabbox-1" class="collection-body" >
+            <h4 class="collection-title">活动主题</h4>
+            <div class="collection-box">
+                <h5 class="collection-box-title"></h5>
+                <div>
+                    <p></p>
+
+                    <h6></h6>
+
+                    <p></p>
+                    <div class="imgbox"></div>
+                    <h6></h6>
+
+                    <p></p>
+
+                </div>
+            </div>
+            <h4 class="collection-title">活动时间</h4>
+            <div class="collection-box">
+                <h6></h6>
+
+                <p></p>
+            </div>
+            <h4 class="collection-title">作品要求</h4>
+            <div class="collection-box">
+                <h6></h6>
+
+                <p></p>
+            </div>
+            <div class="collection-btn">
+              <input type="hidden" value="" id="ac_type"/>
+                <a href="javascript:tosubmit();" id="goto_sub" style="color:#fff">立即投稿</a>
+            </div>
+        </div>
+        <div id="collection-tabbox-2" class="collection-body">
+
+            <div style="display:none" id="show_work">
+                <div class="paixu"> <a  class="on" href="javascript:getworklist(1);">投稿时间</a>｜ <a href="javascript:getworklist(1);">投稿票数</a></div>
+                <div  style="" id="tab-1-box">
+
+                </div>
+                <div class="user-img-listbox" id="tab-2-box" style="display: none">
+                <ul class="user-img-list">
+
+                </ul></div>
+                <div class="user-txt-listbox" id="tab-3-box" style="">
+                    <div>
+
+                    </div>
+                </div>
+                <div class="pagination" id="page_list">
+
+                </div>
+            </div>
+
+            <div class="collection-result-img" style="display: none">
+                <div class="listbox">
+                    <ul class="main-tj">
+
+                    </ul>
+                </div>
+                <a href="javascript:;" class="addmore">显示更多</a>
+            </div>
+            <div class="collection-result-txt" style="display: none">
+                <div class="txt-listbox">
+                         </div>
+                <a href="javascript:;" class="addmore">显示更多</a>
+            </div>
+
+
+
+        </div>
+        <div id="collection-tabbox-3" class="collection-result" style="display: none">
+            <ul class="result-work">
+
+            </ul>
+            <a href="javascript:showmore(show_limit);" class="addmore">显示更多</a>
+        </div>
+
+    </div>
+
+    <div class="collection-info-r" style="display:none">
+        <div class="collection-user">
+            <span><a href="user-info.html"><img src="../images/user-head.jpg" id="user_head" style="width:100px;height:100px"></a></span>
+            <h3 id="user_name"><img src="../images/user/sex-2.png" ></h3>
+            <ul class="qlink">
+                <li><a href="user-main.html"><img src="../images/collection-user-ico-1.jpg"><br>个人主页</a></li>
+                <li><a href="user-favorite.html"><img src="../images/collection-user-ico-2.jpg"><br>我的收藏</a></li>
+                <li><a href="user-works.html"><img src="../images/collection-user-ico-3.jpg"><br>我的作品</a></li>
+            </ul>
+        </div>
+        <div class="sub-advbox">
+            <div><img src="../images/pro-3.jpg"></div>
+            <div><img src="../images/pro-3.jpg"></div>
+            <div><img src="../images/pro-3.jpg"></div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-body">
+        <h2>
+            <img src="../images/logo-footer.png">
+        </h2>
+        <ul class="footer-ico-box">
+            <li class="footer-ico-1">
+                <h3>官方微信</h3>
+                <p>关注POPPRO最新动态</p>
+            </li>
+            <li class="footer-ico-2">
+                <h3>初音未来 V4 中文版</h3>
+                 <p><a target="_blank" style="text-decoration:none; color:#b0b0b2; " href="https://item.taobao.com/item.htm?spm=a230r.1.14.21.108f93131LkcYB&id=557546981640&ns=1&abbucket=1#detail" >点击购买</a></p>
+            </li>
+        </ul>
+        <div class="footer-link">
+           <a href="http://www.poppro.cn/html/aboutus.html?hId=MQ==">关于POPPRO</a><span>|</span><a href="mailto:kfpoppro@scla.com.cn">联系我们</a><span>|</span><a href="http://www.poppro.cn/html/aboutus.html?hId=Mw==">网站协议</a><span>|</span><a href="mailto:bhpoppro@scla.com.cn">客服/版权申诉</a>
+            <p>公司名称：上海新创华文化发展有限公司 | 公司地址：上海市静安区万荣路1053号6号楼 | 公司电话：(8621)51095308</p><p>&copy; Crypton Future Media, INC. www.piapro.net | 网站备案号：沪ICP备17015563号-1 | 网络文化经营许可证：沪网文（2017）11256-869号</p>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../js/jquery-1.7.1.min.js"></script>
+<script src="../js/util/pager.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/project.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/page/collection-detail.js"></script>
+
+<script>
+    $(function () {
+        $(".paixu a").click(function () {
+
+          	if($(this).hasClass("on-1")){
+		          	$(this).removeClass("on-1");
+		          	$(this).addClass("on-2");
+          	}else if($(this).hasClass("on-2")){
+	          		$(this).removeClass("on-2");
+	              	$(this).addClass("on-1");
+          	}else{
+	          	   $(".paixu a").removeClass("on");
+	               $(".paixu a").removeClass("on-1");
+	               $(".paixu a").removeClass("on-2");
+	               $(this).addClass("on");
+	               $(this).addClass("on-1");
+          	}
+        })
+        $('#collection-tab-1').click(function () {
+            $('#collection-tabbox-1,#collection-tabbox-2,#collection-tabbox-3').hide();
+            $('#collection-tab-1,#collection-tab-2,#collection-tab-3').removeClass('on');
+            $(this).addClass('on');
+            $('#collection-tabbox-1').show();
+        })
+        $('#collection-tab-2').click(function () {
+            $('#collection-tabbox-1,#collection-tabbox-2,#collection-tabbox-3').hide();
+            $('#collection-tab-1,#collection-tab-2,#collection-tab-3').removeClass('on');
+            $(this).addClass('on');
+            $('#collection-tabbox-2').show();
+            $("#show_work").show();
+        })
+        $('#collection-tab-3').click(function () {
+            $('#collection-tabbox-1,#collection-tabbox-2,#collection-tabbox-3').hide();
+            $('#collection-tab-1,#collection-tab-2,#collection-tab-3').removeClass('on');
+            $(this).addClass('on');
+            $('#collection-tabbox-3').show();
+        })
+
+
+        $('.paixu a').eq(0).click(function(){
+
+        })
+        $('.paixu a').eq(1).click(function(){
+
+        })
+    })
+</script>
+</html>

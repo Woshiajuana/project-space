@@ -1,0 +1,253 @@
+//$root:"http://img.autostreetscdn.com/wbc/src/images/";
+
+@function j($px, $base-font-size: 75px) {
+  @if (unitless($px)) {
+    @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels for you";
+    @return j($px + 0px); // That may fail.
+  } @else if (unit($px) == rem) {
+    @return $px;
+  }
+  @return ($px / $base-font-size) * 1rem;
+}
+@function g($px) {
+  @return ($px / 2) * 1px;
+}
+
+@function f($px) {
+  @return ($px*320 / 750) * 1px;
+}
+
+
+@mixin dpr($property,$val1,$val2:false){
+  @if $val2{
+    [data-dpr="1"] & {
+      #{$property}: $val1/2*1px  $val2/2*1px;
+    }
+
+    [data-dpr="2"] & {
+      #{$property}: $val1*1px $val2*1px;
+    }
+
+    [data-dpr="3"] & {
+      #{$property}: $val1 /2*3*1px $val2/2*3*1px;
+    }
+  }@else {
+    [data-dpr="1"] & {
+
+      #{$property}: $val1/2*1px;
+    }
+
+    [data-dpr="2"] & {
+      #{$property}: $val1*1px;
+    }
+
+    [data-dpr="3"] & {
+      #{$property}: $val1 /2*3*1px;
+    }
+  }
+
+}
+%imgB{
+  display:block; border:none;
+}
+
+//圆角
+@mixin bra($px) {
+  -webkit-border-radius:j($px); -moz-border-radius:j($px); border-radius:j($px);
+}
+
+//阴影
+@mixin bxs($h,$v,$blur,$spread,$color) {
+  -webkit-box-shadow:j($h) j($v) j($blur) j($spread) $color;
+  -moz-box-shadow:j($h) j($v) j($blur) j($spread) $color;
+  box-shadow:j($h) j($v) j($blur) j($spread) $color;
+}
+
+//旋转
+@mixin rotate($deg){
+  -webkit-transform:rotate($deg*1deg); -moz-transform:rotate($deg*1deg); -ms-transform:rotate($deg*1deg); -o-transform:rotate($deg*1deg); transform:rotate($deg*1deg);
+}
+
+//backgroundSize;
+@mixin bs($w,$h){
+  background-size:j($w) j($h);
+}
+
+//缩放
+
+@mixin scale($x,$y){
+  -moz-transform:scale($x,$y); 
+-webkit-transform:scale($x,$y); 
+-o-transform:scale($x,$y);
+}
+
+
+//淡入
+@mixin fadeInOut($delay,$time){
+    -webkit-animation: fadeInOut $delay*1ms ease-in $time*1ms both;animation: fadeInOut $delay*1ms ease-in $time*1ms both;
+}
+
+//淡入
+@mixin fadeIn($delay,$time){
+    -webkit-animation: fadeIn $delay*1ms ease-in $time*1ms both;animation: fadeIn $delay*1ms ease-in $time*1ms both;
+}
+ 
+ 
+ //淡入
+@mixin fadeIns($delay,$time){
+    -webkit-animation: fadeIns $delay*1ms ease-out $time*1ms both;animation: fadeIns $delay*1ms ease-out $time*1ms both;
+}
+ 
+
+//background;
+//@mixin bg($img){
+  //background-image:url($root + $img);
+  //background-repeat:no-repeat;
+//}
+%css3Transition {
+  -webkit-transition:all .3s ease-in; -moz-transition:all .3s ease-in; -ms-transition:all .3s ease-in; -o-transition:all .3s ease-in; transition:all .3s ease-in;
+}
+
+//底边#ccc 边框
+%b_b_3c{
+  border-bottom:1px solid #ccc;
+}
+%b_b_3d{
+  border-bottom:1px solid #ddd;
+}
+%pl30{
+  padding-left:j(30);
+}
+//flexbox
+%flex_box{
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+}
+
+%flex{
+  flex:1;
+  -webkit-box-flex:1;
+  -webkit-flex:1;
+  -ms-flex:1;
+  flex:1;
+}
+%tsfR135{
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+%tsfR45{
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+%tsfR-45{
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+
+%tsf50{
+  -webkit-transform:translate(-50%,-50%); -moz-transform:translate(-50%,-50%); -ms-transform:translate(-50%,-50%); -o-transform:translate(-50%,-50%); transform:translate(-50%,-50%);
+  position:absolute;
+  top:50%; left:50%;
+}
+%tsfY50{
+  -webkit-transform:translateY(-50%); -moz-transform:translateY(-50%); -ms-transform:translateY(-50%); -o-transform:translateY(-50%); transform:translateY(-50%);
+  position:absolute;
+  top:50%;
+}
+%tsfX50{
+  -webkit-transform:translateX(-50%); -moz-transform:translateX(-50%); -ms-transform:translateX(-50%); -o-transform:translateX(-50%); transform:translateX(-50%);
+  position:absolute;
+  left:50%;
+}
+
+
+
+//垂直居中
+%verAC{
+  @extend %flex_box;
+  -ms-flex-align:center;
+  -webkit-box-align:center;
+  box-align:center;
+  -webkit-align-items:center;
+  align-items:center;
+}
+//垂直左右居中
+%item_alignCenter{
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-pack:center;
+  -webkit-box-pack:center;
+  box-pack:center;
+  -webkit-justify-content:center;
+  justify-content:center;
+  -ms-flex-align:center;
+  -webkit-box-align:center;
+  box-align:center;
+  -webkit-align-items:center;
+  align-items:center;
+}
+//层布局居中
+%box_alignCenter{
+  position:fixed;
+  left:0;
+  top:0;
+  z-index:999;
+  width:100%;
+  height:100%;
+  @extend %item_alignCenter;
+}
+
+$car:"http://img.autostreetscdn.com/m/src/images/xj_no_pic.jpg";
+%after{
+  content: '';
+  display:block;
+  clear:both;
+}
+%placeholderBg{
+  background-image:url($car);
+  background-repeat:no-repeat;
+}
+
+%imgWrap{
+  position:relative;
+  img{
+    position:absolute;width:100%; height:100%;
+    left:0;top:0;
+  }
+  &:after{
+    @extend %after;
+    @extend %placeholderBg;
+    background-size:100% 100%;
+  }
+}
+
+@mixin placeholderBg($url,$pt){
+  &:after{
+    background-image:url($url);
+    padding-top:$pt;
+  }
+}
+
+@mixin wh($w,$h){
+  width:j($w); height:j($h);
+}
+
+
+//黄色字体
+@mixin orangeTxt{
+  color:#FF5000;
+}
+//
+@mixin greenTXT{
+  color:#228C00;
+}
+

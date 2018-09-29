@@ -1,0 +1,190 @@
+.group-user-admin-t{position: relative;
+  h3{font-size: 20px;color: #333;padding-top: 30px;}
+  .position{padding-top: 15px;}
+}
+
+.group-user-admin-l{float: left;width: 340px}
+.group-user-admin-r{float: right;width: 910px;}
+
+.group-info{padding: 49px 30px 40px 30px; text-align: center;
+  h3{font-size: 16px; font-weight: normal; padding: 15px 0}
+  ul{text-align: left; font-size: 14px; line-height: 30px;
+    li{
+      strong{ color: #18b2d8; font-size: 18px;padding-right: 3px;}
+      label{width: 85px;display: inline-block;}
+    }
+    li.on{color: #18b2d8}
+  }
+  .wantaddbox{padding-top: 30px;
+    a#apply{width: 118px; height: 36px;font-size: 14px;color: #fff;line-height: 38px;text-decoration: none;display: inline-block;border-radius: 3px; -webkit-border-radius: 3px; border: 1px solid #18b2d8; margin: 0 6px;background: #18b2d8 url('../images/tagbox-add.png') no-repeat 14px 11px;text-align: left; text-indent: 40px;}
+    a.tougao{width: 118px; height: 36px; font-size: 14px; line-height: 38px; text-decoration: none; display: inline-block;border-radius: 3px;-webkit-border-radius: 3px; border: 1px solid #18b2d8; margin: 0 6px; background: #fff url("../images/feiji-on.png") no-repeat 10px 8px; background-size: 24px 20px; color: #18b2d8; text-align: left;text-indent: 40px;}
+  	a.jzjr-off{width: 118px; height: 36px; border: 1px solid #18b2d8; border-radius: 3px; line-height: 38px; display: inline-block; border: 1px solid #cccccc; -webkit-border-radius: 3px; color: #cccccc; text-decoration: none;}
+  }
+
+  .adminpanel{padding-top: 30px; overflow: hidden;font-size: 14px;
+    span{float: left; padding-top: 10px;
+      input{ margin-right: 5px;}
+    }
+    a.zy{float: right; width: 128px;height: 36px; border: 1px solid #18b2d8; border-radius: 3px; -webkit-border-radius: 3px;line-height: 36px; color:#18b2d8; text-decoration: none; background: url('../images/zhuanyiico.png') no-repeat left center; text-align: left; text-indent: 57px;}
+    a.jzjr{width: 128px;height: 36px; border: 1px solid #18b2d8; border-radius: 3px; -webkit-border-radius: 3px;line-height: 36px; color:#18b2d8; text-decoration: none; display: inline-block;}
+    a.jzjr-off{border: 1px solid #cccccc; border-radius: 3px; -webkit-border-radius: 3px;line-height: 36px; color:#cccccc; text-decoration: none;}
+  	a.tougao {width: 118px; height: 36px; font-size: 14px; line-height: 38px; text-decoration: none; display: inline-block;border-radius: 3px;-webkit-border-radius: 3px; border: 1px solid #18b2d8; margin: 0 6px; background: #fff url("../images/feiji-on.png") no-repeat 10px 8px; background-size: 24px 20px; color: #18b2d8; text-align: left;text-indent: 40px; }
+  }
+}
+.add-chengguo{width: 128px;height: 36px; border: 1px solid #18b2d8; border-radius: 3px; -webkit-border-radius: 3px;line-height: 36px; color:#18b2d8; text-decoration: none; background: url('../images/addchengguoico.png') no-repeat left center; text-align: left; text-indent: 45px; font-size: 14px;display: inline-block; margin-bottom: 30px; }
+.group-left-box{border-top: 1px solid #eeeeee;padding: 0px 30px 40px 30px;
+  h3{padding:15px 0;}
+  .userlist{ overflow: hidden;width: 290px; margin-bottom: 10px;
+    li{float: left; overflow: hidden; margin:0 10px 10px 0;
+      img{width: 48px; height: 48px; float: left}
+    }
+    li.userlist-admin{display: block;float: none;
+      img{ margin-right: 10px;}
+      span{font-size: 12px; background: #18b2d8; height: 20px;display: inline-block; line-height: 20px; padding: 0 10px;color: #fff;}
+      p{color: #18b2d8;font-size: 14px; line-height:30px;}
+    }
+  }
+  .alluser-link{float: right; color: #18b2d8;font-size: 14px; text-decoration: none}
+}
+
+.user-dongtai{
+  h3{
+    a{float: right;color: #18b2d8;font-size: 14px; text-decoration: none; font-weight: normal}
+  }
+
+  ul{ padding-top: 15px;
+    li{font-size: 14px; margin-bottom: 10px; overflow: hidden;
+      span{float:right; color: #aaaaaa;font-size: 12px;}
+    }
+  }
+}
+
+.user-share{
+  input{width: 100%;height: 36px;background: #f9f9f9; border: 1px solid #dddddd;border-radius: 36px; -webkit-border-radius: 36px; text-indent: 24px; color: #333; font-size: 14px;margin-bottom: 20px;padding-right: 24px;}
+  a{float: right; color: #18b2d8;font-size: 14px; text-decoration: none; }
+}
+
+.group-introduce{padding: 49px 49px 27px 49px;background: #fff; font-size: 14px; overflow: hidden; position: relative;
+  a.edit{right:50px; top:39px; position: absolute; width: 118px;height: 36px; border: 1px solid #18b2d8; border-radius: 3px; -webkit-border-radius: 3px;line-height: 36px; color:#18b2d8; text-decoration: none; background: url('../images/editico.png') no-repeat left center; text-align: left; text-indent: 57px; }
+  h3{ margin-bottom: 30px;}
+  p{ line-height:28px;margin-bottom: 20px; height: 84px; overflow: hidden}
+  p.on{height: auto;}
+
+  .showall{ color: #18b2d8; font-size: 14px; float: right; background:url("../images/arrw-b-s.png") no-repeat left center; padding-left: 20px; text-decoration: none}
+  .hideall{ color: #18b2d8; font-size: 14px; float: right; background:url("../images/arrw-t-s.png") no-repeat left center; padding-left: 20px; text-decoration: none;display: none}
+}
+
+.list-filter-box-r{float:right}
+.group-filter {
+  h3 {
+    line-height: 30px;
+  }
+}
+.chengguo{ background: #fff; border: 1px solid #eeeeee; padding: 29px;
+  ul{overflow: hidden}
+  li{overflow: hidden; color: #999; font-size: 14px; margin-bottom: 29px;width: 400px; float: left; height: 255px;position: relative;padding-right: 20px;
+    p{　word-break:break-all; word-wrap:break-word;line-height: 24px; height: 120px ; overflow: hidden}
+    a{position:relative;float: left;
+    }
+    h3{color: #333; line-height: 40px;
+      a{float: none;}
+    }
+    .bigimg{border: 1px solid #dddddd;float: left; margin-right: 29px;}
+    span{/*display: block;*/height: 30px;
+      a{display:block; margin-top: 7px; margin-bottom: 3px; float: none}
+      i{ font-style: normal; color: #18b2d8; margin-right: 10px;}
+      img{float: left; margin-right: 5px;}
+    }
+
+    span.imgbox{
+      width: 192px; height: 255px; display: inline-block;
+      text-align:center;background:#fff;
+      overflow: hidden;
+
+      /* 兼容标准浏览器 */
+      display: table-cell;
+      vertical-align:middle;
+
+      /* 兼容IE6/IE7 */
+      *display:block;
+      *font-size:349px; /* 字体大小约为容器高度的0.873倍 400*0.873 = 349 */
+      *font-family:Arial; /* 防止非utf-8引起的hack失效问题，如gbk编码 */
+    }
+
+    span.imgbox img{
+      vertical-align:middle;
+    }
+
+
+
+    span.ico-3d{position: absolute;width: 50px; height: 50px; z-index: 91; top: 0; left: 0; background: url("../images/ico-3d.png"); background-size: cover;padding: 0px; }
+    .btnbox{padding-top: 15px;text-align: right; position: absolute;right: 5px; bottom: 5px;
+      a{width:60px; height: 32px; display: inline-block; background: #18b2d8; line-height: 32px; color: #fff;text-align: center;border-radius: 3px; -webkit-border-radius: 3px; text-decoration: none; font-size: 14px; margin-right: 10px;}
+      a.dis{ background: #b8c0cc;}
+    }
+  }
+}
+
+.group-body{padding-top: 20px;
+  .music-listbox{min-height:730px;_height:730px;}
+  .user-txt-listbox{min-height:730px;_height:730px;}
+}
+
+.userlistbox{ background: #fff; border: 1px solid #eeeeee;padding: 20px; margin-bottom: 70px;position:relative;
+  a.back{    float: right;  width: 80px; height: 28px;  display: inline-block;  background: #18b2d8;  color: #fff;  line-height: 28px;  text-align: center;  text-decoration: none;  border-radius: 3px;  -webkit-border-radius: 3px;  margin-right: 10px;font-size: 14px;}
+  h3{font-size: 20px; color: #333; margin-bottom: 20px;}
+  h4{font-size: 16px; color: #18b2d8; line-height: 30px; padding: 20px 0}
+  ul{overflow: hidden; padding-left: 10px;
+    li{width: 166px; float:left; text-align: center; font-size: 14px; margin-bottom: 40px; position: relative;
+      img{border-radius: 100px; -webkit-border-radius: 100px; margin-bottom: 10px;width: 100px;height: 100px;}
+      span{width: 30px; height: 30px;display: inline-block; position: absolute; background: url('../images/userdel-ico.png'); position:absolute; top:0px;right: 30px;display: none}
+    }
+    li.on{
+      span{display: inline-block}
+    }
+  }
+}
+
+.userlogsbox{ background: #fff; border: 1px solid #eeeeee;padding: 20px; margin-bottom: 70px;position:relative;
+  a.back{    float: right;  width: 80px; height: 28px;  display: inline-block;  background: #18b2d8;  color: #fff;  line-height: 28px;  text-align: center;  text-decoration: none;  border-radius: 3px;  -webkit-border-radius: 3px;  margin-right: 10px;font-size: 14px;}
+  h3{font-size: 20px; color: #333; margin-bottom: 20px;}
+
+  ul{overflow: hidden; padding-left: 10px;
+    li{ height: 49px; line-height: 49px; border-bottom: 1px solid #eeeeee;font-size: 14px; padding: 0 20px;
+
+      span{float: right; font-size: 12px;}
+
+    }
+  }
+}
+
+.group-addbox{ color: #333;
+  background: #fff; border: 1px solid #eee; margin-bottom: 70px;
+  h2{ color: #18b2d8;font-size: 20px;padding: 20px 0; text-align: center}
+  ul{width: 746px; margin: auto; overflow: hidden;
+    li{ overflow:hidden; margin-bottom: 20px;}
+  }
+  label{float: left; width: 108px; height: 30px; line-height: 30px;display: inline-block}
+  .group-addbox-r{float:left; width: 637px;}
+  .input-1{width: 558px; height: 30px; border: 1px solid #eee;border-radius: 3px; -webkit-border-radius: 3px;}
+}
+
+.group-logo{
+  p{height: 120px; line-height: 120px; color: #999; font-size: 14px;}
+  .imgbox{width: 120px;height: 120px; display: inline-block; background: #f9f9f9;position: relative;float: left; margin-right: 21px;
+    i{position: absolute;top:0;width: 100%;height: 120px; text-align: center; font-size: 14px; font-style: normal;color: #ccc;z-index: 98;}
+    img{position:absolute;width: 120px;height: 120px; top:0;left: 0;z-index: 99}
+  }
+  .select-file{ background: #18b2d8;width: 120px; height: 38px; line-height: 38px; display: inline-block;color: #fff; text-decoration: none; text-align: center; margin-top: 10px;border-radius: 3px; -webkit-border-radius: 3px;}
+}
+
+.checekbox-list{ overflow: hidden;
+  input{ margin-right:10px; float: left; margin-top: 10px;}
+  span{ margin-right: 20px; font-size: 14px; color: #333;float: left; margin-top: 6px;}
+}
+
+.add-textarea{width: 548px; height: 88px; line-height: 150%;border: 1px solid #eee;border-radius: 3px; -webkit-border-radius: 3px;resize: none;font-size: 14px; padding: 5px;}
+
+.group-add-btn { text-align:left; padding: 30px 0 50px 0; width: 746px; text-indent:108px; margin: auto;
+  a {background: #18b2d8; width: 150px; height: 50px; display: inline-block; line-height: 50px; color: #fff;border-radius: 3px; -webkit-border-radius: 3px; text-align: center; text-decoration: none; text-indent: 0}
+}

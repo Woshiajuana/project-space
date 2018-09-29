@@ -1,0 +1,617 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="POPPRO是由Crypton Future Media公司官方独家授权的初音未来官方中文投稿网站。" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>POPPRO | 官方互动</title>
+    <link type="text/css" href="../css/b.css" rel="stylesheet" /><link type="text/css" href="../css/b_v2.css" rel="stylesheet" />
+    <link type="text/css" href="../css/b_v2.css" rel="stylesheet" />
+    <link type="text/css" href="../css/hd.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link type="text/css" href="../js/layer/skin/default/layer.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../css/uploadify.css">
+    <link rel="stylesheet" type="text/css" href="../css/uploadifive.css">
+    <script src="../js/jquery-1.7.1.min.js"></script>
+    <script src="../js/jquery.uploadifive.min.js" type="text/javascript"></script>
+    <script src="../js/util/jquery.uploadify1.js"></script>
+    <script src="../js/layer/layer.js"></script>
+    <script src="../js/jq.layer.js"></script>
+    <script src="../js/util/pager.js"></script>
+    <script src="../js/util/pager-jump.js"></script>
+    <script src="../js/util/base64.js"></script>
+    <script src="../js/util.js"></script>
+    <script src="../js/project.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/page/hudong.js"></script>
+    <style type="text/css">
+        .bqbox >ul {padding: 0 !important;}
+        .bqbox >ul >li{padding: 0!important; margin: 0 !important;}
+        .sub-pinlun-submint, .sub-pinlun-submint-box{overflow: visible !important;}
+        .pinlunlistlist-box >ul >li:hover .delete-msg{display: inline-block;}
+        .delete-msg{cursor: pointer; color: red; display: none;}
+        .pagination-1{ padding-bottom: 20px}
+        .list-con:hover .delete-msg{display: inline-block;}
+        .delete-icon{background: url("../images/reply-delete-icon.png") no-repeat !important;}
+        .reply-like{background: url("../images/reply-like-icon.png") no-repeat; padding-left: 20px; cursor: pointer}
+        .reply-like.active{background: url("../images/reply-like-active-icon.png") no-repeat;}
+        .master-text{float: right}
+        .pinlun-submint{overflow: visible;}
+        .bqbox{bottom: 30px; top: auto}
+        .bqbox{width: 310px;}
+        .bqbox{bottom: 30px; top: auto; padding-bottom: 50px;}
+        .bqbox-inner{width: 300px;position: relative; height: 180px; overflow: hidden;}
+        .bqbox-inner-con{ position: absolute;top: 0;left: 0;right: -20px;bottom: 0; overflow-y: auto;}
+        .bqbox-inner-con >ul {padding: 0 !important;}
+        .bqbox-inner-con >ul >li{padding: 0!important; margin: 0 !important;}
+        .bqbox-inner-con li { width: 60px; height: 60px; overflow: hidden;}
+        .bqbox-inner-con li img,
+        .bqbox-inner-con li a {width: 50px; height: 50px; display: block;}
+        .bqbox-inner-con li a {margin: 5px;}
+        .bqbox-inner-con >ul li:hover{background-color: #f2f2f2;}
+        .bqbox-tab{position: absolute;left: 0;height: 40px;bottom: 0;right: 0; background-color: #f2f2f2;}
+        .bqbox-tab-inner{width: 320px;float: left;height: 100%;}
+        .bqbox-tab-con{height: 100%; padding: 0 !important;}
+        .bqbox-tab-item{width: 40px!important; height: 100%!important;float: left; cursor: pointer;
+            padding: 0 !important;}
+        .bqbox-tab-item img{width: 20px; height: 20px; margin: 10px;}
+        .bqbox-tab-item.active{background-color: #fff;}
+        .bqbox-btn{height: 100%;float: right;}
+        .pinlun-submint {
+            overflow: visible !important;
+        }
+        .uploadifive-button{width: 24px !important;}
+        .hasheaderbox .userinfo{height: 206px;overflow: hidden;}
+        .userinfo a{display: block}
+        .userinfo a img{margin-bottom: 5px;}
+        .pinlunlistlist-box .userinfo{height: 136px;overflow: hidden;}
+        .pinlunlistlist .pinlunlistlist-box .userinfo span img,
+        .pinlunlistlist .pinlunlistlist-box .userinfo span {width:19px;height:19px;}
+        .comment-session >img{margin-bottom: 5px;}
+        .comment-session >span{float: left; margin: 0 2px 2px 0}
+        .comment-session >span,
+        .comment-session >span > img{width: 19px !important; height: 19px !important;}
+        .comment-session >span > img{display: block;}
+        .userinfo{position: relative;}
+        .landlord-icon{position: absolute; width: 40% !important; height:auto  !important;top: 0;left: 0;}
+        .sex-icon,.personal-icon{display: inline-block;}
+        .sex-icon{width: 20px;height: 20px;}
+        .personal-icon{width: 25px;height: 25px;}
+        .title span, .title img{vertical-align:middle; margin-left: 5px;}
+    </style>
+</head>
+<body class="mainbody">
+<div class="headerbody">
+    <div class="header wp">
+        <h1 class="logo"><img src="../images/logo.png"></h1>
+        <div class="searchbox">
+            <div class="searchboxbody">
+                <a class="select" href="javascript:;" id="search-select"><img src="../images/search-ico-1-on.jpg" id="search-select-1"><img src="../images/search-ico-2-on.jpg" style="display: none"  id="search-select-2"><img src="../images/search-ico-3-on.jpg" style="display: none"  id="search-select-3"><img src="../images/search-ico-5-on.png" style="display: none"  id="search-select-4"><img src="../images/search-ico-6-on.png" style="display: none"  id="search-select-5"></a>
+                <input type="text" class="input" placeholder="初音">
+                <input type="button" class="btn">
+            </div>
+            <ul id="search-type">
+                <li><a href="javascript:;" class="on" id="search-type-1"><img src="../images/search-ico-1.jpg" class="imgunon"><img src="../images/search-ico-1-on.jpg" class="imgon">音乐</a></li>
+                <li><a href="javascript:;" id="search-type-3"><img src="../images/search-ico-3.jpg" class="imgunon"><img src="../images/search-ico-3-on.jpg" class="imgon">图片／3D</a></li>
+                <li><a href="javascript:;" id="search-type-2"><img src="../images/search-ico-2.jpg" class="imgunon"><img src="../images/search-ico-2-on.jpg" class="imgon">文字</a></li>
+                <li><a href="javascript:;" id="search-type-4"><img src="../images/search-ico-5.png" class="imgunon"><img src="../images/search-ico-5-on.png" class="imgon">用户</a></li>
+                <li><a href="javascript:;" id="search-type-5"><img src="../images/search-ico-6.png" class="imgunon"><img src="../images/search-ico-6-on.png" class="imgon">小组</a></li>
+            </ul>
+        </div>
+        <ul class="top-login">
+            <li><a href="message.html" class="t-msg-link" style='display:none;'>消息<span>3</span></a></li>
+            <li>
+            </li>
+            <li><a href="post-music.html" class="t-send-link">我要投稿</a></li>
+        </ul>
+    </div>
+</div>
+<div class="navbox"><ul class="wp">
+        <li><a href="main.html">首页</a></li>
+        <li><a href="list-music.html">音乐作品</a></li>
+        <li><a href="list-img.html">画作/3D 建模</a></li>
+        <li><a href="list-txt.html">文字作品</a></li>
+        <li><a href="activity.html">专题活动</a></li>
+        <li><a href="groups.html">小组创作</a></li>
+        <li><a href="list-hudong.html" class="on">官方互动</a></li><li>
+
+    </ul>
+</div>
+<div class="mainbox wp mb50">
+    <div class="position"><a href="list-hudong.html">官方互动</a>  > <span id="platName">互动列表</span></div>
+    <div class="hd-l">
+        <div class="detailbox">
+            <h2 id="noteTitle"></h2>
+            <p class="headerinfo"><span class="yuedu" id="yuedu"></span><span id="noteCommentNum" class="pinlun"></span><span class="fav"></span></p>
+            <div class="pagination-2" id="topPage">
+                <!--<a href="javascript:;" class="on">1</a>-->
+                <!--<a href="javascript:;">2</a>-->
+                <!--<a href="javascript:;">3</a>-->
+                <!--<span class="num"><i></i>  评论，共14页，转到</span><input type="text">页<a href="javascript:;" class="btn">跳页</a>-->
+            </div>
+            <div class="hasheaderbox">
+                <div class="userinfo" id="adminInfo">
+                    <img src="">
+                    <!--<img class="landlord-icon" src="../images/landlord-type-icon.png">-->
+                    <!--<span><img src="../images/pro-img-5.jpg"></span>-->
+                    <!--<span><img src="../images/pro-img-5.jpg"></span>-->
+                    <!--<span><img src="../images/pro-img-5.jpg"></span>-->
+                    <!--<span><img src="../images/pro-img-5.jpg"></span>-->
+                </div>
+                <h3 class="title" id="adminNick">  <span></span></h3>
+                <!--<h3 class="title" id="adminNick">-->
+                    <!--马列酱的迷喵-->
+                    <!--<img class="sex-icon" src="../images/pro-img-5.jpg" alt="">-->
+                    <!--<span>Lv.12</span>-->
+                    <!--<img class="personal-icon" src="../images/pro-img-5.jpg" alt="">-->
+                <!--</h3>-->
+                <p class="time" id="adminTime"></p>
+                <div class="arical" id="adminContent">
+                <img src="">
+                </div>
+                <div class="fav-ico" id="likeNote">
+                    <span id="likeNum"></span>
+                </div>
+
+
+
+            </div>
+            <div class="pinlulistbox">
+                <h3>全部评论<span id="commentNum"> 条评论</span></h3>
+            </div>
+            <div class="pinlunlistlist">
+                <!--<div class="pinlunlistlist-box">-->
+                    <!--<div class="userinfo">-->
+                        <!--<img src="../images/pro-img-7.jpg">-->
+                        <!--<span><img src="../images/pro-img-5.jpg"></span>-->
+                        <!--<span><img src="../images/pro-img-5.jpg"></span>-->
+                        <!--<span><img src="../images/pro-img-5.jpg"></span>-->
+                        <!--<span><img src="../images/pro-img-5.jpg"></span>-->
+                    <!--</div>-->
+                    <!--<h4 class="title">龙舞樱傲 <span>Lv.12</span></h4>-->
+                    <!--<p class="txt">　　纸头上写着“我不想去当兵，我也不想去工厂做工，只能这样。”索尔挥挥手示意，一名士兵便出去了，过一会那名士兵拿着一张征兵海报走了进来。上面画着自己的肖像，身着动力装甲。“这是阿格瑞亚的难民给我们的一张泰伦帝国的征兵海报，为什么会有你？”</p>-->
+                    <!--<div class="time"><span>#4,673</span><span>2018-06-15 23:22:37</span><span class="pinlun" style="cursor: pointer" onclick="showFirstReply($(this))">2</span></div>-->
+                    <!--<ul>-->
+                        <!--<li><span class="name">Tomp丶Chen:</span> “你妹妹就在这，不过不让进”那名士兵把luka和蒂利亚带到了miku所在的监护室后便离开了，不过门口有两名全副武装的陆战队员守着。-->
+                            <!--<p class="time" style="cursor: pointer" onclick="showReply($(this))">2018-06-18 13:59<span class="pinlun">回复</span></p>-->
+                            <!--<span class="headerimg"><img src="../images/pro-img-7.jpg"></span>-->
+                            <!--<div class="logintip" style="display: none">您尚未登录，请先行【<a href="javascript:;">注册/登录</a>】</div>-->
+                            <!--<div class="sub-pinlun-submint" style="display: none">-->
+                                <!--<span class="subheaderimg"><img src="../images/pro-img-7.jpg"></span>-->
+                                <!--<div class="sub-pinlun-submint-box">-->
+                                    <!--<div class="headerbox"><a href="javascript:;" class="face">表情</a>-->
+                                        <!--<div class="bqbox">-->
+                                            <!--<ul>-->
+                                                <!--<li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li><li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li><li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li><li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li><li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li><li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li><li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li><li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>-->
+                                            <!--</ul>-->
+                                            <!--<a class="close" href="javascript:;">X</a>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--&lt;!&ndash;<textarea>请填写帖子内容</textarea>&ndash;&gt;-->
+                                    <!--<p contentEditable="true" style="overflow:scroll;" id="insideReplyContent" class="textarea-1" placeholder="请填写回复内容"></p>-->
+                                <!--</div>-->
+                                <!--<div class="btnbox">-->
+                                    <!--<a href="javascript:;" onclick="insideReply()">发表</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                        <!--<li><span class="name">S丶烧仙草:</span> “请你相信我，miku绝不是坏人，我承认她可能之前被那些泰伦帝国的政府当做了一枚棋子，可能做过许多的错事，但是那是那些执政者的错误，请你们不要追究我妹妹。”-->
+                        <!--<p class="time">2018-06-18 13:59<span class="pinlun">回复</span></p>-->
+                            <!--<span class="headerimg"><img src="../images/pro-img-7.jpg"></span>-->
+
+                         <!--<div class="sub-pinlun-submint">-->
+                             <!--<span class="subheaderimg"><img src="../images/pro-img-7.jpg"></span>-->
+                             <!--<div class="logintip" style="display: none;">您尚未登录，请先行【<a href="javascript:;">注册/登录</a>】</div>-->
+                             <!--<div class="sub-pinlun-submint-box">-->
+                                 <!--<div class="headerbox"><a href="javascript:;" class="face">表情</a>-->
+                                     <!--<div class="bqbox">-->
+                                         <!--<ul>-->
+                                             <!--<li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li><li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li><li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li><li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li><li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li><li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li><li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li><li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>-->
+                                         <!--</ul>-->
+                                         <!--<a class="close" href="javascript:;">X</a>-->
+                                     <!--</div>-->
+                                 <!--</div>-->
+                                 <!--&lt;!&ndash;<textarea>请填写帖子内容</textarea>&ndash;&gt;-->
+                                 <!--<p contentEditable="true" style="overflow:scroll;" id="insideReplyContent1" class="textarea-1" placeholder="请填写回复内容"></p>-->
+                             <!--</div>-->
+                             <!--<div class="btnbox">-->
+                             <!--<a href="javascript:;" onclick="insideReply()">发表</a>-->
+                                 <!--</div>-->
+
+                             <!--<div class="pagination-3">-->
+                                 <!--<a href="javascript:;" class="on">1</a>-->
+                                 <!--<a href="javascript:;">2</a>-->
+                                 <!--<a href="javascript:;">3</a>-->
+                             <!--</div>-->
+                         <!--</div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                    <!--<div class="logintip" style="display: none">您尚未登录，请先行【<a href="javascript:;">注册/登录</a>】</div>-->
+                    <!--<div class="sub-pinlun-submint">-->
+                        <!--<span class="subheaderimg"><img src="../images/pro-img-7.jpg"></span>-->
+                        <!--<div class="sub-pinlun-submint-box">-->
+                            <!--<div class="headerbox"><a href="javascript:;" class="face">表情</a></div>-->
+                            <!--<p contentEditable="true" style="overflow:scroll;" id="insideReplyContent2" class="textarea-1" placeholder="请填写回复内容"></p>-->
+                        <!--</div>-->
+                        <!--<div class="btnbox">-->
+                            <!--<a href="javascript:;">发表</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+            <div class="pagination" id="page">
+                <!--<a href="javascript:;" class="on">1</a><a href="javascript:;">2</a><a href="javascript:;">3</a><a href="javascript:;">4</a><a href="javascript:;">5</a><span>...</span><a href="javascript:;">112</a><a href="javascript:;">&gt;</a>-->
+            </div>
+            <div class="pinlun-submint" id="replyTextShow" style="display: none">
+                <div class="logintip" id="noLoginReply">您尚未登录，请先行【<a href="login.html">注册/登录</a>】</div>
+                <span class="subheaderimg userinfo comment-session" id="userHead">
+                    <img src="">
+                </span>
+                <h4 class="title" id="userName"> <span id="userLevel">Lv.</span></h4>
+                <div class="sub-pinlun-submint-box" id="outReply">
+                    <div class="headerbox">
+                        <a href="javascript:;" class="face">表情</a>
+                        <!--<a href="javascript:;" class="img">图片</a>-->
+                        <input id="file_upload_h5" style="display:none" name="file_upload_h5" type="file">
+                        <input id="file_upload_pic" style="display:none" name="file_upload_pic" type="file">
+                        <!--<a href="javascript:;" class="img">-->
+                            <!--图片-->
+                            <!--&lt;!&ndash;<input type="file">&ndash;&gt;-->
+                            <!--<input id="file_upload_pic" style="display:none" name="file_upload" type="file" >-->
+                            <!--<input id="file_upload_h5" style="display:none" name="file_upload_h5" type="file">-->
+                        <!--</a>-->
+
+                        <div class="bqbox">
+                            <div class="bqbox-inner">
+                                <div class="bqbox-inner-con">
+                                    <ul>
+                                        <!--<li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>-->
+                                        <!--<li><a href="javascript:;"><img src="../images/new-ico-2.png"> </a></li>-->
+                                    </ul>
+                                </div>
+                            </div>
+                            <a class="close" href="javascript:;">X</a>
+                            <div class="bqbox-tab">
+                                <div class="bqbox-tab-inner">
+                                    <ul class="bqbox-tab-con">
+                                        <!--<li class="bqbox-tab-item active">-->
+                                            <!--<img src="../images/new-ico-2.png">-->
+                                        <!--</li>-->
+                                        <!--<li class="bqbox-tab-item">-->
+                                            <!--<img src="../images/new-ico-2.png">-->
+                                        <!--</li>-->
+                                        <!--<li class="bqbox-tab-item">-->
+                                            <!--<img src="../images/new-ico-2.png">-->
+                                        <!--</li>-->
+                                        <!--<li class="bqbox-tab-item">-->
+                                            <!--<img src="../images/new-ico-2.png">-->
+                                        <!--</li>-->
+                                        <!--<li class="bqbox-tab-item">-->
+                                            <!--<img src="../images/new-ico-2.png">-->
+                                        <!--</li>-->
+                                        <!--<li class="bqbox-tab-item">-->
+                                            <!--<img src="../images/new-ico-2.png">-->
+                                        <!--</li>-->
+                                        <!--<li class="bqbox-tab-item">-->
+                                            <!--<img src="../images/new-ico-2.png">-->
+                                        <!--</li>-->
+                                    </ul>
+                                </div>
+                                <!--<div class="bqbox-btn">-->
+                                    <!--<div class="bqbox-tab-item">-->
+                                        <!--<img src="../images/bqbox-pre.png">-->
+                                    <!--</div>-->
+                                    <!--<div class="bqbox-tab-item">-->
+                                        <!--<img src="../images/bqbox-next.png">-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--<textarea>请填写帖子内容</textarea>-->
+                    <p contentEditable="true" style="overflow:scroll;height: 148px;" id="replyContent" class="textarea-1" placeholder="请填写回复内容"></p>
+                </div>
+                <div class="btnbox">
+                    <a href="javascript:;" onclick="reply()">发表</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hd-r hd-r-2">
+        <h3 class="right-title-1">版块总览</h3>
+        <div class="right-list-box">
+            <ul class="gailan">
+                <!--<li class="on"><span>1,341</span>画作讨论</li>-->
+                <!--<li><span>1,341</span>画作讨论</li>-->
+                <!--<li><span>1,341</span>画作讨论</li>-->
+                <!--<li><span>1,341</span>画作讨论</li>-->
+                <!--<li><span>1,341</span>画作讨论</li>-->
+                <!--<li><span>1,341</span>画作讨论</li>-->
+                <!--<li><span>1,341</span>画作讨论</li>-->
+            </ul>
+        </div>
+        <h3 class="right-title-2">最热帖子</h3>
+        <div class="right-list-box">
+            <ul class="hotlist">
+                <!--<li>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                    <!--<strong class="ranking-1">1</strong>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                    <!--<strong class="ranking-2">2</strong>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                    <!--<strong class="ranking-3">3</strong>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                    <!--<strong>4</strong>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                    <!--<strong>5</strong>-->
+                <!--</li>-->
+            </ul>
+        </div>
+        <h3 class="right-title-3" id="likeNoteShow">我的收藏</h3>
+        <div class="right-list-box mt0" id="likeNoteBox">
+            <ul class="favlist">
+                <!--<li>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队部...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队部...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队部...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队部...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队部...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                <!--</li>-->
+            </ul>
+        </div>
+        <div class="pagination-1" id="likePage">
+            <!--<a href="javascript:;" class="on">1</a>-->
+            <!--<a href="javascript:;">2</a>-->
+            <!--<a href="javascript:;">3</a>-->
+        </div>
+
+        <h3 class="right-title-3" id="myNoteShow">我的帖子</h3>
+        <div class="right-list-box mt0" id="myNoteBox">
+            <ul class="favlist">
+                <!--<li>-->
+                    <!--<span class="fav delete-icon"></span>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队部...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<span class="fav delete-icon"></span>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队部...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<span class="fav delete-icon"></span>-->
+                    <!--<h4>车队一路朝星港驶去，起初由于难民营中有部队部...</h4>-->
+                    <!--<p><span>哈喽力哥哈喽力哥哈喽</span><span class="pinlun">94</span><span class="yuedu">6,087</span></p>-->
+                <!--</li>-->
+            </ul>
+        </div>
+
+        <div class="pagination-1" id="myPageList">
+            <!--<a href="javascript:;" class="on">1</a>-->
+            <!--<a href="javascript:;">2</a>-->
+            <!--<a href="javascript:;">3</a>-->
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-body">
+        <h2>
+            <img src="../images/logo-footer.png">
+        </h2>
+        <ul class="footer-ico-box">
+            <li class="footer-ico-1">
+                <h3>官方微信</h3>
+                <p>关注POPPRO最新动态</p>
+            </li>
+            <li class="footer-ico-2">
+                <h3>初音未来 V4 中文版</h3>
+                <p><a target="_blank" style="text-decoration:none; color:#b0b0b2; " href="https://item.taobao.com/item.htm?spm=a230r.1.14.21.108f93131LkcYB&id=557546981640&ns=1&abbucket=1#detail" >点击购买</a></p>
+            </li>
+        </ul>
+        <div class="footer-link">
+            <a href="http://www.poppro.cn/html/aboutus.html?hId=MQ==">关于POPPRO</a><span>|</span><a href="mailto:kfpoppro@scla.com.cn">联系我们</a><span>|</span><a href="http://www.poppro.cn/html/aboutus.html?hId=Mw==">网站协议</a><span>|</span><a href="mailto:bhpoppro@scla.com.cn">客服/版权申诉</a>
+            <p>公司名称：上海新创华文化发展有限公司 | 公司地址：上海市静安区万荣路1053号6号楼 | 公司电话：(8621)51095308</p><p>&copy; Crypton Future Media, INC. www.piapro.net | 网站备案号：沪ICP备17015563号-1 | 网络文化经营许可证：沪网文（2017）11256-869号</p>
+        </div>
+    </div>
+</div>
+<script type="application/javascript">
+    $(function(){
+
+        // getEmojiList(function(r){
+        //     if (r.code == 0) {
+        //         emojiData = r.data;
+        //         var innerHtml = '';
+        //         var insideHtml = '';
+        //         for (var i=0; i<r.data.length; i++) {
+        //             innerHtml += '<li><a href="javascript:;" onclick="addFirstEmoji('+"'"+r['data'][i]['imgUrl']+"'"+')"><img width="20" height="20" src="'+r['data'][i]['imgUrl']+'"> </a></li>';
+        //         }
+        //         $('#firstReply ul').html(innerHtml)
+        //     }
+        // })
+
+        getEmojiTypeList();
+
+        $('.face').click(function(){
+            var id = ($(this).attr('id'))?$(this).attr('id'):'';
+            var innerHtml = '';
+            var addClass = '';
+            for (var i=0; i<emojiTypeData.length; i++) {
+                addClass = (i == 0) ? 'active':'';
+                innerHtml += '<li class="bqbox-tab-item '+addClass+'" onclick="showEmojiList('+emojiTypeData[i]['id']+','+id+')">\n' +
+                    '                                            <img width="20" height="20" src="'+emojiTypeData[i]['typeImgUrl']+'">\n' +
+                    '                                        </li>';
+            }
+            $('.bqbox-tab-con').html(innerHtml);
+            showEmojiList(emojiTypeData[0]['id'],id);
+            $('.bqbox-tab-con li').click(function(){
+                $('.bqbox-tab-con li').removeClass('active');
+                $(this).addClass('active');
+            })
+        })
+
+        getPlatform();
+        getNoteInfo();
+        getHotNote();
+        getLikeNote(1);
+        getReplyList();
+        viewNote();
+        $(".face").unbind('click');
+        $(".face").click(
+            function () {
+                $('.bqbox').hide();
+                $(this).parent().parent().find(".bqbox").show();
+            }
+        );
+        $('.bqbox a.close').click(function () {
+            $(this).parent().hide();
+        });
+
+        $('#likeNum').click(function(){
+            likeNote(queryString('noteId'));
+        })
+        if(!checkLogin()) {
+            $('#replyTextShow').show();
+            $('#replyTextShow div,#replyTextShow h4').hide();
+            $('#noLoginReply').show();
+            $('#userHead').hide();
+            $('#myNoteShow,#myNoteBox,#myPageList,#likeNoteShow,#likeNoteBox,#likePage').hide();
+        }
+        else {
+            $.post('/user/userinfo',{},function(r){
+                $('.subheaderimg[id != "userHead"] img').attr('src',r.head);
+                var signHtml = '';
+                if (r.signLogo) {
+                    signHtml = '<img class="personal-icon" src="'+r.signLogo+'" alt="">';
+                }
+                $('#userName').html(r.username+'<img class="sex-icon" src="../images/user/sex-'+r.sex+'.png" alt=""> <span>Lv.'+r.lv+'</span>'+signHtml);
+                var infoHtml = '<img src="'+r.head+'">\n';
+                if (r['badge'].length > 0) {
+                    if (r['badge'] != '暂无') {
+                        for (var i = 0; i < r['badge'].length; i++) {
+                            if (r['badge'][i] != null) {
+                                infoHtml += '<span><img src="'+r['badge'][i]+'"></span>';
+                            }
+                        }
+                    }
+                }
+                $('#userHead').html(infoHtml);
+                // $('#userHead img').attr('src',r.head);
+            },'json');
+            getMyNote(1);
+            $('#noLoginReply').hide();
+            $('#replyTextShow').show();
+        }
+
+        if (isUseH5()) {
+            $('#file_upload_h5').show();
+            $('#file_upload_pic').hide();
+            $('#file_upload_h5').uploadifive({
+                'auto'             : true,
+                'fileType': ['image/jpeg','image/png','image/gif','image/jpg'],
+                'checkScript'      : '',
+                'uploadScript'     : '/hudong/upload',
+                'color': 'blue',
+                'buttonText':'图片',
+                'height': 30,
+                'width': 86,
+                'buttonClass':'img',
+                'multi' : false,
+                'queueSizeLimit':1,
+                'fileSizeLimit':'2000',
+                'removeCompleted':false,
+                'auto' : true,
+                'onUploadComplete' : function(file, data) {
+                    $('.close').click();
+                    var dataObj = JSON.parse(data);
+                    var imgUrl;
+                    var addHtml = '';
+                    if(dataObj.code == 0){
+                        imgUrl = dataObj.msg;
+                        if (dataObj.width > 680) {
+                            addHtml += '<img width="680" class="picshow" src="'+imgUrl+'">';
+                        }
+                        else {
+                            addHtml += '<img class="picshow" src="'+imgUrl+'">';
+                        }
+                        document.getElementById('replyContent').focus();
+                        insertHtmlAtCaret(addHtml);
+                        // $('#noteContent').append(addHtml);
+                    }else{
+                        alert(dataObj.msg);
+                    }
+
+                }
+            });
+        }
+        else {
+            $('#file_upload_h5').hide();
+            $('#file_upload_pic').show();
+            //ie 7 8 9 flash上传
+            $('#file_upload_pic').uploadify({
+                'swf'      : '/swf/uploadify.swf',
+                'uploader' : '/hudong/upload',
+                'color': 'blue',
+                'buttonText':'图片',
+                'fileTypeExts': '*.jpg;*.jpeg;*.png;*.gif',
+                'height': 38,
+                'width': 116,
+                'buttonClass':'select-file',
+                'multi' : false,
+                //'uploadLimit':1,
+                'queueSizeLimit':1,
+                'fileSizeLimit':'2000',
+                'removeCompleted':false,
+                'auto' : true,
+                'onUploadSuccess': function (file, data, response) {
+                    var dataObj = JSON.parse(data);
+                    var imgUrl;
+                    var addHtml = '';
+                    if(dataObj.code == 0){
+                        imgUrl = dataObj.msg;
+                        if (dataObj.width > 680) {
+                            addHtml += '<img class="picshow" width="680" src="'+imgUrl+'">';
+                        }
+                        else {
+                            addHtml += '<img class="picshow" src="'+imgUrl+'">';
+                        }
+                        document.getElementById('replyContent').focus();
+                        insertHtmlAtCaret(addHtml);
+                        // $('#noteContent').append(addHtml);
+                    }else{
+                        alert(dataObj.msg);
+                    }
+                }
+            });
+        }
+
+
+    })
+</script>
+</body>
+</html>
