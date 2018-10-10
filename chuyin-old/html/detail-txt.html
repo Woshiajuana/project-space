@@ -9,9 +9,26 @@
     <link rel="shortcut icon" href="../images/favicon.ico"/>
     <link type="text/css" href="../js/layer/skin/default/layer.css" rel="stylesheet" />
     <style type="text/css">
-        .detail-base-info{ color: #999;}
-        .detail-base-info span{ height: 20px;display: inline-block;color: #999; font-size: 12px; margin-right: 20px;}
-        .detail-base-info .icon{ padding-left: 22px; }
+        .detail-base-info{ color: #999; padding: 0 0 18px 40px;}
+        .detail-base-info span{ height: 20px; line-height: 20px;display: inline-block;color: #999; font-size: 12px; margin-right: 20px;}
+        .detail-base-info .icon{ padding-left: 22px; background: url("../images/mian-eye-ico.png") left center no-repeat;}
+
+
+        .author-session{zoom:1;}
+        .author-session:after{content:'\20';display:block;height:0;clear:both;}
+        .author-wrap{padding: 25px 0 30px 115px;position: relative;}
+        .author-head-link{position: absolute; top: 25px; left: 30px; padding: 5px;}
+        .author-head-link img{display: block; width: 70px; height: 70px;}
+        .author-inner{}
+        .author-session{ margin-bottom: 10px;}
+        .author-name-link{color: #18b2d8; font-size: 16px;text-decoration: none;}
+        .author-sex{width: 20px; height: 20px;}
+        .author-session a,.author-session span,.author-session img{vertical-align:middle;display: inline-block;}
+        .author-level{color: #18b2d8;font-size: 12px;}
+        .author-icon{width: 16px;height: 16px;}
+        .author-icon-session{ width: 160px;}
+        .author-icon-session img{float: left; width: 30px; height: 30px; margin: 0 5px 5px 0;}
+        .auth-more-link{color: #18b2d8; font-size: 14px;text-decoration: none;}
     </style>
 </head>
 <body class="mainbody">
@@ -116,10 +133,37 @@
             </div>
         </div>
         <div class="detail-box-r">
-            <div class="zuozhe" style="display:none;">
-                <h3><img src=""><span><img src="" class="sex" ></span></h3>
-                <p></p>
-                <a href="other-works.html">查看作者更多作品</a>
+            <!--<div class="zuozhe">-->
+                <!--<h3><img src=""><span><img src="" class="sex" ></span></h3>-->
+                <!--<p></p>-->
+                <!--<a href="other-works.html">查看作者更多作品</a>-->
+            <!--</div>-->
+
+            <div class="author-wrap">
+                <a href="" class="author-head-link"><img src="http://www.owulia.com/static/temp/2.jpg" alt=""></a>
+                <div class="author-inner">
+                    <div class="author-session">
+                        <a href="" class="author-name-link">作者</a>
+                        <img src="http://www.owulia.com/static/temp/2.jpg" class="author-sex">
+                    </div>
+                    <div class="author-session">
+                        <span class="author-level">Lv13</span>
+                        <img src="http://www.owulia.com/static/temp/2.jpg" alt="" class="author-icon">
+                    </div>
+                    <div class="author-session author-icon-session">
+                        <img src="http://www.owulia.com/static/temp/2.jpg" alt="">
+                        <img src="http://www.owulia.com/static/temp/2.jpg" alt="">
+                        <img src="http://www.owulia.com/static/temp/2.jpg" alt="">
+                        <img src="http://www.owulia.com/static/temp/2.jpg" alt="">
+                        <img src="http://www.owulia.com/static/temp/2.jpg" alt="">
+                        <img src="http://www.owulia.com/static/temp/2.jpg" alt="">
+                        <img src="http://www.owulia.com/static/temp/2.jpg" alt="">
+                        <img src="http://www.owulia.com/static/temp/2.jpg" alt="">
+                        <img src="http://www.owulia.com/static/temp/2.jpg" alt="">
+                        <img src="http://www.owulia.com/static/temp/2.jpg" alt="">
+                    </div>
+                    <a href="" class="auth-more-link">查看作者更多作品</a>
+                </div>
             </div>
             <div>
                 <div  class="detail-desc-box-title"><a href="javascript:;" id="addvideo">追加</a><span>关联视频（<span class="videoNum">0</span>）</span></div>

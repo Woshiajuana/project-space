@@ -8,9 +8,27 @@
     <link type="text/css" href="../css/dropkick.css" rel="stylesheet" />
     <link type="text/css" href="../css/b.css" rel="stylesheet" /><link type="text/css" href="../css/b_v2.css" rel="stylesheet" />
     <style>
-.main-tg a{ text-decoration:none;color:#999;} 
-.listbox a{ text-decoration:none;color:#999;} 
-</style>
+        .main-tg a{ text-decoration:none;color:#999;}
+        .listbox a{ text-decoration:none;color:#999;}
+
+        .pop-wrap{position: fixed;top: 0;left: 0;right: 0;bottom: 0;background-color: rgba(0,0,0,0.5); z-index: 99}
+        .pop-inner{position: absolute; transform: translate3d(-50%, -50%, 0); top: 50%; left: 50%;}
+        .pop-next,.pop-prev{position: absolute; width: 40px; height: 40px;  top: 50%; margin-top: -20px; cursor: pointer;}
+        .pop-prev{left: 0; background: url("../images/pop-prev-icon.png") center no-repeat;}
+        .pop-next{right: 0; background: url("../images/pop-next-icon.png") center no-repeat;}
+        .pop-con{margin: 0 100px;position: relative;}
+        .pop-con img{max-width: 480px; height: auto;}
+        .pop-info{ position: absolute; width: 100%; bottom: 0; left: 0; right: 0;background-color: rgba(0,0,0,0.4);
+            height: 65px;overflow: hidden;}
+        .pop-info-text{zoom:1;}
+        .pop-info-text:after{content:'\20';display:block;height:0;clear:both;}
+        .pop-info h3{font-size: 14px; color: #fff; padding: 15px 0 2px 30px; font-weight: normal;}
+        .pop-info-text{color: #fff; font-size: 12px; padding: 0 30px;}
+        .pop-info-text span{float: left;}
+        .pop-info-text .pop-right{float: right;}
+        .pop-right{ height: 20px; line-height: 20px; padding-left: 20px; background: url("../images/mian-eye-ico.png") left center no-repeat;}
+
+    </style>
 </head>
 <body class="mainbody">
 <div class="headerbody">
@@ -40,10 +58,10 @@
             <li><a href="main.html" >首页</a></li>
             <li><a href="list-music.html">音乐作品</a></li>
             <li><a href="list-img.html" class="on">画作／3D 建模</a></li>
-            <li><a href="list-txt.html">文字作品</a></li>     
+            <li><a href="list-txt.html">文字作品</a></li>
             <li><a href="activity.html">专题活动</a></li>
             <li><a href="groups.html">小组创作</a></li><li><a href="/html/list-hudong.html">官方互动</a></li>
-           
+
         </ul>
     </div>
     <div class="mainbox wp mb50">
@@ -81,11 +99,11 @@
             <p class="buybtnbox"><a target="_blank" style="text-decoration:none;" href="https://item.taobao.com/item.htm?spm=a230r.1.14.21.108f93131LkcYB&id=557546981640&ns=1&abbucket=1#detail" ><img src="../images/buybtn.png"></a></p>
                 <h3 class="main-title-4"><a href="activity.html">全部</a>官方通告</h3>
                 <ul class="main-tg">
-                  
+
                 </ul>
             </div>
             <div class="sub-advbox">
-      
+
                 </div>
         </div>
     </div>
@@ -109,6 +127,26 @@
             <p>公司名称：上海新创华文化发展有限公司 | 公司地址：上海市静安区万荣路1053号6号楼 | 公司电话：(8621)51095308</p><p>&copy; Crypton Future Media, INC. www.piapro.net | 网站备案号：沪ICP备17015563号-1 | 网络文化经营许可证：沪网文（2017）11256-869号</p>
         </div>
     </div>
+
+
+
+    <div class="pop-wrap">
+        <div class="pop-inner">
+            <i class="pop-prev"></i>
+            <div class="pop-con">
+                <img src="http://www.owulia.com/static/temp/2.jpg" alt="">
+                <div class="pop-info">
+                    <h3>xasxaxsa</h3>
+                    <p class="pop-info-text">
+                        <span>xasxasx</span>
+                        <span class="pop-right">xsaxasx</span>
+                    </p>
+                </div>
+            </div>
+            <i class="pop-next"></i>
+        </div>
+    </div>
+
 </div>
 </body>
 <script src="../js/jquery-1.7.1.min.js"></script>
@@ -130,7 +168,7 @@
                 page(1);
             }
         })
-        
+
         /*
          * 排序选择
          */
