@@ -150,5 +150,23 @@
 
 ```
 
+# 6.作品新增角标
+
+```
+    // 新增样式
+    .col-1 a{position: relative; float: left;margin-right: 20px;}
+    .col-1 a img {float: none !important; margin-right: 0 !important; display: block;}
+    .col-1 a span {position: absolute; font-size: 12px; color: #fff; background-color: #fc348e; bottom: 0; right: 0; height: 16px; line-height: 16px; padding: 0 2px;}
+
+    // 新增html
+    <li class="col-1">
+        <a target="_blank" href="/html/detail-txt.html?id=MTAwMDg=&amp;type=1" style="color:#333;">
+            <img width="45" src="http://poppro.ozzyad.com/images/person/2.png">
+            <span>活动</span>
+        </a>
+        <a href="/html/detail-txt.html?id=MTAwMDg=&amp;type=1" style="color:#333;">222</a>
+    </li>
+```
+
 
 
