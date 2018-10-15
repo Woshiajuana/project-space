@@ -27,6 +27,7 @@
         }
         .search-group-list a{position: relative;}
         .search-group-list .auth-icon{width: 50px;height: 50px;position: absolute;top: 0;left: 0;}
+        .wheel-button{top: 80%}
     </style>
 </head>
 <body class="bodynew">
@@ -93,6 +94,8 @@
             <!-- 如果需要导航按钮 -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
         </div>
         <div>
             <h3 class="box-title box-title-topten">本周TOP10</h3>
@@ -480,20 +483,25 @@
         });
 
 
-        var _topten ;
-        var _index = 0;
+//        var _topten ;
+//        var _index = 0;
+//        $('#toplist li').hover(function () {
+//            clearTimeout(_topten)
+//            _index =$(this).index();
+//            console.log(_index)
+//            $('#toplist li').removeClass('on');
+//            $(this).addClass('on')
+//            //setTimeout(function () {
+//            // $('#toplist li').removeClass('on');
+//            //$("#toplist li:eq("+_index+")").addClass('on')
+//            // },10)
+//        },function () {
+//            //_topten = setTimeout("$('#toplist li').removeClass('on')",1000)
+//        });
+
         $('#toplist li').hover(function () {
-            clearTimeout(_topten)
-            _index =$(this).index();
-            console.log(_index)
             $('#toplist li').removeClass('on');
             $(this).addClass('on')
-            //setTimeout(function () {
-            // $('#toplist li').removeClass('on');
-            //$("#toplist li:eq("+_index+")").addClass('on')
-            // },10)
-        },function () {
-            //_topten = setTimeout("$('#toplist li').removeClass('on')",1000)
         });
 
 //        $("#toplist").hover(function(){
