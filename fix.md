@@ -69,7 +69,7 @@
 ```
     // 新增样式
     .search-group-list a{position: relative;}
-    .search-group-list .auth-icon{width: 50px;height: 50px;position: absolute;top: 0;left: 0;}
+    .search-group-list .auth-icon{width: 50px;height: 50px;position: absolute;top: 0;left: -120px;}
     // 列表结构
     <ul class="search-group-list">
         <li>
@@ -169,6 +169,7 @@
 ```
     // 新增样式
     .uploadifive-button{cursor: pointer;}
+    .uploadifive-button input{width: auto !important;}
 ```
 
 # 19.回复提示	回复提示字体	不可回复的帖子内，回复插件内的文字颜色太显眼，不像不可回复的类型	改成淡灰色，发表按钮也灰色

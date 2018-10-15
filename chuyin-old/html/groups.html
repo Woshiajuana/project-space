@@ -8,7 +8,10 @@
     <link type="text/css" href="../css/b.css" rel="stylesheet" /><link type="text/css" href="../css/b_v2.css" rel="stylesheet" />
     <link type="text/css" href="../js/layer/skin/default/layer.css" rel="stylesheet" />
  <style>
-.main-tg a{ text-decoration:none} 
+.main-tg a{ text-decoration:none}
+.search-group-list a{position: relative; float: left}
+.search-group-list a img{float: none; margin: 0;}
+.search-group-list .auth-icon{width: 50px;height: 50px;position: absolute;top: 0;left: 0;}
 </style>
 </head>
 <body class="mainbody">
@@ -20,7 +23,7 @@
             <a class="select" href="javascript:;" id="search-select"><img src="../images/search-ico-1-on.jpg" id="search-select-1"><img src="../images/search-ico-2-on.jpg" style="display: none"  id="search-select-2"><img src="../images/search-ico-3-on.jpg" style="display: none"  id="search-select-3"><img src="../images/search-ico-5-on.png" style="display: none"  id="search-select-4"><img src="../images/search-ico-6-on.png" style="display: none"  id="search-select-5"></a>
             <input type="text" class="input" placeholder="初音">
             <input type="button" class="btn">
-        </div> 
+        </div>
         <ul id="search-type">
             <li><a href="javascript:;" class="on" id="search-type-1"><img src="../images/search-ico-1.jpg" class="imgunon"><img src="../images/search-ico-1-on.jpg" class="imgon">音乐</a></li>
             <li><a href="javascript:;" id="search-type-3"><img src="../images/search-ico-3.jpg" class="imgunon"><img src="../images/search-ico-3-on.jpg" class="imgon">图片／3D</a></li>
@@ -39,7 +42,7 @@
         <li><a href="main.html">首页</a></li>
         <li><a href="list-music.html">音乐作品</a></li>
         <li><a href="list-img.html">画作／3D 建模</a></li>
-        <li><a href="list-txt.html">文字作品</a></li>     
+        <li><a href="list-txt.html">文字作品</a></li>
         <li><a href="activity.html">专题活动</a></li>
         <li><a href="groups.html" class="on">小组创作</a></li><!-- <li><a href="/concert/index.html">颁奖典礼投票</a></li> -->
         <li><a href="list-hudong.html">官方互动</a></li>
@@ -55,8 +58,16 @@
             </ul>
             <span class="groupsearch"><input type="text" class="group-list-search" placeholder="请输入小组名称/招募职位"><input type="button" value="搜索" class="groupsearchbtn"></span>
         </div>
-            <ul class="search-group-list">
-            </ul>
+        <ul class="search-group-list">
+            <li>
+                <a href="javascript:;" onclick="joinInGroup(53)" class="join">申请加入</a>
+                <a target="_blank" href="group.html?id=NTM=">
+                    <img src="http://poppro.ozzyad.com/uploads/1535529656_210.png?ran=2578700">
+                    <img class="auth-icon" src="../images/rzxzym-icon.png"/>
+                </a>
+                <h3><a target="_blank" style="color:black;text-decoration:none;" href="group.html?id=NTM=">测试123</a></h3>
+                <dl><dt>最近更新：</dt><dd>2018-09-28</dd></dl><dl><dt>成立时间：</dt><dd>2018-08-29 16:01:07</dd></dl><dl><dt>参加人数：</dt><dd>1人</dd></dl><dl><dt>管理员：</dt><dd>天天天晴</dd></dl><dl><dt>招募：</dt><dd>绘画</dd></dl></li>
+        </ul>
         <div class="search-null" style="display: none">
             很抱歉，暂时无相关结果
         </div>
@@ -71,7 +82,7 @@
         <div>
             <h3 class="main-title-4"><a href="activity.html">全部</a>官方通告</h3>
             <ul class="main-tg">
-                
+
             </ul>
         </div>
     </div>
