@@ -12,7 +12,7 @@
     .music-line .col-1{width: 300px !important;}
     .music-line .col-2{width: 100px !important;}
     .music-line .col-6{ color: #b2b2b2; width: 84px !important; padding-left: 20px; background: url(../images/shouting.png) no-repeat left center;}
-    .music-line .play-panel .a0{background: url("../images/yylb-xz-jz-icon.png") no-repeat center}
+    .music-line .play-panel .a0{background: url("../images/yylb-xz-jz-icon.png") no-repeat center; cursor: not-allowed;}
     // 新增html
     <div class="music-listbox">
         <ul class="music-line">
