@@ -10,6 +10,12 @@
     <link rel="stylesheet" type="text/css" href="../css/uploadify.css">
     <link rel="stylesheet" type="text/css" href="../css/uploadifive.css">
     <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <style type="text/css">
+        .user-check li .input-code{float: left; width: 176px; }
+        .code-button{float: left; width: 112px; height: 32px; text-align: center; line-height: 32px; color: #fff;
+            margin-left: 10px;cursor: pointer;background-color: #18b2d8;border-radius: 3px;}
+        .code-button.disabled{cursor: default;background-color: #d9d9d9;color: #b6b6b6;}
+    </style>
 </head>
 <body class="mainbody">
 <div class="headerbody">
@@ -79,6 +85,11 @@
             <li><label class="label-l">团队名称</label><input type="text" placeholder="" class="input-1"></li>
             <li><label class="label-l">管理员姓名</label><input type="text" placeholder="" class="input-1"></li>
             <li><label class="label-l">手机号码</label><input type="text" placeholder="" class="input-1"></li>
+            <li>
+                <label class="label-l">验证码</label>
+                <input type="text" placeholder="" class="input-1 input-code">
+                <div class="code-button disabled"><span>获取验证码</span></div>
+            </li>
             <li><label class="label-l">证件类型</label><select class="select-1"><option>二代身份证</option></select></li>
             <li><label class="label-l">证件号码</label><input type="text" placeholder="" class="input-1"></li>
             <li><label class="label-l">团队标识</label><input id="file_upload_h5" style="display:none" name="file_upload_h5" type="file"></li>
