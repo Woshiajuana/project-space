@@ -15,6 +15,19 @@
         .code-button{float: left; width: 112px; height: 32px; text-align: center; line-height: 32px; color: #fff;
             margin-left: 10px;cursor: pointer;background-color: #18b2d8;border-radius: 3px;}
         .code-button.disabled{cursor: default;background-color: #d9d9d9;color: #b6b6b6;}
+
+
+        .input-tel-warp{margin-left: 108px; line-height: 30px;}
+        .input-tel-code{float: left; height: 30px;background: url(../images/arrw-b.png) no-repeat right center;
+            width: 70px;  display: inline-block; text-indent: 10px; cursor: pointer; position: relative;}
+        .input-tel{float: left; height: 30px; border: none; width: 200px; padding: 0 10px; margin-left: 8px;}
+        .tel-code-tel{ position: absolute; width: 220px; max-height: 300px; overflow-y: auto; background-color: #fff;
+        border: 1px solid #ddd; display: none;}
+        .tel-code-tel li{height: 30px;cursor: pointer; line-height: 30px;margin: 0 !important;}
+        .tel-code-tel li span{font-size: 14px; color: #333;display: inline-block; width: 70px;}
+        .tel-code-tel li:hover{background-color: #ddd;}
+        .input-tel-code:hover .tel-code-tel{display: block;}
+        .te{overflow: visible !important; z-index: 1; position: relative;}
     </style>
 </head>
 <body class="mainbody">
@@ -84,7 +97,30 @@
         <ul class="user-check">
             <li><label class="label-l">团队名称</label><input type="text" placeholder="" class="input-1"></li>
             <li><label class="label-l">管理员姓名</label><input type="text" placeholder="" class="input-1"></li>
-            <li><label class="label-l">手机号码</label><input type="text" placeholder="" class="input-1"></li>
+            <li class="te">
+                <label class="label-l">手机号码</label>
+                <div class="input-1 input-tel-warp">
+                    <div class="input-tel-code">
+                        <span> +86</span>
+                        <ul class="tel-code-tel">
+                            <li><span>+86</span>中国</li>
+                            <li><span>+86</span>中国</li>
+                            <li><span>+86</span>中国</li>
+                            <li><span>+86</span>中国</li>
+                            <li><span>+86</span>中国</li>
+                            <li><span>+86</span>中国</li>
+                            <li><span>+86</span>中国</li>
+                            <li><span>+86</span>中国</li>
+                            <li><span>+86</span>中国</li>
+                            <li><span>+86</span>中国</li>
+                            <li><span>+86</span>中国</li>
+                            <li><span>+86</span>中国</li>
+                            <li><span>+86</span>中国</li>
+                        </ul>
+                    </div>
+                    <input type="text" class="input-tel">
+                </div>
+            </li>
             <li>
                 <label class="label-l">验证码</label>
                 <input type="text" placeholder="" class="input-1 input-code">
