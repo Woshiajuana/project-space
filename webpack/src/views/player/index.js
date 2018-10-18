@@ -11,6 +11,7 @@ $(function () {
         $el_src: $('#music-pic-image'),
         $el_delete: $('#list-delete'),
         list: [],
+        $scroll_list: null,
         // 初始化
         init (list, index) {
             this.innerHTML(list, index);
@@ -21,7 +22,7 @@ $(function () {
             let str = '';
             this.list = list || [];
             list.forEach((item, i) => {
-                str += `<li class="list-item ${i === index ? 'active' : ''}" data-index="${i}">
+                str += `<div class="list-item ${i === index ? 'active' : ''}" data-index="${i}">
                             <div class="list-item-part check">
                                 <div class="check-box">
                                     <div class="check-inner"></div>
@@ -32,10 +33,20 @@ $(function () {
                             <div class="list-item-part name">${item.title}</div>
                             <div class="list-item-part author">${item.author}</div>
                             <div class="list-item-part time">${formatTime(+item.duration)}</div>
-                        </li>`;
+                        </div>`;
             });
-            this.$el_list.html(str);
             this.innerLrc(index);
+            if (this.$scroll_list) {
+                $('.left .jspPane').html(str)
+                this.$scroll_list.data("jsp").reinitialise({
+                    autoReinitialise: false,
+                });
+            } else {
+                this.$el_list.html(str);
+                this.$scroll_list = $('#music-list').jScrollPane({
+                    autoReinitialise: false,
+                });
+            }
             return this;
         },
         // 渲染歌词
@@ -83,6 +94,9 @@ $(function () {
             this.$el_src.hide();
             this.$el_title.text('');
             MusicResourcesController.remove(arr).restart();
+            this.$scroll_list.data("jsp").reinitialise({
+                autoReinitialise: false,
+            });
         },
         // 选中
         handleCheck(el){
@@ -217,7 +231,7 @@ $(function () {
             if(music.lrc) {
                 $.get(music.lrc + '?t=' + new Date().getTime(),function(data,status){
                     if(status !== 'success') {
-                        $('.jspPane').html(' <p>获取歌词失败</p>')
+                        $('.music-words-wrap .jspPane').html(' <p>获取歌词失败</p>')
                         var refreshApi = that.lrc_list.data("jsp");
                         //重新加载刷新滚动条
                         refreshApi.reinitialise({
@@ -229,7 +243,7 @@ $(function () {
                     }
                 });
             } else  {
-                $('.jspPane').html(' <p>暂无歌词</p>')
+                $('.music-words-wrap .jspPane').html(' <p>暂无歌词</p>')
                 var refreshApi = this.lrc_list.data("jsp");
                 //重新加载刷新滚动条
                 refreshApi.reinitialise({
@@ -254,7 +268,7 @@ $(function () {
                 list.forEach((item, index) => {
                     html += `<p>${item}</p>`
                 });
-                $('.jspPane').html(html);
+                $('.music-words-wrap .jspPane').html(html);
                 var refreshApi = this.lrc_list.data("jsp");
                 //重新加载刷新滚动条
                 refreshApi.reinitialise({
