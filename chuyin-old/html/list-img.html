@@ -28,6 +28,15 @@
         .pop-info-text .pop-right{float: right;}
         .pop-right{ height: 20px; line-height: 20px; padding-left: 20px; background: url("../images/mian-eye-ico.png") left center no-repeat;}
 
+
+        .question{float: right; width: 20px; height: 20px; margin: 10px 10px 0 0; position: relative; cursor: pointer;
+            background: url("../images/que-mask-bg.png") no-repeat center;}
+        .question-mask{position: absolute; width: 200px; padding: 5px 10px; background-color: rgba(90, 98, 118, 0.8);
+        border-radius: 5px; left: 50%; margin-left: -110px; color: #fff; font-size: 12px; bottom: 130%; display: none;}
+        .question-mask:after{ content: ''; position: absolute;display:block; width:0;height:0; border-width: 8px;
+            border-style:solid;  border-color: rgba(90, 98, 118, 0.8) transparent transparent  transparent;
+            top: 100%; left: 50%; margin-left: -8px;}
+        .question:hover .question-mask{display: block;}
     </style>
 </head>
 <body class="mainbody">
@@ -72,8 +81,6 @@
                 </select>
                 <select name="country" class="list-filter-box catPic" id="selectbox-2" style="display: none;">
                     <option value="">作品分类</option>
-
-
                 </select>
                 <ul class="list-order" id="list-orderby">
                     <li><a href="javascript:;" class="on">作品预览</a></li>
@@ -82,6 +89,11 @@
                     <li>|</li>
                     <li><a href="javascript:;">最多点击</a></li>
                 </ul>
+                <div class="question">
+                    <div class="question-mask">
+                        <span>预览模式：选择本模式后，点击图片进入预览模式</span>
+                    </div>
+                </div>
             </div>
             <div class="listbox listbox-1">
                 <ul class="main-tj main-tj1">
@@ -132,7 +144,7 @@
 
 
 
-    <div class="pop-wrap">
+    <div class="pop-wrap" style="display:none;">
         <div class="pop-inner">
             <i class="pop-prev"></i>
             <div class="pop-con">
