@@ -11,7 +11,8 @@
         .main-tg a{ text-decoration:none;color:#999;}
         .listbox a{ text-decoration:none;color:#999;}
 
-        .pop-wrap{position: fixed;top: 0;left: 0;right: 0;bottom: 0;background-color: rgba(0,0,0,0.5); z-index: 99}
+        .pop-wrap{position: fixed;top: 0;left: 0;right: 0;bottom: 0;background-color: rgba(0,0,0,0.5); z-index: 99;
+            background: rgba(0,0,0,0.5) url("../images/loading-gif.gif") center no-repeat; background-size: 72px;}
         .pop-inner{position: absolute; transform: translate3d(-50%, -50%, 0); top: 50%; left: 50%;}
         .pop-next,.pop-prev{position: absolute; width: 40px; height: 40px;  top: 50%; margin-top: -20px; cursor: pointer;}
         .pop-prev{left: 0; background: url("../images/pop-prev-icon.png") center no-repeat;}
@@ -144,7 +145,7 @@
 
 
 
-    <div class="pop-wrap" style="display:none;">
+    <div class="pop-wrap">
         <div class="pop-inner">
             <i class="pop-prev"></i>
             <div class="pop-con">
