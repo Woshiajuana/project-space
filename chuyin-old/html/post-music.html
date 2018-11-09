@@ -11,8 +11,8 @@
     <link rel="stylesheet" type="text/css" href="../css/uploadify.css">
     <link type="text/css" href="../js/layer/skin/default/layer.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="../css/uploadify.css">
-	<link type="text/css" href="../js/layer/skin/default/layer.css" rel="stylesheet" />  
-	<link rel="stylesheet" href="../css/jquery.Jcrop.min.css" type="text/css" />  
+	<link type="text/css" href="../js/layer/skin/default/layer.css" rel="stylesheet" />
+	<link rel="stylesheet" href="../css/jquery.Jcrop.min.css" type="text/css" />
 	<link rel="stylesheet" type="text/css" href="../css/uploadifive.css">
 </head>
 <body class="mainbody">
@@ -43,10 +43,10 @@
         <li><a href="main.html">首页</a></li>
         <li><a href="list-music.html"  class="on">音乐</a></li>
         <li><a href="list-img.html">画作／3D 建模</a></li>
-        <li><a href="list-txt.html">文字作品</a></li>     
+        <li><a href="list-txt.html">文字作品</a></li>
         <li><a href="activity.html">专题活动</a></li>
         <li><a href="groups.html">小组创作</a></li><li><a href="/html/list-hudong.html">官方互动</a></li>
-       
+
     </ul>
 </div>
 <div class="post-top">
@@ -256,7 +256,7 @@
                       	}
  				}
  			});
- 			
+
     		 $('#file_upload_pic').hide();
     		 $('#file_upload_pic_h5').show();
  			  $('#file_upload_pic_h5').uploadifive({
@@ -275,7 +275,7 @@
  					'onUploadComplete': function (file, data, response) {
  							$('#uploadifive-file_upload_pic_h5-queue .close').click();
  						     var dataObj = JSON.parse(data);
- 						     var img = new Image();  
+ 						     var img = new Image();
  		            		 if(dataObj.code == 0){
  		            			$.LAYER.show({id:'tip-upload'});
  		            			img.src = dataObj.msg;
@@ -324,7 +324,7 @@
  			                   		 	})
  			            		     });
  		            			}
- 					        	
+
  			                 	/* picSmall = dataObj.msg;
  			                 	$('.imgbox').html('<img width="240" src="'+dataObj.msg+'">'); */
  		              		}else{
@@ -363,7 +363,7 @@
                       	}
  				}
  			});
- 			
+
  			  $('#file_upload_pic').uploadify({
  					'swf'      : '/swf/uploadify.swf',
  					'uploader' : '/work/upload',
@@ -380,7 +380,7 @@
  					'auto' : true,
  					'onUploadSuccess': function (file, data, response) {
  						     var dataObj = JSON.parse(data);
- 						     var img = new Image();  
+ 						     var img = new Image();
  		            		 if(dataObj.code == 0){
  		            			$.LAYER.show({id:'tip-upload'});
  		            			img.src = dataObj.msg;
@@ -429,7 +429,7 @@
  			                   		 	})
  			            		     });
  		            			}
- 					        	
+
  			                 	/* picSmall = dataObj.msg;
  			                 	$('.imgbox').html('<img width="240" src="'+dataObj.msg+'">'); */
  		              		}else{
@@ -438,7 +438,7 @@
  					}
  				});
     	 }
-			 
+
 
 		 $(".tip-close").click(function(){
 			 $.LAYER.close();
@@ -463,7 +463,7 @@
          $("#titlebox").bind("input propertychange",'textarea',function(){
              words_deal($(this),30,$('#titlebox-count'))
          });
-		 
+
 		 if(ac_type){
 				var wordCount = 1000;
 			}else{
@@ -478,7 +478,7 @@
              $("#textarea-2").bind("input propertychange",'textarea',function(){
                  words_deal($(this),wordCount,$('#lyricbox-count'))
              });
-    
+
 
 
 
@@ -487,12 +487,12 @@
              }
          })
 
-			
+
 	});
      function getcord() {
 	       /* console.log(jcrop_api.tellSelect())
 	       console.log(jcrop_api.tellScaled())
-	       console.log("===============================================") */ 
+	       console.log("===============================================") */
 	 	};
 
     function words_deal(obj,maxnum,countobj)
@@ -518,13 +518,13 @@
             countobj.find("i").html(curLength)
         }
     }
-    
+
     /*
-     * 
+     *
      *
      */
-     
-     
-    
+
+
+
 </script>
 </html>
