@@ -18,10 +18,12 @@
         .radio-wrap{margin: 0 20px;}
         .radio-input{margin-right: 5px;}
         .task{position: fixed;top: 200px; left: 0; z-index: 999;}
+        .task:hover .task-wrap, .task:active .task-wrap{display: block;}
+        .task:hover .task-btn, .task:active .task-btn{display: block; background: #fff url("../images/arrw-left.png") center no-repeat;}
         .task-btn{ width: 20px; height: 54px; position: absolute;top: 0; left: 0;background: #fff url("../images/arrw-r.png") center no-repeat;
             cursor: pointer; box-shadow: 2px 2px 2px 1px rgba(0,0,0,.1);}
-        .task-inner{position: absolute; width: 276px; height: 516px; background: #fff; box-shadow: 2px 2px 2px 1px rgba(0,0,0,.1);
-        top: 0; left: 28px;}
+        .task-wrap{display: none;position: absolute;top: 0; left: 0; padding-left: 28px;}
+        .task-inner{ width: 276px; height: 516px; background: #fff; box-shadow: 2px 2px 2px 1px rgba(0,0,0,.1);  }
         .task-item{height: 49px; line-height: 49px; border-bottom: 1px solid #ddd;margin: 0 38px 0 14px;position: relative;}
         .task-item p,.task-item a{font-size: 14px; color: #333; width: 200px; padding: 0 12px; text-overflow: ellipsis;
         white-space: nowrap; overflow: hidden;}
@@ -76,56 +78,58 @@
     </ul>
 </div>
 <div class="task">
-    <div class="task-btn"></div>
-    <div class="task-inner">
-        <div class="task-con">
-            <ul class="task-con-list">
-                <li class="task-item">
-                    <p>文字上传文字上文字上传文字上传文字上传文字上传传文字上传文字上传</p>
-                    <i></i>
-                </li>
-                <li class="task-item">
-                    <p>文字上传文字上文字上传文字上传文字上传文字上传传文字上传文字上传</p>
-                    <i></i>
-                </li>
-                <li class="task-item">
-                    <p>文字上传文字上文字上传文字上传文字上传文字上传传文字上传文字上传</p>
-                    <i></i>
-                </li>
-                <li class="task-item">
-                    <p>文字上传文字上文字上传文字上传文字上传文字上传传文字上传文字上传</p>
-                    <i></i>
-                </li>
-                <li class="task-item">
-                    <p>文字上传文字上文字上传文字上传文字上传文字上传传文字上传文字上传</p>
-                    <i></i>
-                </li>
-                <li class="task-item">
-                    <p>文字上传文字上文字上传文字上传文字上传文字上传传文字上传文字上传</p>
-                    <i></i>
-                </li>
-                <li class="task-item">
-                    <p>文字上传文字上文字上传文字上传文字上传文字上传传文字上传文字上传</p>
-                    <i></i>
-                </li>
-                <li class="task-item">
-                    <p>文字上传文字上文字上传文字上传文字上传文字上传传文字上传文字上传</p>
-                    <i></i>
-                </li>
-                <li class="task-item">
-                    <p>文字上传文字上文字上传文字上传文字上传文字上传传文字上传文字上传</p>
-                    <i></i>
-                </li>
-                <li class="task-item">
-                    <p>1111</p>
-                    <i></i>
-                </li>
-            </ul>
-        </div>
-        <div class="task-sure">
-            <span>确认</span>
+    <div class="task-wrap">
+        <div class="task-inner">
+            <div class="task-con">
+                <ul class="task-con-list">
+                    <li class="task-item">
+                        <p>文字上传文字上文字上传文字上传文字上传文字上传传文字上传文字上传</p>
+                        <i></i>
+                    </li>
+                    <li class="task-item">
+                        <p>文字上传文字上文字上传文字上传文字上传文字上传传文字上传文字上传</p>
+                        <i></i>
+                    </li>
+                    <li class="task-item">
+                        <p>文字上传文字上文字上传文字上传文字上传文字上传传文字上传文字上传</p>
+                        <i></i>
+                    </li>
+                    <li class="task-item">
+                        <p>文字上传文字上文字上传文字上传文字上传文字上传传文字上传文字上传</p>
+                        <i></i>
+                    </li>
+                    <li class="task-item">
+                        <p>文字上传文字上文字上传文字上传文字上传文字上传传文字上传文字上传</p>
+                        <i></i>
+                    </li>
+                    <li class="task-item">
+                        <p>文字上传文字上文字上传文字上传文字上传文字上传传文字上传文字上传</p>
+                        <i></i>
+                    </li>
+                    <li class="task-item">
+                        <p>文字上传文字上文字上传文字上传文字上传文字上传传文字上传文字上传</p>
+                        <i></i>
+                    </li>
+                    <li class="task-item">
+                        <p>文字上传文字上文字上传文字上传文字上传文字上传传文字上传文字上传</p>
+                        <i></i>
+                    </li>
+                    <li class="task-item">
+                        <p>文字上传文字上文字上传文字上传文字上传文字上传传文字上传文字上传</p>
+                        <i></i>
+                    </li>
+                    <li class="task-item">
+                        <p>1111</p>
+                        <i></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="task-sure">
+                <span>确认</span>
+            </div>
         </div>
     </div>
+    <div class="task-btn"></div>
 </div>
 <div class="post-main">
     <div class="post-l">
