@@ -9,6 +9,19 @@
     <link type="text/css" href="../css/b.css" rel="stylesheet" /><link type="text/css" href="../css/b_v2.css" rel="stylesheet" />
     <link type="text/css" href="../css/group.css" rel="stylesheet" />
 
+    <style type="text/css">
+        .group-pop-wrap{position: fixed; top: 0; left: 0; bottom: 0; right: 0; background-color: rgba(0,0,0,0.3);
+        z-index: 999;}
+        .group-pop-inner{position: absolute; top: 50%; left: 50%; width: 960px; height: 540px; background-color: #fff;
+        margin-left: -480px; margin-top: -270px;}
+        .group-pop-close{position: absolute; top: 0; right: 0; width: 40px;height: 40px;cursor: pointer;
+        background: url("../images/pop-close-icon.png") no-repeat center;}
+        .group-pop-title{height: 40px; background-color: #18b2d8; text-align: center; line-height: 40px;
+        color: #fff; font-size: 14px; font-weight: normal;}
+        .group-pop-box{height: 500px; overflow-y: auto;}
+        .group-pop-con{margin: 30px; min-height: 400px; background-color: #edf9fc; line-height: 2;
+        font-size: 13px; color: #333; text-indent: 2em; padding: 20px;}
+    </style>
 </head>
 <body class="mainbody">
 <div class="headerbody">
@@ -38,10 +51,10 @@
         <li><a href="main.html" class="on">首页</a></li>
         <li><a href="list-music.html">音乐作品</a></li>
         <li><a href="list-img.html">画作／3D 建模</a></li>
-        <li><a href="list-txt.html">文字作品</a></li>     
+        <li><a href="list-txt.html">文字作品</a></li>
         <li><a href="activity.html">专题活动</a></li>
         <li><a href="groups.html">小组创作</a></li><li><a href="/html/list-hudong.html">官方互动</a></li>
-    
+
     </ul>
 </div>
 <div class="group-user-admin wp">
@@ -803,6 +816,18 @@
         </div>
     </div>
     <a class="tip-close" href="javascript:;"></a>
+</div>
+
+<div class="group-pop-wrap">
+    <div class="group-pop-inner">
+        <i class="group-pop-close"></i>
+        <h3 class="group-pop-title">解散公告</h3>
+        <div class="group-pop-box">
+            <div class="group-pop-con">
+                <p>解散公告</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 </body>

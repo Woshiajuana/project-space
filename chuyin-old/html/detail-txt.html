@@ -29,33 +29,72 @@
         .author-icon-session{ width: 160px;}
         .author-icon-session img{float: left; width: 30px; height: 30px; margin: 0 5px 5px 0;}
         .auth-more-link{color: #18b2d8; font-size: 14px;text-decoration: none;}
+
+        .biaoqianbox{background: #fffaec url(../images/detail-ico-3.png) no-repeat 19px center; line-height: 2;}
+
+
+        .clearfix{zoom:1;}
+        .clearfix:after{content:'\20';display:block;height:0;clear:both;}
+        .article-wrap{}
+        .article-section-bg{background: #fdfdf4;}
+        .article-section{padding: 66px 100px;}
+        .article-con{line-height: 1.6; font-size: 13px;
+            color: #684d37;padding: 0 10px;}
+        .article-con p{}
+        .article-operation{ margin-top: 20px; padding: 0 10px;}
+        .article-btn{float: left; line-height: 32px;}
+        .article-btn span{ color: #18b2d8; font-size: 13px; margin-right: 28px; cursor: pointer;}
+        .article-btn span:hover{text-decoration: underline;}
+        .article-page{float: right;}
+        .article-page-item{float: left;width: 32px;height: 32px;text-align: center;line-height: 32px;
+        font-size: 13px;color: #999;cursor: pointer;}
+        .article-page-item.active{background-color: #18b2d8; color: #fff;}
+        .article-page-item:hover{background-color: #ddd;}
+        .article-page-item.article-page-start{}
+        .article-page-item.article-page-next{}
+        .article-page-item.article-page-end{}
+        .article-chapter{}
+        .article-title{height: 30px; line-height: 30px; font-size: 14px; color: #333;
+        border-bottom: 1px solid #ddd;padding: 0 10px;}
+        .article-chapter li{width: 200px;  margin-right: 20px;float: left; cursor: pointer;
+            height: 20px; line-height: 20px;overflow: hidden; text-overflow: ellipsis;
+            white-space: nowrap;margin-top: 10px;}
+        .article-chapter a{ display: inline-block; max-width: 180px; font-size: 12px;color: #333; cursor: pointer;
+            position: relative; padding-right: 18px; text-decoration: none;}
+        .article-chapter li:hover,
+        .article-chapter a:hover{text-decoration: underline;}
+        .article-chapter span{display: inline-block; width: 18px; height: 6px;
+        background: url("../images/article-new-20181130.png") no-repeat center;position: absolute;
+            top: 0;right: 0;}
     </style>
 </head>
 <body class="mainbody">
 <div class="headerbody">
-<div class="header wp">
-    <h1 class="logo"><img src="../images/logo.png"></h1>
-    <div class="searchbox">
-        <div class="searchboxbody">
-            <a class="select" href="javascript:;" id="search-select"><img src="../images/search-ico-1-on.jpg" id="search-select-1"><img src="../images/search-ico-2-on.jpg" style="display: none"  id="search-select-2"><img src="../images/search-ico-3-on.jpg" style="display: none"  id="search-select-3"><img src="../images/search-ico-5-on.png" style="display: none"  id="search-select-4"><img src="../images/search-ico-6-on.png" style="display: none"  id="search-select-5"></a>
-            <input type="text" class="input" placeholder="初音">
-            <input type="button" class="btn">
-        </div>
-        <ul id="search-type">
-            <li><a href="javascript:;" class="on" id="search-type-1"><img src="../images/search-ico-1.jpg" class="imgunon"><img src="../images/search-ico-1-on.jpg" class="imgon">音乐</a></li>
-            <li><a href="javascript:;" id="search-type-3"><img src="../images/search-ico-3.jpg" class="imgunon"><img src="../images/search-ico-3-on.jpg" class="imgon">图片／3D</a></li>
-            <li><a href="javascript:;" id="search-type-2"><img src="../images/search-ico-2.jpg" class="imgunon"><img src="../images/search-ico-2-on.jpg" class="imgon">文字</a></li>
+    <div class="header wp">
+        <h1 class="logo"><img src="../images/logo.png"></h1>
+        <div class="searchbox">
+            <div class="searchboxbody">
+                <a class="select" href="javascript:;" id="search-select"><img src="../images/search-ico-1-on.jpg" id="search-select-1"><img src="../images/search-ico-2-on.jpg" style="display: none"  id="search-select-2"><img src="../images/search-ico-3-on.jpg" style="display: none"  id="search-select-3"><img src="../images/search-ico-5-on.png" style="display: none"  id="search-select-4"><img src="../images/search-ico-6-on.png" style="display: none"  id="search-select-5"></a>
+                <input type="text" class="input" placeholder="初音">
+                <input type="button" class="btn">
+            </div>
+            <ul id="search-type">
+                <li><a href="javascript:;" class="on" id="search-type-1"><img src="../images/search-ico-1.jpg" class="imgunon"><img src="../images/search-ico-1-on.jpg" class="imgon">音乐</a></li>
+                <li><a href="javascript:;" id="search-type-3"><img src="../images/search-ico-3.jpg" class="imgunon"><img src="../images/search-ico-3-on.jpg" class="imgon">图片／3D</a></li>
+                <li><a href="javascript:;" id="search-type-2"><img src="../images/search-ico-2.jpg" class="imgunon"><img src="../images/search-ico-2-on.jpg" class="imgon">文字</a></li>
                 <li><a href="javascript:;" id="search-type-4"><img src="../images/search-ico-5.png" class="imgunon"><img src="../images/search-ico-5-on.png" class="imgon">用户</a></li>
                 <li><a href="javascript:;" id="search-type-5"><img src="../images/search-ico-6.png" class="imgunon"><img src="../images/search-ico-6-on.png" class="imgon">小组</a></li>
+            </ul>
+        </div>
+        <ul class="top-login">
+            <li><a href="message.html" class="t-msg-link" style='display:none;'>消息<span>3</span></a></li>
+            <li></li>
+            <li><a href="post-music.html" class="t-send-link">我要投稿</a></li>
         </ul>
     </div>
-    <ul class="top-login">
-                 <li><a href="message.html" class="t-msg-link" style='display:none;'>消息<span>3</span></a></li>
-        <li></li>
-        <li><a href="post-music.html" class="t-send-link">我要投稿</a></li>
-    </ul>
 </div>
-</div><div class="navbox"><ul class="wp">
+<div class="navbox">
+    <ul class="wp">
         <li><a href="main.html">首页</a></li>
         <li><a href="list-music.html">音乐作品</a></li>
         <li><a href="list-img.html">画作／3D 建模</a></li>
@@ -78,43 +117,90 @@
                 <span class="icon">2012</span>
                 <span>上传时间：2018-08-06</span>
             </p>
-            <div class="detail-txt-box">
-                <div class="detail-txt-info">
+            <div class="article-wrap">
+                <div class="article-section article-section-bg">
+                    <div class="article-con">
+                        <p>内容文内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案案</p>
+                     </div>
+                    <div class="article-operation clearfix">
+                        <div class="article-btn">
+                            <span>上一章节</span>
+                            <span>下一章节</span>
+                        </div>
+                        <ul class="article-page clearfix">
+                            <li class="article-page-item article-page-start">《</li>
+                            <li class="article-page-item article-page-pre">&lt;</li>
+                            <li class="article-page-item active">1</li>
+                            <li class="article-page-item">2</li>
+                            <li class="article-page-item">3</li>
+                            <li class="article-page-item">4</li>
+                            <li class="article-page-item article-page-next">&gt;</li>
+                            <li class="article-page-item article-page-end">》</li>
+                        </ul>
+                    </div>
+                </div>
 
+                <div class="article-section">
+                    <p class="article-title">正文xxx</p>
+                    <div class="article-con">
+                        <ul class="article-chapter clearfix">
+                            <li><a href="">第一章节<span></span></a></li>
+                            <li><a href="">第一章x<span></span></a></li>
+                            <li><a href="">第一章节<span></span></a></li>
+                            <li><a href="">第一章节xx第一章节xxxxxxxx第一章节xxxxxxxxxxxxxx<span></span></a></li>
+                         </ul>
+                    </div>
+                    <div class="article-operation">
+                        <ul class="article-page clearfix">
+                            <li class="article-page-item article-page-start">《</li>
+                            <li class="article-page-item article-page-pre">&lt;</li>
+                            <li class="article-page-item active">1</li>
+                            <li class="article-page-item">2</li>
+                            <li class="article-page-item">3</li>
+                            <li class="article-page-item">4</li>
+                            <li class="article-page-item article-page-next">&gt;</li>
+                            <li class="article-page-item article-page-end">》</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            <!--<div class="detail-txt-box">-->
+                <!--<div class="detail-txt-info">-->
+
+                <!--</div>-->
+            <!--</div>-->
             <div class="detail-info-box">
-                <p class="biaoqianbox"></p>
+                <p class="biaoqianbox">点赞点赞点赞</p>
                 <div class="detail-desc">
                     <div class="detail-cancel-body">
-                    <ul class="detail-cancel">
-                         <li>
-                            <a href="javascript:vote(WORK_TXT,detailVoteCallback)"><img src="../images/detail-cancel-1.png"></a>
-                            <span id="toupiao">点赞</span><br>
-                            <i id="voteNum">0</i>
-                        </li>
-                        <li>
-                            <a href="javascript:collect(detailCollectCallback)"><img src="../images/detail-cancel-2.png"></a>
-                            <span>收藏</span><br>
-                            <i id="collectNum">0</i>
-                        </li>
-                        <li id="download" style="display:none;">
-                           <a href="javascript:download()"> <img src="../images/detail-cancel-3.png"></a>
-                            <span>下载</span><br>
-                        </li>
-                    </ul>
-                    <div class="detail-cancel-r">
-                    <span class="sharetxt">分享</span>
-                      <!-- JiaThis Button BEGIN -->
-<div class="jiathis_style_32x32">
-    <div class="bdsharebuttonbox"><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
-    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-    <!-- JiaThis Button END -->
-</div>
-<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
-<!-- JiaThis Button END -->
-                    </div>
+                        <ul class="detail-cancel">
+                            <li>
+                                <a href="javascript:vote(WORK_TXT,detailVoteCallback)"><img src="../images/detail-cancel-1.png"></a>
+                                <span id="toupiao">点赞</span><br>
+                                <i id="voteNum">0</i>
+                            </li>
+                            <li>
+                                <a href="javascript:collect(detailCollectCallback)"><img src="../images/detail-cancel-2.png"></a>
+                                <span>收藏</span><br>
+                                <i id="collectNum">0</i>
+                            </li>
+                            <li id="download" style="display:none;">
+                                <a href="javascript:download()"> <img src="../images/detail-cancel-3.png"></a>
+                                <span>下载</span><br>
+                            </li>
+                        </ul>
+                        <div class="detail-cancel-r">
+                            <span class="sharetxt">分享</span>
+                            <!-- JiaThis Button BEGIN -->
+                            <div class="jiathis_style_32x32">
+                                <div class="bdsharebuttonbox"><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+                                <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+                                <!-- JiaThis Button END -->
+                            </div>
+                            <script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+                            <!-- JiaThis Button END -->
                         </div>
+                    </div>
                     <div class="xuke">
                         <span>作品许可</span>：该作品如需转载必需署名原作者名字，作者允许该作品在不商业化的情况下进行二次创作，但禁止抄袭，直接使用的情况发生
                     </div>
@@ -122,7 +208,7 @@
             </div>
             <h3 class="detail-desc-box-title">评论（12）</h3>
             <div class="send-pl">
-               <textarea id="comment_content" placeholder="你喜欢这个作品吗，点评两句吧！"></textarea><span id="descbox-count"><i style="font-style:normal">0</i>/300</span>
+                <textarea id="comment_content" placeholder="你喜欢这个作品吗，点评两句吧！"></textarea><span id="descbox-count"><i style="font-style:normal">0</i>/300</span>
                 <a href="javascript:comment();">评论</a>
             </div>
 
@@ -134,9 +220,9 @@
         </div>
         <div class="detail-box-r">
             <!--<div class="zuozhe">-->
-                <!--<h3><img src=""><span><img src="" class="sex" ></span></h3>-->
-                <!--<p></p>-->
-                <!--<a href="other-works.html">查看作者更多作品</a>-->
+            <!--<h3><img src=""><span><img src="" class="sex" ></span></h3>-->
+            <!--<p></p>-->
+            <!--<a href="other-works.html">查看作者更多作品</a>-->
             <!--</div>-->
 
             <div class="author-wrap">
@@ -186,11 +272,11 @@
             </li>
             <li class="footer-ico-2">
                 <h3>初音未来 V4 中文版</h3>
-                 <p><a target="_blank" style="text-decoration:none; color:#b0b0b2; " href="https://item.taobao.com/item.htm?spm=a230r.1.14.21.108f93131LkcYB&id=557546981640&ns=1&abbucket=1#detail" >点击购买</a></p>
+                <p><a target="_blank" style="text-decoration:none; color:#b0b0b2; " href="https://item.taobao.com/item.htm?spm=a230r.1.14.21.108f93131LkcYB&id=557546981640&ns=1&abbucket=1#detail" >点击购买</a></p>
             </li>
         </ul>
         <div class="footer-link">
-<a href="http://www.poppro.cn/html/aboutus.html?hId=MQ==">关于POPPRO</a><span>|</span><a href="mailto:kfpoppro@scla.com.cn">联系我们</a><span>|</span><a href="http://www.poppro.cn/html/aboutus.html?hId=Mw==">网站协议</a><span>|</span><a href="mailto:bhpoppro@scla.com.cn">客服/版权申诉</a>
+            <a href="http://www.poppro.cn/html/aboutus.html?hId=MQ==">关于POPPRO</a><span>|</span><a href="mailto:kfpoppro@scla.com.cn">联系我们</a><span>|</span><a href="http://www.poppro.cn/html/aboutus.html?hId=Mw==">网站协议</a><span>|</span><a href="mailto:bhpoppro@scla.com.cn">客服/版权申诉</a>
             <p>公司名称：上海新创华文化发展有限公司 | 公司地址：上海市静安区万荣路1053号6号楼 | 公司电话：(8621)51095308</p><p>&copy; Crypton Future Media, INC. www.piapro.net | 网站备案号：沪ICP备17015563号-1 | 网络文化经营许可证：沪网文（2017）11256-869号</p>
         </div>
     </div>
@@ -220,14 +306,14 @@
 <div class="UED_hide" id="tip-group-transfer">
     <div class="showbox showbox-1">
         <h2>举报作品</h2>
-          <div class="transferbox">
+        <div class="transferbox">
             <ul>
                 <li><label>举报内容：</label>
                     <textarea placeholder="请输入投诉内容" id="conplain_content"></textarea>
                 </li>
             </ul>
             <div class="btnbox">
-                 <a href="javascript:to_conplain();">确定</a> <a class="dis" href="javascript:colse_conplain();">取消</a>
+                <a href="javascript:to_conplain();">确定</a> <a class="dis" href="javascript:colse_conplain();">取消</a>
             </div>
         </div>
     </div>
@@ -244,65 +330,65 @@
 <script src="../js/page/detail-txt.js"></script>
 
 <script>
-function words_deal(obj,maxnum,countobj)
-{
-    var curLength=obj.val().length;
+    function words_deal(obj,maxnum,countobj)
+    {
+        var curLength=obj.val().length;
 
-    console.log(curLength)
-    if(curLength>=maxnum)
-    {
-        countobj.removeClass();
-        countobj.addClass('txtmax');
-        var num=obj.val().substr(0,maxnum);
-        obj.val(num);
-        //alert("超过字数限制，多出的字将被截断！" );
-        countobj.find("i").html(maxnum)
-    }else if(curLength<1){
-        countobj.removeClass()
-        countobj.find("i").html('0')
-    }else
-    {
-        countobj.removeClass();
-        countobj.addClass('txtmin')
-        countobj.find("i").html(curLength)
+        console.log(curLength)
+        if(curLength>=maxnum)
+        {
+            countobj.removeClass();
+            countobj.addClass('txtmax');
+            var num=obj.val().substr(0,maxnum);
+            obj.val(num);
+            //alert("超过字数限制，多出的字将被截断！" );
+            countobj.find("i").html(maxnum)
+        }else if(curLength<1){
+            countobj.removeClass()
+            countobj.find("i").html('0')
+        }else
+        {
+            countobj.removeClass();
+            countobj.addClass('txtmin')
+            countobj.find("i").html(curLength)
+        }
     }
-}
     $(function () {
         $("#addvideo").click(function () {
-        	if(!checkLogin()){
-        		systemTip('您还没有登录哦！','/html/login.html');
-        		return ;
-        	}
-        	//限制数量
-	    		var videoCount = parseInt($('.videoNum').text())
-	    	if(videoCount>=10){
-	    		systemTip('关联视频已满');
-	    	}else{
-	    		$.LAYER.show({id:'tip-addvideo'});
-	    	}
+            if(!checkLogin()){
+                systemTip('您还没有登录哦！','/html/login.html');
+                return ;
+            }
+            //限制数量
+            var videoCount = parseInt($('.videoNum').text())
+            if(videoCount>=10){
+                systemTip('关联视频已满');
+            }else{
+                $.LAYER.show({id:'tip-addvideo'});
+            }
         })
         $(".tip-close").click(
-                function(){$.LAYER.close();}
+            function(){$.LAYER.close();}
         )
-         $("#comment_content").bind("input propertychange",'textarea',function(){
+        $("#comment_content").bind("input propertychange",'textarea',function(){
             words_deal($(this),300,$('#descbox-count'))
         });
-      $("#jubao").click(function () {
-        	$.ajax({
-        		url:'../work/check_conplain',
-        		type:'POST',
-        		data:{},
-        		dataType:'json',
-        		async:false,
-        		success:function(r){
-        			if (r.code == 0) {
-        			 $.LAYER.show({id:'tip-group-transfer'});
+        $("#jubao").click(function () {
+            $.ajax({
+                url:'../work/check_conplain',
+                type:'POST',
+                data:{},
+                dataType:'json',
+                async:false,
+                success:function(r){
+                    if (r.code == 0) {
+                        $.LAYER.show({id:'tip-group-transfer'});
 
-        			}else{
-        			alert(r.msg);
-        			}
-        		}
-        	})
+                    }else{
+                        alert(r.msg);
+                    }
+                }
+            })
         })
     })
 
