@@ -7,6 +7,14 @@
     <link rel="shortcut icon" href="../images/favicon.ico"/>
     <link type="text/css" href="../css/b.css" rel="stylesheet" /><link type="text/css" href="../css/b_v2.css" rel="stylesheet" />
     <link type="text/css" href="../css/login.css" rel="stylesheet" >
+    <style type="text/css">
+        .login-tab{height: 30px; line-height: 30px;}
+        .login-tab h2{float: left; margin-right: 20px; cursor: pointer; color: #999; border-bottom: 2px solid transparent;}
+        .login-tab .active{color: #333; border-bottom: 2px solid #333; }
+        .hidden-important{display: none !important;}
+        .city-code-list{display: inline-block;width: 98px;height: 32px;border: 1px solid #dddddd;}
+        .input-tel{width: 196px !important;}
+    </style>
 </head>
 <body class="mainbody">
 <div class="headerbody">
@@ -36,33 +44,58 @@
             <li><a href="main.html" class="on">首页</a></li>
             <li><a href="list-music.html">音乐作品</a></li>
             <li><a href="list-img.html">画作／3D 建模</a></li>
-            <li><a href="list-txt.html">文字作品</a></li>     
+            <li><a href="list-txt.html">文字作品</a></li>
             <li><a href="activity.html">专题活动</a></li>
             <li><a href="groups.html">小组创作</a></li><li><a href="/html/list-hudong.html">官方互动</a></li>
-           
+
         </ul>
     </div>
 <div class="loginbox">
     <div class="loginbox-l">
-        <h2>用户登录</h2>
-        <ul>
-            <li>
-                <label>你的Email地址</label>
-                <input type="text" class="input-1" name="email">
-            </li>
-            <li>
-                <label>你的密码</label>
-                <input type="password" class="input-1" name="password"><a href="./forgotpass.html" class="forgot-pass">忘记密码？</a>
-            </li>
-            <li class="save-week" ><input type="checkbox" name="rememberMe"  >一周内自动登录</li>
-        </ul>
-        <div>
-             <div class="loginbtn"><a href="javascript:login();">登录</a></div>
-            <p class="goto-reg">还没有POPPRO账户？<a href="https://www.poppro.cn/html/reg.html">立即注册</a></p>
+        <div class="login-tab">
+            <h2 class="active">邮箱登录</h2>
+            <h2>手机登录</h2>
+        </div>
+        <div class="login-inner">
+            <ul>
+                <li>
+                    <label>你的Email地址</label>
+                    <input type="text" class="input-1" name="email">
+                </li>
+                <li>
+                    <label>你的密码</label>
+                    <input type="password" class="input-1" name="password"><a href="./forgotpass.html" class="forgot-pass">忘记密码？</a>
+                </li>
+                <li class="save-week" ><input type="checkbox" name="rememberMe"  >一周内自动登录</li>
+            </ul>
+            <div>
+                <div class="loginbtn"><a href="javascript:login();">登录</a></div>
+                <p class="goto-reg">还没有POPPRO账户？<a href="https://www.poppro.cn/html/reg.html">立即注册</a></p>
+            </div>
+        </div>
+        <div class="login-inner hidden-important">
+            <ul>
+                <li>
+                    <label>你的手机</label>
+                    <select class="city-code-list">
+                        <option>11</option>
+                    </select>
+                    <input type="tel" class="input-1 input-tel" name="tel" maxlength="11">
+                </li>
+                <li>
+                    <label>验证码</label>
+                    <input type="password" class="input-1" name="password">
+                    <a href="javascript:;" class="forgot-pass clickable">获取验证码</a>
+                </li>
+            </ul>
+            <div>
+                <div class="loginbtn"><a href="javascript:login();">登录</a></div>
+                <p class="goto-reg">还没有POPPRO账户？<a href="https://www.poppro.cn/html/reg.html">立即注册</a></p>
+            </div>
         </div>
     </div>
     <div class="loginbox-r">
-        <h3>您也可以使用合作网站登录</h3> 
+        <h3>您也可以使用合作网站登录</h3>
         <p>
             <a href="javascript:;" class="other-login-1"></a>
            <!-- <a href="javascript:;" class="other-login-2"></a>-->
@@ -98,70 +131,101 @@
 <script src="../js/project.js"></script>
 <script src="../js/common.js"></script>
 <script>
-/*	
 
- $('.other-login-1').click(function(){
-		$.ajax({
-			url:'../user/wxstate',
-			type:'get',
-			data:{},
-			dataType:'json',
-			async:false,
-			success:function(r){
-			var STATE=r;
-			var APPID="1106104908";
-			//var REDIRECT_URI=encodeURI("www.poppro.cn/user/wxlogin");
-			var REDIRECT_URI=encodeURIComponent("http://poppro.cn/user/qqlogin");
-			location.href="https://graph.qq.com/oauth2.0/authorize?client_id="+APPID+"&redirect_uri="+REDIRECT_URI+
-					"&response_type=code&state="+STATE+"#wechat_redirect";
-			}
-		})
-	});
-	*/
-	//QQ登陆
-	 $('.other-login-1').click(function(){
-			systemTip('敬请期待');
-		});
-	//微信登陆
-	$(".other-login-2").click(function(){
-		$.ajax({
-			url:'../user/wxstate',
-			type:'get',
-			data:{},
-			dataType:'json',
-			async:false,
-			success:function(r){
-			var STATE=r;
-			var APPID="wx87931a4807a186b8";
-			//var REDIRECT_URI=encodeURI("www.poppro.cn/user/wxlogin");
-			var REDIRECT_URI=encodeURIComponent("http://www.poppro.cn/user/wxlogin");
-			location.href="https://open.weixin.qq.com/connect/qrconnect?appid="+APPID+"&redirect_uri="+REDIRECT_URI+
-					"&response_type=code&scope=snsapi_login&state="+STATE+"#wechat_redirect";
-			}
-		})
+    $(function () {
+        // 切换
+        var $elH2 = $('.login-tab h2'),
+            $elInner = $('.login-inner');
+        $elH2.on('click', function () {
+            $elH2.removeClass('active');
+            $(this).addClass('active');
+            $elInner.addClass('hidden-important');
+            $($elInner[Array.prototype.slice.apply($elH2).indexOf(this)]).removeClass('hidden-important');
+        });
 
-	})
-	//微博登陆
-	$(".other-login-3").click(function(){
-		$.ajax({
-			url:'../user/wxstate',
-			type:'get',
-			data:{},
-			dataType:'json',
-			async:false,
-			success:function(r){
-			var STATE=r;
-			var clientId="1886521423";
-			//var redirectUri=encodeURIComponent("http://poppro.cn/user/wblogin");
-			var redirectUri="http://www.poppro.cn/user/wblogin";
-			var wburl="https://api.weibo.com/oauth2/authorize?client_id="+clientId+
-					"&redirect_uri="+redirectUri+"&response_type=code&state="+STATE;
-				location.href=wburl;
-			}
-		})
-
-
-	})
+        // 获取验证码
+        var $elBtn = $('.clickable'),
+            number = 10,
+            index = number;
+        $elBtn.on('click', function () {
+            if (index !== number)
+                return null;
+            countDown();
+        });
+        function countDown() {
+            index--;
+            if (index < 0) {
+                index = number;
+                return $elBtn.text('获取验证码');
+            }
+            $elBtn.text('发送成功 ( ' + index + 's )');
+            setTimeout(countDown, 1000);
+        }
+    })
+///*
+//
+// $('.other-login-1').click(function(){
+//		$.ajax({
+//			url:'../user/wxstate',
+//			type:'get',
+//			data:{},
+//			dataType:'json',
+//			async:false,
+//			success:function(r){
+//			var STATE=r;
+//			var APPID="1106104908";
+//			//var REDIRECT_URI=encodeURI("www.poppro.cn/user/wxlogin");
+//			var REDIRECT_URI=encodeURIComponent("http://poppro.cn/user/qqlogin");
+//			location.href="https://graph.qq.com/oauth2.0/authorize?client_id="+APPID+"&redirect_uri="+REDIRECT_URI+
+//					"&response_type=code&state="+STATE+"#wechat_redirect";
+//			}
+//		})
+//	});
+//	*/
+//	//QQ登陆
+//	 $('.other-login-1').click(function(){
+//			systemTip('敬请期待');
+//		});
+//	//微信登陆
+//	$(".other-login-2").click(function(){
+//		$.ajax({
+//			url:'../user/wxstate',
+//			type:'get',
+//			data:{},
+//			dataType:'json',
+//			async:false,
+//			success:function(r){
+//			var STATE=r;
+//			var APPID="wx87931a4807a186b8";
+//			//var REDIRECT_URI=encodeURI("www.poppro.cn/user/wxlogin");
+//			var REDIRECT_URI=encodeURIComponent("http://www.poppro.cn/user/wxlogin");
+//			location.href="https://open.weixin.qq.com/connect/qrconnect?appid="+APPID+"&redirect_uri="+REDIRECT_URI+
+//					"&response_type=code&scope=snsapi_login&state="+STATE+"#wechat_redirect";
+//			}
+//		})
+//
+//	})
+//	//微博登陆
+//	$(".other-login-3").click(function(){
+//		$.ajax({
+//			url:'../user/wxstate',
+//			type:'get',
+//			data:{},
+//			dataType:'json',
+//			async:false,
+//			success:function(r){
+//			var STATE=r;
+//			var clientId="1886521423";
+//			//var redirectUri=encodeURIComponent("http://poppro.cn/user/wblogin");
+//			var redirectUri="http://www.poppro.cn/user/wblogin";
+//			var wburl="https://api.weibo.com/oauth2/authorize?client_id="+clientId+
+//					"&redirect_uri="+redirectUri+"&response_type=code&state="+STATE;
+//				location.href=wburl;
+//			}
+//		})
+//
+//
+//	})
 </script>
 
 </html>
