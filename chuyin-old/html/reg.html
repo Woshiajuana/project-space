@@ -7,6 +7,16 @@
     <link rel="shortcut icon" href="../images/favicon.ico"/>
     <link type="text/css" href="../css/b.css" rel="stylesheet" /><link type="text/css" href="../css/b_v2.css" rel="stylesheet" />
     <link type="text/css" href="../css/login.css" rel="stylesheet" >
+    <style type="text/css">
+        .login-tab{height: 30px; line-height: 30px;}
+        .login-tab h2{float: left; margin-right: 20px; cursor: pointer; color: #999; border-bottom: 2px solid transparent;}
+        .login-tab .active{color: #333; border-bottom: 2px solid #333; }
+        .hidden-important{display: none !important;}
+        .city-code-list{display: inline-block;width: 98px;height: 32px;border: 1px solid #dddddd;}
+        .input-tel{width: 196px !important;}
+        .loginbox{height: 560px}
+    </style>
+
 </head>
 <body class="mainbody">
 <div class="headerbody">
@@ -36,32 +46,65 @@
             <li><a href="main.html" class="on">首页</a></li>
             <li><a href="list-music.html">音乐作品</a></li>
             <li><a href="list-img.html">画作／3D 建模</a></li>
-            <li><a href="list-txt.html">文字作品</a></li>     
+            <li><a href="list-txt.html">文字作品</a></li>
             <li><a href="activity.html">专题活动</a></li>
             <li><a href="groups.html">小组创作</a></li><li><a href="/html/list-hudong.html">官方互动</a></li>
-        
+
         </ul>
     </div>
 <div class="loginbox">
     <div class="loginbox-l">
-        <h2>用户注册</h2>
-        <ul>
-            <li>
-                <label>你的Email地址</label>
-                <input type="text" class="input-1">
-            </li>
-            <li>
-                <label>请设置密码</label>
-                <input type="password" class="input-1">
-            </li>
-            <li>
-                <label>确认密码</label>
-                <input type="password" class="input-1">
-            </li>
-            <li class="xieyi"><input type="checkbox"><a href="aboutus.html?hId=Mw==" target="_blank">请阅读并同意网站协议</a>&nbsp;&nbsp;<span style="color:#BEBFC3;font-weight:900;">|</span>&nbsp;&nbsp;<a href="http://www.poppro.cn/html/newslist.html?hId=OQ==" target="_blank">海外ユーザー登録のご案内</a></li>
-        </ul>
-        <div>
-             <div class="regbtn"><a href="javascript:;">立即注册</a></div>
+        <div class="login-tab">
+            <h2 class="active">邮箱注册</h2>
+            <h2>手机注册</h2>
+        </div>
+        <div class="login-inner">
+            <ul>
+                <li>
+                    <label>你的Email地址</label>
+                    <input type="text" class="input-1">
+                </li>
+                <li>
+                    <label>请设置密码</label>
+                    <input type="password" class="input-1">
+                </li>
+                <li>
+                    <label>确认密码</label>
+                    <input type="password" class="input-1">
+                </li>
+                <li class="xieyi"><input type="checkbox"><a href="aboutus.html?hId=Mw==" target="_blank">请阅读并同意网站协议</a>&nbsp;&nbsp;<span style="color:#BEBFC3;font-weight:900;">|</span>&nbsp;&nbsp;<a href="http://www.poppro.cn/html/newslist.html?hId=OQ==" target="_blank">海外ユーザー登録のご案内</a></li>
+            </ul>
+            <div>
+                <div class="regbtn"><a href="javascript:;">立即注册</a></div>
+            </div>
+        </div>
+        <div class="login-inner hidden-important">
+            <ul>
+                <li>
+                    <label>你的手机</label>
+                    <select class="city-code-list">
+                        <option>11</option>
+                    </select>
+                    <input type="tel" class="input-1 input-tel" name="tel" maxlength="11">
+                </li>
+                <li>
+                    <label>验证码</label>
+                    <input type="password" class="input-1" name="password">
+                    <a href="javascript:;" class="forgot-pass clickable">获取验证码</a>
+                </li>
+                <li>
+                    <label>请设置密码</label>
+                    <input type="password" class="input-1">
+                </li>
+                <li>
+                    <label>确认密码</label>
+                    <input type="password" class="input-1">
+                </li>
+                <li class="xieyi"><input type="checkbox"><a href="aboutus.html?hId=Mw==" target="_blank">请阅读并同意网站协议</a>&nbsp;&nbsp;<span style="color:#BEBFC3;font-weight:900;">|</span>&nbsp;&nbsp;<a href="http://www.poppro.cn/html/newslist.html?hId=OQ==" target="_blank">海外ユーザー登録のご案内</a></li>
+            </ul>
+            <div>
+                <div class="regbtn"><a href="javascript:;">立即注册</a></div>
+            </div>
         </div>
     </div>
     <div class="regbox-r">
@@ -90,11 +133,44 @@
         </div>
     </div>
 </div>
-</body>
+
 <script src="../js/jquery-1.7.1.min.js"></script>
 <script src="../js/util/base64.js"></script>
 <script src="../js/header.js"></script>
 <script src="../js/project.js"></script>
 <script src="../js/common.js"></script>
 <script src="../js/page/reg.js"></script>
+<script>
+    $(function () {
+        // 切换
+        var $elH2 = $('.login-tab h2'),
+            $elInner = $('.login-inner');
+        $elH2.on('click', function () {
+            $elH2.removeClass('active');
+            $(this).addClass('active');
+            $elInner.addClass('hidden-important');
+            $($elInner[Array.prototype.slice.apply($elH2).indexOf(this)]).removeClass('hidden-important');
+        });
+
+        // 获取验证码
+        var $elBtn = $('.clickable'),
+            number = 10,
+            index = number;
+        $elBtn.on('click', function () {
+            if (index !== number)
+                return null;
+            countDown();
+        });
+        function countDown() {
+            index--;
+            if (index < 0) {
+                index = number;
+                return $elBtn.text('获取验证码');
+            }
+            $elBtn.text('发送成功 ( ' + index + 's )');
+            setTimeout(countDown, 1000);
+        }
+    })
+</script>
+</body>
 </html>
