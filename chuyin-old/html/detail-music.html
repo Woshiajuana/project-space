@@ -9,7 +9,24 @@
     <link rel="shortcut icon" href="../images/favicon.ico"/>
      <link type="text/css" href="../js/layer/skin/default/layer.css" rel="stylesheet" />
     <style type="text/css">
-        .bannerbox{overflow:hidden;position: relative;width: 850px;height: 600px; margin: 0 auto;background: url("../images/music-deails-bg.jpg") no-repeat center;}
+        .border-radius{border-radius: 50%; overflow: hidden;}
+
+        .author-session{zoom:1;}
+        .author-session:after{content:'\20';display:block;height:0;clear:both;}
+        .author-wrap{padding: 25px 0 30px 115px;position: relative;}
+        .author-head-link{position: absolute; top: 25px; left: 30px; padding: 5px;}
+        .author-head-link img{display: block; width: 70px; height: 70px;}
+        .author-inner{}
+        .author-session{ margin-bottom: 10px;}
+        .author-name-link{color: #18b2d8; font-size: 16px;text-decoration: none;}
+        .author-sex{width: 15px; height: 15px;}
+        .author-session a,.author-session span,.author-session img{vertical-align:middle;display: inline-block;}
+        .author-level{color: #18b2d8;font-size: 12px;}
+        .author-icon{width: 16px;height: 16px;}
+        .author-icon-session{ width: 160px;}
+        .author-icon-session img{float: left; width: 30px; height: 30px; margin: 0 5px 5px 0;}
+        .auth-more-link{color: #18b2d8; font-size: 14px;text-decoration: none;}
+        .bannerbox{overflow:hidden;position: relative;width: 850px;height: 600px; margin: 0 auto;background: url("../images/bannermusic.jpg") no-repeat center;}
         .bannerbox img{width: 100%;height: 100%;position: relative;}
         .banner-ctr{position: absolute; bottom: 0;left: 0; right: 0;height: 50px;background-color: rgba(0,0,0,.5);text-align: left; padding-top: 14px}
         .banner-ctr i {cursor: pointer; background: url("../images/music-detials-icon.png?v=1") no-repeat;display: inline-block;}
@@ -20,13 +37,24 @@
         .banner-con img{width: 100%;height: 100%;}
         .banner-add {width: 80px;height: 80px;border-radius: 50%;background-color: rgba(0,0,0,.2); cursor: pointer;
             position: absolute; top: -40px; left: -40px;}
-        .banner-add-icon{background: url("../images/music-details-add-icon.png") no-repeat; width: 16px; height: 16px;
-            position: absolute; bottom: 16px; right: 16px; background-size: 100%;}
+        .banner-add-icon{background: url("../images/music-details-add-icon.png") no-repeat; width: 32px; height: 32px; background-position: 5px,10px;
+            position: absolute; bottom: 4px; right: 4px; background-size: 50%;}
         .banner-mask{ position: absolute; width: 120px; height: 120px; border-radius: 50%;
             top:50%;left: 50%;margin-left: -60px;margin-top: -60px;border: 5px solid rgba(0,0,0,.6); text-align: center; line-height: 120px;}
         .banner-mask-bg{position: absolute; width: 114px; height: 114px; border-radius: 50%; background-color: rgba(0,0,0,.6);
             top:50%;left: 50%;margin-left: -57px;margin-top: -57px;}
         .banner-mask span {font-size: 14px; color: #fff; position: relative;}
+        /*补丁2018.10.15*/
+        .detail-base-info{ color: #999; padding: 0 0 18px 50px;}
+        .detail-base-info span{ height: 20px; line-height: 20px;display: inline-block;color: #999; font-size: 12px; margin-right: 20px;}
+        .detail-base-info .icon{ padding-left: 22px; background: url("../images/erji.png") left center no-repeat;}
+
+
+        /*补丁 2019.02.27*/
+        .author-wrap{padding: 25px 0 30px 120px;}
+        .author-head-link{padding: 0;}
+        .border-mask{position: absolute; left: 50%; top: 50%; width: 100px !important; height: 100px !important;
+        margin-left: -50px; margin-top: -50px;}
     </style>
     <link rel="stylesheet" type="text/css" href="../css/uploadifive.css">
 </head>
@@ -145,6 +173,24 @@
             </div>
         </div>
         <div class="detail-box-r">
+            <div class="author-wrap">
+                <a href="./user-main.html?id=MjY0NA==" class="author-head-link">
+                    <img class="border-mask" src="../images/user-head-mask-20190227.png" alt="">
+                    <img class="border-radius" src="http://poppro.ozzyad.com/images/user.jpg" alt="">
+                </a>
+                <div class="author-inner">
+                    <div class="author-session">
+                        <a href="./user-main.html?id=MjY0NA==" class="author-name-link">leo2</a>
+                        <img src="../images/user/sex-1.png" class="author-sex">
+                    </div>
+                    <div class="author-session">
+                        <span class="author-level">lv6</span>
+
+                    </div>
+                    <div class="author-session author-icon-session"><img src="http://adpoppro.ozzyad.com/uploads/15354437194767.gif" alt=""><img src="http://adpoppro.ozzyad.com/uploads/15354430278394.gif" alt=""></div>
+                    <a href="./user-main.html?id=MjY0NA==" class="auth-more-link">查看作者更多作品</a>
+                </div>
+            </div>
             <div class="zuozhe" style="display:none;">
                 <h3><img src=""><span><img src="" class="sex" ></span></h3>
                 <p></p>
